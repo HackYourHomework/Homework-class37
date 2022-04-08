@@ -7,16 +7,16 @@ Why pay a fortune teller when you can just program your fortune yourself?
    the variable.
 2. Complete the function `selectRandomly`. This function should take an array 
    as a parameter and return a randomly selected element as its return value.
-// 3. Complete the function named `tellFortune` as follows:
-//    - It should take four arguments (in the order listed): 
-//      * the array with the options for the number of children, 
-//      * the array with the options for the partner's name, 
-//      * the array with the options for the geographic location and 
-//      * the array with the options for the job title.
-//    - It should use the `selectRandomly` function to randomly select values from 
-//      the arrays.
-//    - It should return a string: "You will be a `jobTitle` in `location`, 
-//     married to `partnerName` with `numKids` kids."
+3. Complete the function named `tellFortune` as follows:
+   - It should take four arguments (in the order listed): 
+     * the array with the options for the number of children, 
+     * the array with the options for the partner's name, 
+     * the array with the options for the geographic location and 
+     * the array with the options for the job title.
+   - It should use the `selectRandomly` function to randomly select values from 
+     the arrays.
+   - It should return a string: "You will be a `jobTitle` in `location`, 
+    married to `partnerName` with `numKids` kids."
 4. Call the function three times, passing the arrays as arguments. Use `
    console.log` to display the results.
 Note: The DRY principle is put into practice here: instead of repeating the code to 
@@ -26,36 +26,12 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-const values = [254, 45, 212, 365, 2543];
-let value = values[Math.floor(Math.random() * values.length)];
-function selectRandomly(value) {
+function selectRandomly(/* TODO parameter(s) go here */) {
   // TODO complete this function
-  
-  return value
-    
 }
 
-// Complete the function named `tellFortune` as follows:
-//    - It should take four arguments (in the order listed): 
-//      * the array with the options for the number of children, 
-//      * the array with the options for the partner's name, 
-//      * the array with the options for the geographic location and 
-//      * the array with the options for the job title.
-//    - It should use the `selectRandomly` function to randomly select values from 
-//      the arrays.
-//    - It should return a string: "You will be a `jobTitle` in `location`, 
-//     married to `partnerName` with `numKids` kids."
-function tellFortune() {
+function tellFortune(/* TODO add parameter(s) here */) {
   // TODO complete this function
-  main();
-  const numKid = numKids[Math.floor(Math.random() * numKids.length)];
- 
-
-
-
-
-
-  
 }
 
 function main() {

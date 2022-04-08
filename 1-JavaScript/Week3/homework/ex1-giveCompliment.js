@@ -22,7 +22,9 @@ function giveCompliment(name) {
   // TODO complete this function
   let compliments=['great','awesome','smart','clever','amazing','cool','fabulous','incredible','fantastic','marvelous']
 for (let i=0; i<compliments.length; i++){
-  console.log(`You are ${compliments[i]} ${name} !`) ; 
+  let compliment=compliments[i];
+ console.log(`You are ${compliment} ${name} !`); 
+ //when I used return it just show me the first index 3 times
 } 
   
 }

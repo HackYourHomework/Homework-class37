@@ -32,7 +32,6 @@ function calculateTotalPrice(shoppingCart) {
 let total=0;
 if (shoppingCart!==undefined){
 for (let items in shoppingCart){
-
   total+=shoppingCart[items];
 }
 return `Total: € ${total}`;

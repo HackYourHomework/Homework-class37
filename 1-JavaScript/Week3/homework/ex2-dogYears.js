@@ -22,6 +22,7 @@ function calculateDogAge(age) {
   return `"Your doggie is ${result}years old in dog years!"`;
 
 }
+calculateDogAge();
 
 function main() {
   console.log(calculateDogAge(1)); // -> "Your doggie is 7 years old in dog years!"

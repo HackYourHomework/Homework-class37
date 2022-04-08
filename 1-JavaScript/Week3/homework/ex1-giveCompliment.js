@@ -22,15 +22,20 @@ function giveCompliment(name) {
   // TODO complete this function
   let compliments=['great','awesome','smart','clever','amazing','cool','fabulous','incredible','fantastic','marvelous']
 for (let i=0; i<compliments.length; i++){
-  console.log(`You are ${compliments[i]} ${name} !`); 
+  console.log(`You are ${compliments[i]} ${name} !`) ; 
 } 
   
 }
-giveCompliment();
+giveCompliment('Ghufran');
+console.log(giveCompliment('Ghufran'));
+giveCompliment('Ghufran');
+console.log(giveCompliment('Ghufran'));
+giveCompliment('Ghufran');
+console.log(giveCompliment('Ghufran'));
 
 function main() {
-  // TODO substitute your own name for "HackYourFuture"
-  const myName = 'GhufranThabit';
+  
+  const myName = 'ghufran';
 
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));

@@ -1,4 +1,7 @@
 'use strict';
+
+const { forEach } = require("lodash");
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-3-be-your-own-fortune-teller
 
@@ -33,30 +36,25 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(...arr) {
+  return arr[Math.floor(Math.random()* arr.length)];
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+
+function tellFortune() { 
+return `"You will be a ${jobTitles} in ${locations}, 
+married to ${partnerNames} with ${numKids} kids."`
 }
+selectRandomly();
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [1,2,3,4,5];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
+  const partnerNames = ['ali','ahmed','john','bob','doe'];
 
-  const locations = [
-    // TODO add elements here
-  ];
+  const locations = ['yemen','eygpt','usa','germany','uae'];
 
-  const jobTitles = [
-    // TODO add elements here
-  ];
+  const jobTitles = ['artist','engineer','doctor','programer','manager'];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

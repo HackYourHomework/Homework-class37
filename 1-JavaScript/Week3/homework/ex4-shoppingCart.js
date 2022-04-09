@@ -21,12 +21,18 @@ const shoppingCart = ['bananas', 'milk'];
 function addToShoppingCart(item) {
   // TODO complete this function
   
+  // let cart = shoppingCart.length;
+  // console.log(`You bought ${shoppingCart}!`);
+  // shoppingCart.push(item);
+  // if(cart > 2){
+  //   shoppingCart.shift();
+  // }
+
   let cart = shoppingCart.length;
   shoppingCart.push(item);
   
   if(cart <= 2){
     console.log(`You bought ${shoppingCart}!`);
-    
   }else if(cart > 2){
     console.log(`You bought ${shoppingCart}!`);
     shoppingCart.shift();

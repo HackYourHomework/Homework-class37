@@ -36,16 +36,17 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(...arr) {
-  return arr[Math.floor(Math.random()* arr.length)];
+function selectRandomly(array) {
+let randomValue= array[Math.floor(Math.random()* array.length)];
+   return randomValue;
 }
 
-
-function tellFortune() { 
-return `"You will be a ${jobTitles} in ${locations}, 
-married to ${partnerNames} with ${numKids} kids."`
+function tellFortune( numKids, partnerNames,locations,jobTitles) { 
+ console.log(`"You will be a ${jobTitles} in ${locations}, 
+married to ${partnerNames} with ${numKids} kids."`);
+return selectRandomly();
 }
-selectRandomly();
+tellFortune(selectRandomly)
 
 function main() {
   const numKids = [1,2,3,4,5];

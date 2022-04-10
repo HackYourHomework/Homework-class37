@@ -42,10 +42,10 @@ function test1() {
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
+  const actual = calculateTotalPrice(cartForParty);//what should i write here?
   const expected = "Total: € 9.89";
-  const actual = addToShoppingCart(cartForParty);
   console.assert(actual === expected);
-  console.assert();
+ 
 }
 
 function test() {

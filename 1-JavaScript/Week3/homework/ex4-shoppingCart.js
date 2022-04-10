@@ -26,7 +26,7 @@ const shoppingCart = ['bananas', 'milk'];
 function addToShoppingCart(item) {
   shoppingCart.push("chocolate");
   console.log(shoppingCart.join());
-  for (let i = 0; i < 2; i++) {
+  
     if (shoppingCart.push("waffles")) {
       shoppingCart.shift(0);
     }
@@ -35,7 +35,7 @@ function addToShoppingCart(item) {
     }
     console.log(shoppingCart.join());
   }
-}
+
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

@@ -38,15 +38,18 @@ body, this code is now written once only in a separated function.
 // a randomly selected element as its return value.
 function selectRandomly(array) {
 let randomValue= array[Math.floor(Math.random()* array.length)];
-   return randomValue;
+   return array[randomValue];
 }
 
-function tellFortune( numKids, partnerNames,locations,jobTitles) { 
- console.log(`"You will be a ${jobTitles} in ${locations}, 
-married to ${partnerNames} with ${numKids} kids."`);
-return selectRandomly();
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
+  return `"You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(
+    locations
+  )}, 
+  married to ${selectRandomly(partnerNames)} with ${selectRandomly(
+    numKids
+  )} kids."`;
 }
-tellFortune(selectRandomly)
+tellFortune();
 
 function main() {
   const numKids = [1,2,3,4,5];

@@ -17,10 +17,14 @@ it pure. Do the following:
 ------------------------------------------------------------------------------*/
 // ! Function under test
 function addToShoppingCart(shoppingCart, item) {
-  let newShoppingCart = [...shoppingCart, item]; // we mean ...shoppingCart to display all the stored elements in our array and then add item to it
-
-  return newShoppingCart;
-}
+  let newShoppingCart = [...shoppingCart, item]; // we mean ...shoppingCart to display all the stored elements in our old array and then add item to it
+  //length === 3
+  if (newShoppingCart.length > 3) {
+    return newShoppingCart.slice(newShoppingCart.length - 3); // slice(start-end) i can also write(slice(0-3))?
+  } else {
+    return newShoppingCart;
+  }
+} //where can I exactly console.log to see my code after the if statments?
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

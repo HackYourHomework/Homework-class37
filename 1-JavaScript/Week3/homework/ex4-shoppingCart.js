@@ -20,22 +20,15 @@ const shoppingCart = ['bananas', 'milk'];
 // ! Function to be tested
 function addToShoppingCart(item) {
   // TODO complete this function
-  
-  // let cart = shoppingCart.length;
-  // console.log(`You bought ${shoppingCart}!`);
-  // shoppingCart.push(item);
-  // if(cart > 2){
-  //   shoppingCart.shift();
-  // }
 
   let cart = shoppingCart.length;
   shoppingCart.push(item);
-  
+  const newShoppingCart =  shoppingCart.filter(e =>  e);
   if(cart <= 2){
-    console.log(`You bought ${shoppingCart}!`);
+    return `You bought ${newShoppingCart.join(', ')}!`;
   }else if(cart > 2){
-    console.log(`You bought ${shoppingCart}!`);
     shoppingCart.shift();
+    return `You bought ${newShoppingCart.join(', ')}!`;
   }
 }
 // ! Test functions (plain vanilla JavaScript)

@@ -22,28 +22,24 @@ you have more than 3 items in your shopping cart the first item gets taken out.
 -----------------------------------------------------------------------------*/
 const shoppingCart = ['bananas', 'milk'];
 
-
 function addToShoppingCart(item) {
-  shoppingCart.push();
- 
-  if (shoppingCart.length < 3) {
-    return `You bought ${shoppingCart.push(item)}!`;
-  } else {
-    return `You bought ${shoppingCart.shift()}!`;
+  if (item !== undefined) {
+    shoppingCart.push(item);
   }
-
+  if (shoppingCart.length > 3) {
+    shoppingCart.shift();
+  }
+  const string = `You bought ${shoppingCart.join(', ')}!`;
+  return string;
 }
 
-  addToShoppingCart("chocolate");
-  addToShoppingCart("waffle");
-  addToShoppingCart("tea");
-  
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log(
     'Test 1: addShoppingCart() called without an argument should leave the shopping cart unchanged'
   );
   const expected = 'You bought bananas, milk!';
+  console.log(expected);
   const actual = addToShoppingCart();
   console.assert(actual === expected);
 }

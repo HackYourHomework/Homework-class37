@@ -24,19 +24,20 @@ const shoppingCart = ['bananas', 'milk'];
 
 
 function addToShoppingCart(item) {
-  shoppingCart.push("chocolate");
-  console.log(shoppingCart.join());
-  
-    if (shoppingCart.push("waffles")) {
-      shoppingCart.shift(0);
-    }
-    if (shoppingCart.push("tea")) {
-      shoppingCart.shift(0);
-    }
-    console.log(shoppingCart.join());
+  shoppingCart.push();
+ 
+  if (shoppingCart.length < 3) {
+    return `You bought ${shoppingCart.push(item)}!`;
+  } else {
+    return `You bought ${shoppingCart.shift()}!`;
   }
 
+}
 
+  addToShoppingCart("chocolate");
+  addToShoppingCart("waffle");
+  addToShoppingCart("tea");
+  
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log(

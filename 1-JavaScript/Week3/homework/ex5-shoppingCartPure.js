@@ -21,21 +21,11 @@ it pure. Do the following:
 function addToShoppingCart(cart, gro) {
   // TODO complete this function
   const newArray = [...cart, gro];
-  
-  
   if (newArray.length > 3){
     return newArray.slice(newArray.length - 3);
   }else{
     return newArray;
   }
-
-  // if(cart === 3){
-  //   addToShoppingCart();
-  // }else{
-  //   const newShoppingCart = initialCart.slice();
-  //   console.log(newShoppingCart);
-  // } 
-  
 }
 
 // ! Test functions (plain vanilla JavaScript)

@@ -1,6 +1,6 @@
 'use strict';
 
-const { forEach } = require("lodash");
+const { forEach } = require('lodash');
 
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-3-be-your-own-fortune-teller
@@ -37,8 +37,8 @@ body, this code is now written once only in a separated function.
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 function selectRandomly(array) {
-let randomValue= array[Math.floor(Math.random()* array.length)];
-   return array[randomValue];
+  const randomValue = Math.floor(Math.random() * 5) + 1;
+  return array[randomValue];
 }
 
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
@@ -49,16 +49,15 @@ function tellFortune(numKids, partnerNames, locations, jobTitles) {
     numKids
   )} kids."`;
 }
-tellFortune();
 
 function main() {
-  const numKids = [1,2,3,4,5];
+  const numKids = [1, 2, 3, 4, 5];
 
-  const partnerNames = ['ali','ahmed','john','bob','doe'];
+  const partnerNames = ['ali', 'ahmed', 'john', 'bob', 'doe'];
 
-  const locations = ['yemen','eygpt','usa','germany','uae'];
+  const locations = ['yemen', 'Netherland', 'usa', 'germany', 'uae'];
 
-  const jobTitles = ['artist','engineer','doctor','programer','manager'];
+  const jobTitles = ['artist', 'engineer', 'doctor', 'programer', 'manager'];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

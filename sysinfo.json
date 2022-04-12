@@ -1,0 +1,30 @@
+{
+  "node": "v16.14.2",
+  "system": {
+    "manufacturer": "HP",
+    "model": "HP Pavilion Laptop 15-eh0xxx"
+  },
+  "cpu": {
+    "manufacturer": "AMD",
+    "brand": "Ryzen 5 4500U with Radeon Graphics",
+    "speed": 2.3
+  },
+  "memory": "15 GB",
+  "osInfo": {
+    "platform": "Windows",
+    "distro": "Microsoft Windows 10 Home",
+    "release": "10.0.19044"
+  },
+  "vscodeInfo": {
+    "version": "1.66.0",
+    "extensions": [
+      "esbenp.prettier-vscode",
+      "evgeniypeshkov.syntax-highlighter",
+      "hdg.live-html-previewer",
+      "hnw.vscode-auto-open-markdown-preview",
+      "ritwickdey.LiveServer",
+      "xabikos.JavaScriptSnippets"
+    ],
+    "userSettings": {}
+  }
+}

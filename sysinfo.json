@@ -1,0 +1,36 @@
+{
+  "node": "v16.14.2",
+  "system": {
+    "manufacturer": "ASUSTeK COMPUTER INC.",
+    "model": "VivoBook_ASUSLaptop X513EAN_K513EA"
+  },
+  "cpu": {
+    "manufacturer": "11th",
+    "brand": "Gen Intel® Core™ i5-1135G7",
+    "speed": 2.4
+  },
+  "memory": "16 GB",
+  "osInfo": {
+    "platform": "Windows",
+    "distro": "Microsoft Windows 11 Home",
+    "release": "10.0.22000"
+  },
+  "vscodeInfo": {
+    "version": "1.66.1",
+    "extensions": [
+      "Centuplex.quokka",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "formulahendry.auto-rename-tag",
+      "formulahendry.code-runner",
+      "hnw.vscode-auto-open-markdown-preview",
+      "HookyQR.beautify",
+      "mcright.auto-save",
+      "ritwickdey.LiveServer",
+      "streetsidesoftware.code-spell-checker",
+      "techer.open-in-browser",
+      "Tyriar.lorem-ipsum"
+    ],
+    "userSettings": {}
+  }
+}

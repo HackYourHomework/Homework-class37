@@ -18,10 +18,12 @@ const employeeRecords = [
 ];
 
 function filterPrivateData(employeeRecords) {
-  for (const {gender, salary, ...employeeRest} of employeeRecords){
-      return employeeRest
-  }
-}
+    const arr =[]
+    for (const {gender, salary, ...employeeRest} of employeeRecords){
+        arr.push(employeeRest)
+      }
+      return arr
+    }
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: filterPrivateData should take one parameters');

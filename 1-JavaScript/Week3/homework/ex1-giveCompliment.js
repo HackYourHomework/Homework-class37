@@ -4,7 +4,11 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
 
 1. Complete the function named `giveCompliment`as follows:
 
+<<<<<<< HEAD
+   - It should take a single parameter: `name`. 
+=======
    - It should take a single parameter: `name`.
+>>>>>>> 36f5667322659c92acb0b271ad9e082da648e18a
    - Its function body should include a variable that holds an array,
      `compliments`, initialized with 10 strings. Each string should be a
      compliment, like `"great"`, `"awesome"` and so on.
@@ -18,6 +22,20 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
+<<<<<<< HEAD
+function giveCompliment(name) {
+  const compliments= ["great", "awesome","nice", "beautiful", "strong","powerful", "friendly", "luxury","sweet","perfect" ]
+
+  const randomElement = compliments[Math.floor(Math.random() * compliments.length)];
+  
+   return "You are " + randomElement + ", " + name +"!";
+
+}
+
+function main() {
+ 
+  const myName = 'Oscar';
+=======
 function giveCompliment(/* TODO parameter(s) go here */) {
   // TODO complete this function
 }
@@ -25,6 +43,7 @@ function giveCompliment(/* TODO parameter(s) go here */) {
 function main() {
   // TODO substitute your own name for "HackYourFuture"
   const myName = 'HackYourFuture';
+>>>>>>> 36f5667322659c92acb0b271ad9e082da648e18a
 
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));

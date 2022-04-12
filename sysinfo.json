@@ -1,0 +1,62 @@
+{
+  "node": "v16.13.2",
+  "system": {
+    "manufacturer": "LENOVO",
+    "model": "23564H3"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i5-3320M",
+    "speed": 2.6
+  },
+  "memory": "4 GB",
+  "osInfo": {
+    "platform": "Windows",
+    "distro": "Microsoft Windows 10 Pro",
+    "release": "10.0.19044"
+  },
+  "vscodeInfo": {
+    "version": "1.66.0",
+    "extensions": [
+      "4ban.kraken",
+      "aaron-bond.better-comments",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-footnotes",
+      "bierner.markdown-preview-github-styles",
+      "bierner.markdown-yaml-preamble",
+      "christian-kohler.npm-intellisense",
+      "CoenraadS.bracket-pair-colorizer",
+      "CoenraadS.bracket-pair-colorizer-2",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "esbenp.prettier-vscode",
+      "firefox-devtools.vscode-firefox-debug",
+      "formulahendry.auto-rename-tag",
+      "formulahendry.code-runner",
+      "GitHub.vscode-pull-request-github",
+      "HookyQR.beautify",
+      "kisstkondoros.vscode-codemetrics",
+      "leizongmin.node-module-intellisense",
+      "ms-azuretools.vscode-azurefunctions",
+      "ms-azuretools.vscode-azureresourcegroups",
+      "ms-azuretools.vscode-docker",
+      "ms-edgedevtools.vscode-edge-devtools",
+      "ms-vscode.azure-account",
+      "ms-vsliveshare.vsliveshare",
+      "ms-vsliveshare.vsliveshare-audio",
+      "msjsdiag.debugger-for-chrome",
+      "nodesource.vscode-for-node-js-development-pack",
+      "pranaygp.vscode-css-peek",
+      "ritwickdey.LiveServer",
+      "Shan.code-settings-sync",
+      "streetsidesoftware.code-spell-checker",
+      "voldemortensen.rainbow-tags",
+      "wix.vscode-import-cost",
+      "xabikos.JavaScriptSnippets"
+    ],
+    "userSettings": {}
+  }
+}

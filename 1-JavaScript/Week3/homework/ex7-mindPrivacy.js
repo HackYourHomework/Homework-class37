@@ -32,12 +32,18 @@ const employeeRecords = [
 // ! Function under test
 function filterPrivateData(employeeRecordsArr) {
   if (employeeRecordsArr!==undefined){
+    /*
     const employeePublicData=[];
  for (let employeeData of employeeRecordsArr)
  {
-  let {name,occupation,email}=employeeData;
+  const {name,occupation,email}=employeeData;
   employeePublicData.push({name,occupation,email});
- }
+ }*/
+ const employeePublicData=employeeRecordsArr.map((elements)=> {
+  const {name,occupation,email}=elements;
+  return  {name,occupation,email};
+ });
+
 return employeePublicData;
   }
   

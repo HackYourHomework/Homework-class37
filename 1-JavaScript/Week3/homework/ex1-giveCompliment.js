@@ -20,7 +20,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
 -----------------------------------------------------------------------------*/
 function giveCompliment(name){
 const compliments=['great','perfect','awesome','incredible','the best','magnificient','stunning','genious','smart','nice'];
-let currentIndex= Math.floor(Math.random()*10);
+const currentIndex= Math.floor(Math.random()*compliments.length);
  return `You are ${compliments[currentIndex]}, ${name}!`;
 }
 

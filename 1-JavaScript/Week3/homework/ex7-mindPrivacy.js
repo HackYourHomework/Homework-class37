@@ -4,7 +4,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
 
 1. Complete the `filterPrivateData()` function. It should take a single 
    parameter: the array of employee records.
-2. It should create a _new_ array, containing employee data without the private
+2. It should create a new array, containing employee data without the private
    data.
 3. Use object destructuring to extract the non-private properties from an 
    employee record (an `object`) and object literal shorthand to create a new 
@@ -30,7 +30,13 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
+function filterPrivateData( employeeRecords ) {
+  const newEmployeeRecord = employeeRecords.map((Element)=>{
+    const{ gender, salary,...rest} = Element;
+    return rest;
+  });
+  console.log(newEmployeeRecord);
+  return newEmployeeRecord; 
   // TODO complete this function
 }
 
@@ -56,6 +62,7 @@ function test2() {
   ];
   const result = filterPrivateData(employeeRecords);
   console.assert(JSON.stringify(result) === JSON.stringify(expected));
+  
 }
 
 function test() {

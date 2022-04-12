@@ -18,13 +18,13 @@ it pure. Do the following:
 
  
 // ! Function under test
-function addToShoppingCart(cart, gro) {
+function addToShoppingCart(cart, item) {
   // TODO complete this function
-  const newArray = [...cart, gro];
-  if (newArray.length > 3){
-    return newArray.slice(newArray.length - 3);
-  }else{
-    return newArray;
+  const newCart = [...cart, item]
+  if(newCart.length > 3){
+      return newCart.slice(newCart.length - 3);
+  }else {
+    return newCart;
   }
 }
 

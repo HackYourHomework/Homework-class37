@@ -83,6 +83,10 @@ function main() {
     'artist',
     'accountant',
   ];
+
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 }
 
 // ! Do not change or remove the code below

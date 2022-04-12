@@ -29,8 +29,9 @@ const cartForParty = {
 };
 
 function calculateTotalPrice(shoppingCart) {
-let total=0;
+
 if (shoppingCart!==undefined){
+  let total=0;
 for (let items in shoppingCart){
   total+=shoppingCart[items];
 }

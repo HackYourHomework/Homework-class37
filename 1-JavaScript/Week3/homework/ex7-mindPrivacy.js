@@ -19,7 +19,6 @@ const employeeRecords = [
 
 function filterPrivateData(employeeRecords) {
   for (const {gender, salary, ...employeeRest} of employeeRecords){
-      console.log (employeeRest)
       return employeeRest
   }
 }

@@ -21,31 +21,38 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
- bread:1.50,
- cheese:3.00,
- chips: 1.90,
- milk:0.99,
- orange:2.50,
-} 
+  bread: 1.5,
+  cheese: 3.0,
+  chips: 1.9,
+  milk: 0.99,
+  orange: 2.5,
+};
 
-function calculateTotalPrice({bread,cheese,chips,milk,orange}) {
-let result = bread+cheese+chips+milk+orange;
-return `"Total: € ${result}"`
+function calculateTotalPrice(cartForParty) {
+  let total = 0;
+  for (const [key, value] of Object.entries(cartForParty)) {
+    total += value;
+  }
+  return `Total: € ${total}`;
 }
-console.log(calculateTotalPrice(cartForParty));
+
+// function calculateTotalPrice({ bread, cheese, chips, milk, orange }) {
+//   const result = bread + cheese + chips + milk + orange;
+//   return `Total: € ${result}`;
+// }
+// console.log(calculateTotalPrice(cartForParty));
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  console.assert(calculateTotalPrice.length ===1);
+  console.assert(calculateTotalPrice.length === 1);
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  const actual = calculateTotalPrice(cartForParty);//what should i write here?
-  const expected = "Total: € 9.89";
+  const actual = calculateTotalPrice(cartForParty);
+  const expected = 'Total: € 9.89';
   console.assert(actual === expected);
- 
 }
 
 function test() {

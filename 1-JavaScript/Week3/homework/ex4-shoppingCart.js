@@ -5,15 +5,11 @@ const shoppingCart = ['bananas', 'milk'];
 // ! Function to be tested
 function addToShoppingCart(item) {
 
-    if (shoppingCart.length === 2 ){
+    if (item !==undefined){
         shoppingCart.push(item);
-        if (shoppingCart[2] === undefined){
-            shoppingCart.pop()
-        }
     }
-    else if (shoppingCart.length === 3){
+    if (shoppingCart.length > 3){
         shoppingCart.shift();
-        shoppingCart.push(item);
     }
     return `You bought ${shoppingCart.join(", ")}!`
 }

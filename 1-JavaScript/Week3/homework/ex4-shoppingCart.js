@@ -24,17 +24,14 @@ const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart(parameter) {
-  if (parameter !== undefined ){
-    shoppingCart.push(parameter );}
-   if(shoppingCart.length > 3) {
-     
-     shoppingCart.shift();
-    
-   }
-  
- 
-   const str =`You bought ${shoppingCart.join(',')}!`;
-   return str;
+  if (parameter !== undefined) {
+    shoppingCart.push(parameter);
+  }
+  if (shoppingCart.length > 3) {
+    shoppingCart.shift();
+  }
+
+  return (str = `You bought ${shoppingCart.join(',')}!`);
 }
 addToShoppingCart();
 
@@ -42,11 +39,10 @@ console.log(addToShoppingCart('chocolate'));
 console.log(addToShoppingCart('waffles'));
 console.log(addToShoppingCart('tea'));
 
-
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log(
-    'Test 1: addShoppingCart() called without an argument should leave the shopping cart unchanged'
+    'Test 1: addShoppingCart() called without an argument should leave the shopping cart unchanged.'
   );
   const expected = 'You bought bananas, milk!';
   const actual = addToShoppingCart();

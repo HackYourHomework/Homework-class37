@@ -19,7 +19,7 @@ calculate it!
 function calculateDogAge(age) {
   // TODO complete this function
   let dogAge = age * 7;
-  return 'your doggie is' + dogage + 'years old in dog years!';
+  return 'your doggie is' + dogAge + 'years old in dog years!';
 }
 
 function main() {

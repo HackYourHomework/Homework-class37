@@ -16,7 +16,7 @@ calculate it!
    ages.
 -----------------------------------------------------------------------------*/
 
-<<<<<<< HEAD
+
 function calculateDogAge(number) {
 const age  = number*7 ;
 

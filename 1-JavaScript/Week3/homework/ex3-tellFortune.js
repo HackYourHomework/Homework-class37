@@ -37,18 +37,18 @@ function selectRandomly(array) {
   // TODO complete this function
 
   const rand = Math.floor(Math.random() * array.length);
-  return rand;
+  return array[rand];
 }
 
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
   // TODO complete this function
 
-  return `You will be a ${jobTitles[selectRandomly(jobTitles)]} in ${
-    locations[selectRandomly(locations)]
-  }, 
-    married to ${partnerNames[selectRandomly(partnerNames)]} with ${
-    numKids[selectRandomly(numKids)]
-  } kids.`;
+  return `You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(
+    locations
+  )}, 
+    married to ${selectRandomly(partnerNames)} with ${selectRandomly(
+    numKids
+  )} kids.`;
 }
 
 function main() {
@@ -88,6 +88,8 @@ function main() {
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 }
+
+main();
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {

@@ -31,9 +31,6 @@ randomly select array elements four times inside the `tellFortune` function
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
 
-// This function should take an array as its parameter and return
-// a randomly selected element as its return value.
-<<<<<<< HEAD
 function selectRandomly(array) {
   let randomElement = array[Math.floor(Math.random() *array.length)];
 

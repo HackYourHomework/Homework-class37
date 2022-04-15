@@ -22,7 +22,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
-<<<<<<< HEAD
+
 function giveCompliment(name) {
   const compliments= ["great", "awesome","nice", "beautiful", "strong","powerful", "friendly", "luxury","sweet","perfect" ]
 

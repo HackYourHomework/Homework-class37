@@ -40,8 +40,6 @@ function selectRandomly(array) {
 function tellFortune(numKids , partnerName ,location, jobTitle ) {
 
   return "You will be a "+ selectRandomly( jobTitle)+ " in" + selectRandomly( location)+ ", married to " + selectRandomly(partnerName) + " with " + selectRandomly(numKids) + " kids."
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
 }
 
 function main() {

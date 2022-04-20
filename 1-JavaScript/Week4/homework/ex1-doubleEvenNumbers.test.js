@@ -15,7 +15,6 @@ function doubleEvenNumbers(numbers) {
   const evenNumbers = numbers.filter((number) => {
     return number % 2 === 0;
   });
-  console.log(evenNumbers);
 
   const newNumbers = evenNumbers.map((evenNumber) => {
     return evenNumber * 2;
@@ -29,7 +28,6 @@ function doubleEvenNumbers(numbers) {
   }*/
   return newNumbers;
 }
-console.log(doubleEvenNumbers([1, 2, 3, 4]));
 
 // ! Unit test (using Jest)
 test('doubleEvenNumbers should take the even numbers and double them', () => {

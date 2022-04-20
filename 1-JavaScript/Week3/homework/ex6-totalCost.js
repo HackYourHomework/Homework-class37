@@ -1,4 +1,7 @@
 'use strict';
+
+const { values } = require("lodash");
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-6-total-cost-is
 You want to buy a couple of things from the supermarket to prepare for a party.
@@ -23,14 +26,16 @@ const cartForParty = {
   chips: 1.50,
   cola: 1.90
 };
-function calculateTotalPrice(part) {
+
+function calculateTotalPrice(cartForParty) {
   // TODO replace this comment with your code
-  let sum = 0;
-  for(const price in cartForParty ){
-      sum += cartForParty[price]
+  let total = 0;
+  for(const [key,value] of Object.entries(cartForParty)){
+      total += values;
   }
   return `Total: € ${sum}`;
 }
+
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
@@ -39,15 +44,17 @@ function test1() {
   const actual = calculateTotalPrice.length;
   console.assert(actual === expected);
 }
+
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
   // TODO replace this comment with your code
   const expected = `Total: € 9.15`;
-  const actual = calculateTotalPrice();
+  const actual = calculateTotalPrice( cartForParty);
   console.assert(actual === expected);
   console.log(expected);
   console.log(actual);
 }
+
 function test() {
   test1();
   test2();

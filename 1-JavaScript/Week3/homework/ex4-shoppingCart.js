@@ -21,10 +21,9 @@ function addToShoppingCart( item) {
   // TODO complete this function
   if (item !== undefined){
     shoppingCart.push(item);
-  }
-  if (shoppingCart.length <= 3){ return `You bought ${shoppingCart.join(', ')}!`;
-}
-   else if   (shoppingCart.length > 3) {
+  } if (shoppingCart.length <= 3){ 
+    return `You bought ${shoppingCart.join(', ')}!`;
+    } else if (shoppingCart.length > 3) {
      shoppingCart.shift();
     return `You bought ${shoppingCart.join(', ')}!`;
 }

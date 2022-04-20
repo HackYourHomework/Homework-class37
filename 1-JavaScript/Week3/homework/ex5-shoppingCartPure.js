@@ -14,24 +14,26 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */ shoppingCart, groceryItem) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCart, groceryItem) {
+  
   const newShoppingCart = [...shoppingCart, groceryItem];
-  if (newShoppingCart.length>3){
+  if (newShoppingCart.length > 3){
     return newShoppingCart.slice(newShoppingCart.length -3);
   } else {
   return newShoppingCart;
   }
 }
-// ! Test functions (plain vanilla JavaScript)
+
 function test1() {
   console.log('Test 1: addToShoppingCart should take two parameters');
   console.assert(addToShoppingCart.length === 2);
 }
 function test2() {
   console.log('Test 2: addToShoppingCart should be a pure function');
+
   // A pure function should return the same result when called with
   // identical arguments. It should also no side effects (not tested here).
+  
   const initialCart = ['bananas', 'milk'];
   const result1 = addToShoppingCart(initialCart, 'chocolate');
   const result2 = addToShoppingCart(initialCart, 'chocolate');

@@ -27,17 +27,21 @@ const employeeRecords = [
     salary: 60000,
   },
 ];
+
 // ! Function under test
+
 function filterPrivateData( employeeRecords ) {
   const newEmployeeRecord = employeeRecords.map((Element)=>{
-    const{ gender, salary,...rest} = Element;
-    return rest;
+    const{ name, occupation, email,...rest} = Element;
+    return { name, occupation, email};
   });
   console.log(newEmployeeRecord);
   return newEmployeeRecord;
   // TODO complete this function
 }
+
 // ! Test functions (plain vanilla JavaScript)
+
 function test1() {
   console.log('Test 1: filterPrivateData should take one parameters');
   console.assert(filterPrivateData.length === 1);

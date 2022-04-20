@@ -13,12 +13,12 @@ Let's rewrite it (or _refactor_ it, as experienced developers would call it):
 function doubleEvenNumbers(numbers) {
   // TODO rewrite the function body using `map` and `filter`.
   const evenNumbers = numbers.filter((number) => {
-    return number % 2 === 1;
+    return number % 2 === 0;
   });
+  console.log(evenNumbers);
 
-  const newNumber = numbers.map((number) => {
-    number % 2 === 1;
-    return number * 2;
+  const newNumbers = evenNumbers.map((evenNumber) => {
+    return evenNumber * 2;
   });
 
   /*const newNumbers = [];
@@ -27,14 +27,15 @@ function doubleEvenNumbers(numbers) {
       newNumbers.push(numbers[i] * 2);
     }
   }*/
-  console.log(newNumbers);
+  return newNumbers;
 }
-
-doubleEvenNumbers(numbers);
+console.log(doubleEvenNumbers([1, 2, 3, 4]));
 
 // ! Unit test (using Jest)
 test('doubleEvenNumbers should take the even numbers and double them', () => {
   const actual = doubleEvenNumbers([1, 2, 3, 4]);
   const expected = [4, 8];
   expect(actual).toEqual(expected);
+  console.log(actual);
+  console.log(expected);
 });

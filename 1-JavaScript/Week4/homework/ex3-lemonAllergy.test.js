@@ -34,19 +34,18 @@ function sanitizeFruitBasket(fruitBasket) {
 // ! Unit tests (using Jest)
 describe('sanitizeFruitBasket', () => {
   test('should take two parameters', () => {
-    expect(sanitizeFruitBasket.length).toBe(1);
+    expect(sanitizeFruitBasket).toHaveLength(1);
   });
 
   test('should not modify the original `fruitBasket` array', () => {
     // Save the original contents of the fruit basket
     const originalFruitBasketContents = [...fruitBasket];
-
-    const basketWithoutLemons = sanitizeFruitBasket(fruitBasket);
+    const filteredBasket = sanitizeFruitBasket(fruitBasket);
     expect(fruitBasket).toEqual(originalFruitBasketContents);
   });
 
   test('should return a new array that does not include the unwanted `lemon`', () => {
-    const basketWithoutLemons = ['apple', 'grapefruit', 'banana', 'watermelon'];
-    expect(sanitizeFruitBasket(fruitBasket)).toEqual(basketWithoutLemons);
+    const expectedBasket = ['apple', 'grapefruit', 'banana', 'watermelon'];
+    expect(sanitizeFruitBasket(fruitBasket)).toEqual(expectedBasket);
   });
 });

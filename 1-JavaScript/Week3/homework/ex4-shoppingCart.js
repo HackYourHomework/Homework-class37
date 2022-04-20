@@ -1,4 +1,6 @@
+/* eslint-disable no-unreachable */
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-4-shopping-at-the-supermarket
 
@@ -23,7 +25,15 @@ you have more than 3 items in your shopping cart the first item gets taken out.
 const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
-function addToShoppingCart(/* parameters go here */) {
+function addToShoppingCart(item) {
+  if (item !== undefined) {
+    shoppingCart.push(item);
+  }
+  if (shoppingCart.length > 3) {
+    shoppingCart.shift();
+  }
+
+  return `You bought ${shoppingCart.join(', ')}!`;
   // TODO complete this function
 }
 

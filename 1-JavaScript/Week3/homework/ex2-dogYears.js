@@ -21,7 +21,7 @@ function calculateDogAge(age) {
 
   let dogYears = 7 * age;  
 
-  return ("your doggi is " + dogYears + " years  old in dog years");
+  return ("your doggi is ${dogYears} years  old in dog years");
 }
 
 function main() {

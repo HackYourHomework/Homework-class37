@@ -29,14 +29,14 @@ const cartForParty = {
   water: 4.6
 };
 
-function calculateTotalPrice(price){
+function calculateTotalPrice(cartForParty){
   // TODO replace this comment with your code
   
     let total = 0;
-    for(let price of Object.values(cartForParty)){
-      total += price;
+    for(const [key, value] of Object.entries(cartForParty)){
+      total += value;
     }
-   return `Total: €${total}`;
+   return (`Total: €${total}`);
 }
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

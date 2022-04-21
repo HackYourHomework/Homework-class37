@@ -39,7 +39,7 @@ function computeEarnings(tasks, rate) {
   }, 0);
   console.log(totalDuration);
 
-  return `€${(totalDuration / 60) * rate}`;
+  return `€${((totalDuration / 60) * rate).toFixed(2)}`;
 }
 console.log(computeEarnings(mondayTasks, hourlyRate));
 
@@ -55,5 +55,7 @@ describe('computeEarnings', () => {
     const result = computeEarnings(mondayTasks, hourlyRate);
     const expected = '€187.50';
     expect(result).toBe(expected);
+    console.log(result);
+    console.log(expected);
   });
 });

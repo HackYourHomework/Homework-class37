@@ -33,16 +33,26 @@ const hourlyRate = 25;
 
 function computeEarnings(tasks, ratePerHour) {
   if (
-    tasks.every((task) => task.duration !== undefined && task.duration > 0) &&
-    ratePerHour > 0
+    tasks.every((task) => task.duration !== undefined && task.duration >= 0) &&
+    ratePerHour >= 0
   ) {
-    const totalTaskDuration = tasks.reduce(
-      (total, task) => total + task.duration / 60,
-      0
-    );
-
-    return `€${(totalTaskDuration * ratePerHour).toFixed(2)}`;
+    const taskDurations = tasks.map((task) => task.duration);
+    let totalEarnings = 0;
+    taskDurations.forEach((duration) => {
+      totalEarnings += (duration / 60) * ratePerHour;
+    });
+    return `€${totalEarnings.toFixed(2)}`;
   }
+  // if (
+  //   tasks.every((task) => task.duration !== undefined && task.duration > 0) &&
+  //   ratePerHour > 0
+  // ) {
+  //   const totalTaskDuration = tasks.reduce(
+  //     (total, task) => total + task.duration / 60,
+  //     0
+  //   );
+  //   return `€${(totalTaskDuration * ratePerHour).toFixed(2)}`;
+  // }
 }
 
 // ! Unit tests (using Jest)

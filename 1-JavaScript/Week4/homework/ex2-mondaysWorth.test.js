@@ -32,14 +32,17 @@ const mondayTasks = [
 const hourlyRate = 25;
 
 function computeEarnings(tasks, ratePerHour) {
-  const totalTaskDuration = mondayTasks.reduce(
-    (total, task) => total + task.duration / 60,
-    0
-  );
+  if (
+    tasks.every((task) => task.duration !== undefined && task.duration > 0) &&
+    ratePerHour > 0
+  ) {
+    const totalTaskDuration = tasks.reduce(
+      (total, task) => total + task.duration / 60,
+      0
+    );
 
-  return `€${(totalTaskDuration * ratePerHour).toFixed(2)}`;
-
-  // TODO complete this function
+    return `€${(totalTaskDuration * ratePerHour).toFixed(2)}`;
+  }
 }
 
 // ! Unit tests (using Jest)
@@ -53,6 +56,14 @@ describe('computeEarnings', () => {
   test('should compute the earnings as a formatted Euro amount', () => {
     const result = computeEarnings(mondayTasks, hourlyRate);
     const expected = '€187.50';
+    expect(result).toBe(expected);
+  });
+  test('should be able to be used on any array containing objects with duration properties', () => {
+    const result = computeEarnings(
+      [{ duration: 60 }, { duration: 60 }],
+      hourlyRate
+    );
+    const expected = '€50.00';
     expect(result).toBe(expected);
   });
 });

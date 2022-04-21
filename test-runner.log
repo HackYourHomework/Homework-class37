@@ -1,0 +1,216 @@
+2022-04-20 01:54:32 info: ------------------------------------------------------
+2022-04-20 01:54:32 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 01:54:32 info: ------------------------------------------------------
+2022-04-20 01:54:35 info: All unit tests passed.
+2022-04-20 01:54:39 info: All steps were completed successfully
+2022-04-20 01:58:39 info: ------------------------------------------------------
+2022-04-20 01:58:39 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 01:58:39 info: ------------------------------------------------------
+2022-04-20 01:58:41 info: All unit tests passed.
+2022-04-20 01:58:44 info: All steps were completed successfully
+2022-04-20 03:42:12 info: ------------------------------------------------------
+2022-04-20 03:42:12 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 03:42:12 info: ------------------------------------------------------
+2022-04-20 03:42:15 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (4 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      26 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      27 |   const expected = [4, 8];
+    > 28 |   expect(actual).toEqual(expected);
+         |                  ^
+      29 | });
+      30 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:28:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.56 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-20 03:42:17 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  13:28  error    'numbers' is defined but never used  no-unused-vars
+  15:3   warning  Remove commented-out code            hyf/no-commented-out-code
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2022-04-20 03:46:34 info: ------------------------------------------------------
+2022-04-20 03:46:34 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 03:46:34 info: ------------------------------------------------------
+2022-04-20 03:46:37 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (4 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      27 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      28 |   const expected = [4, 8];
+    > 29 |   expect(actual).toEqual(expected);
+         |                  ^
+      30 | });
+      31 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:29:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.472 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-20 03:46:38 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  15:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-04-20 04:05:35 info: ------------------------------------------------------
+2022-04-20 04:05:35 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 04:05:35 info: ------------------------------------------------------
+2022-04-20 04:05:37 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (1 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    TypeError: Assignment to constant variable.
+
+      22 |   const newNumbers = numbers.filter((num) => num % 2 === 0);
+      23 |   // eslint-disable-next-line no-const-assign
+    > 24 |   newNumbers = newNumbers.map((num) => num * 2);
+         |             ^
+      25 |   return newNumbers;
+      26 | }
+      27 |
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:24:13)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:30:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.48 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-20 04:05:39 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  15:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-04-20 04:06:52 info: Disclaimer turned off
+2022-04-20 04:07:01 info: ------------------------------------------------------
+2022-04-20 04:07:01 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 04:07:01 info: ------------------------------------------------------
+2022-04-20 04:07:04 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (1 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    TypeError: Assignment to constant variable.
+
+      15 |   const newNumbers = numbers.filter((num) => num % 2 === 0);
+      16 |   // eslint-disable-next-line no-const-assign
+    > 17 |   newNumbers = newNumbers.map((num) => num * 2);
+         |             ^
+      18 |   return newNumbers;
+      19 | }
+      20 |
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:17:13)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:23:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.468 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-20 04:10:36 info: ------------------------------------------------------
+2022-04-20 04:10:36 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 04:10:36 info: ------------------------------------------------------
+2022-04-20 04:10:38 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (1 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    TypeError: Assignment to constant variable.
+
+      14 |   // TODO rewrite the function body using `map` and `filter`.
+      15 |   const newNumbers = numbers.filter((num) => num % 2 === 0);
+    > 16 |   newNumbers = newNumbers.map((num) => num * 2);
+         |             ^
+      17 |   return newNumbers;
+      18 | }
+      19 |
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:16:13)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:22:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.503 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-20 04:10:40 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  16:3  error  'newNumbers' is constant  no-const-assign
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-04-20 04:11:55 info: ------------------------------------------------------
+2022-04-20 04:11:55 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-20 04:11:55 info: ------------------------------------------------------
+2022-04-20 04:11:58 info: All unit tests passed.
+2022-04-20 04:12:01 info: All steps were completed successfully
+2022-04-21 11:19:10 info: ------------------------------------------------------
+2022-04-21 11:19:10 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-21 11:19:10 info: ------------------------------------------------------
+2022-04-21 11:19:14 info: All unit tests passed.
+2022-04-21 11:19:19 info: All steps were completed successfully

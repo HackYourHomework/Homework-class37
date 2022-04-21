@@ -456,3 +456,28 @@ Browserslist: caniuse-lite is outdated. Please run:
 2022-04-21 12:36:36 info: --------------------------------------
 2022-04-21 12:36:45 info: All unit tests passed.
 2022-04-21 12:36:55 info: All steps were completed successfully
+2022-04-21 12:45:54 info: -------------------------------------------------
+2022-04-21 12:45:54 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-04-21 12:45:54 info: -------------------------------------------------
+2022-04-21 12:46:04 info: All unit tests passed.
+2022-04-21 12:46:12 info: All steps were completed successfully
+2022-04-21 12:50:50 info: -------------------------------------------------
+2022-04-21 12:50:50 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-04-21 12:50:50 info: -------------------------------------------------
+2022-04-21 12:51:00 info: All unit tests passed.
+2022-04-21 12:51:09 info: All steps were completed successfully
+2022-04-21 12:56:58 info: --------------------------------------
+2022-04-21 12:56:58 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-21 12:56:58 info: --------------------------------------
+2022-04-21 12:57:03 info: All unit tests passed.
+2022-04-21 12:57:07 info: All steps were completed successfully
+2022-04-21 10:12:30 info: ------------------------------------------------------
+2022-04-21 10:12:30 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-21 10:12:30 info: ------------------------------------------------------
+2022-04-21 10:12:40 info: All unit tests passed.
+2022-04-21 10:12:48 info: All steps were completed successfully
+2022-04-21 10:15:14 info: ------------------------------------------------------
+2022-04-21 10:15:14 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-21 10:15:14 info: ------------------------------------------------------
+2022-04-21 10:15:19 info: All unit tests passed.
+2022-04-21 10:15:25 info: All steps were completed successfully

@@ -1,0 +1,18 @@
+2022-04-21 11:05:43 info: ------------------------------------------------------
+2022-04-21 11:05:43 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-21 11:05:43 info: ------------------------------------------------------
+2022-04-21 11:05:49 info: All unit tests passed.
+2022-04-21 11:05:54 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  35:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-04-21 11:18:17 info: Disclaimer turned off
+2022-04-21 11:30:36 info: ------------------------------------------------------
+2022-04-21 11:30:36 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-21 11:30:36 info: ------------------------------------------------------
+2022-04-21 11:30:41 info: All unit tests passed.
+2022-04-21 11:30:47 info: All steps were completed successfully

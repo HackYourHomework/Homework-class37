@@ -1,4 +1,7 @@
 'use strict';
+
+const { includes } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week4#exercise-3-lemon-allergy
 
@@ -26,9 +29,14 @@ const fruitBasket = [
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(/* TODO parameter(s) go here */) {
+function sanitizeFruitBasket(fruits, allergenFruit) {
   // TODO complete this function
+  const newFruitBasket = fruits.filter(
+    (fruit) => !fruit.includes(allergenFruit)
+  );
+  return newFruitBasket;
 }
+console.log(sanitizeFruitBasket(fruitBasket, 'lemon'));
 
 // ! Unit tests (using Jest)
 describe('sanitizeFruitBasket', () => {

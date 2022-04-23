@@ -56,7 +56,5 @@ describe('computeEarnings', () => {
     const result = computeEarnings(mondayTasks, hourlyRate);
     const expected = '€187.50';
     expect(result).toBe(expected);
-    console.log(result);
-    console.log(expected);
   });
 });

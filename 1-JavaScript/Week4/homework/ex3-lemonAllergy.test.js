@@ -27,7 +27,6 @@ const fruitBasket = [
 
 // ! Function under test
 function sanitizeFruitBasket(fruitBasket,fruit) {
-  // TODO complete this function
   const fruitToBeIgnor = fruitBasket.filter(fruit => fruit !== 'lemon')
   return fruitToBeIgnor;
 }

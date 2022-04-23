@@ -2676,3 +2676,8 @@ ex3-lemonAllergy.test.js
 ✖ 1 problem (1 error, 0 warnings)
 
 
+2022-04-23 04:01:23 info: -------------------------------------------------
+2022-04-23 04:01:23 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-04-23 04:01:23 info: -------------------------------------------------
+2022-04-23 04:01:28 info: All unit tests passed.
+2022-04-23 04:01:33 info: All steps were completed successfully

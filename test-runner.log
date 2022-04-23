@@ -2020,3 +2020,195 @@ Ran all test suites matching /ex2-mondaysWorth.test.js/i.
 2022-04-22 12:39:49 info: -------------------------------------------------
 2022-04-22 12:39:54 info: All unit tests passed.
 2022-04-22 12:40:00 info: All steps were completed successfully
+2022-04-23 01:56:02 info: ------------------------------------------------------
+2022-04-23 01:56:02 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-23 01:56:02 info: ------------------------------------------------------
+2022-04-23 01:56:08 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (11 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      23 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      24 |   const expected = [4, 8];
+    > 25 |   expect(actual).toEqual(expected);
+         |                  ^
+      26 | });
+      27 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:25:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        1.105 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-23 01:56:12 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  16:6  warning  Results from `map` are unused. Replace `map` with `forEach`  no-restricted-syntax
+  16:6  error    Results from `map` are unused. Replace `map` with `forEach`  hyf/use-map-result
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2022-04-23 01:58:27 info: ------------------------------------------------------
+2022-04-23 01:58:27 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-23 01:58:27 info: ------------------------------------------------------
+2022-04-23 01:58:32 error: *** Unit Test Error Report ***
+
+console.log
+    undefined
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:20:9)
+
+
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (6 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      23 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      24 |   const expected = [4, 8];
+    > 25 |   expect(actual).toEqual(expected);
+         |                  ^
+      26 | });
+      27 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:25:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.949 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-23 01:58:34 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  16:6  warning  Results from `map` are unused. Replace `map` with `forEach`  no-restricted-syntax
+  16:6  error    Results from `map` are unused. Replace `map` with `forEach`  hyf/use-map-result
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2022-04-23 01:59:30 info: ------------------------------------------------------
+2022-04-23 01:59:30 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-23 01:59:30 info: ------------------------------------------------------
+2022-04-23 01:59:35 info: All unit tests passed.
+2022-04-23 01:59:40 info: All steps were completed successfully
+2022-04-23 02:00:58 info: ------------------------------------------------------
+2022-04-23 02:00:58 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-23 02:00:58 info: ------------------------------------------------------
+2022-04-23 02:01:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (10 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+      Array [
+    +   1,
+    +   2,
+    +   3,
+        4,
+    -   8,
+      ]
+
+      23 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      24 |   const expected = [4, 8];
+    > 25 |   expect(actual).toEqual(expected);
+         |                  ^
+      26 | });
+      27 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:25:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.927 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-23 02:01:06 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  16:6  warning  Results from `map` are unused. Replace `map` with `forEach`  no-restricted-syntax
+  16:6  error    Results from `map` are unused. Replace `map` with `forEach`  hyf/use-map-result
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2022-04-23 02:03:07 info: ------------------------------------------------------
+2022-04-23 02:03:07 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-23 02:03:07 info: ------------------------------------------------------
+2022-04-23 02:03:12 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (6 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      23 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      24 |   const expected = [4, 8];
+    > 25 |   expect(actual).toEqual(expected);
+         |                  ^
+      26 | });
+      27 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:25:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.955 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-23 02:03:15 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  14:9  error  'newNumbers' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-04-23 02:03:47 info: ------------------------------------------------------
+2022-04-23 02:03:47 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-23 02:03:47 info: ------------------------------------------------------
+2022-04-23 02:03:52 info: All unit tests passed.
+2022-04-23 02:03:57 info: All steps were completed successfully

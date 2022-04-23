@@ -32,25 +32,17 @@ const mondayTasks = [
 const hourlyRate = 25;
 
 function computeEarnings(tasks, rate) {
-  // TODO complete this function
-
   const taskDurations = tasks.map((task) => {
     return (task.duration / 60) * rate;
   });
-  console.log(taskDurations);
 
-  const sum = taskDurations.reduce((accumulator, curr) => accumulator + curr);
+  const totalEarning = taskDurations.reduce(
+    (accumulator, curr) => accumulator + curr
+  );
 
-  return `€${sum.toFixed(2)}`;
-
-  /* const totalDuration = tasks.reduce((currentDuration, task) => {
-    return task.duration + currentDuration;
-  }, 0);
-  console.log(totalDuration);
-
-  return `€${((totalDuration / 60) * rate).toFixed(2)}`; */
+  return `€${totalEarning.toFixed(2)}`;
 }
-console.log(computeEarnings(mondayTasks, hourlyRate));
+computeEarnings(mondayTasks, hourlyRate);
 
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {

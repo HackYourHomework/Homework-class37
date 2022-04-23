@@ -2,7 +2,8 @@
 *** ESLint Report ***
 
 ex2-mondaysWorth.test.js
-  39:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  38:3  warning  Remove commented-out code  hyf/no-commented-out-code
 
-✖ 1 problem (0 errors, 1 warning)
+✖ 2 problems (0 errors, 2 warnings)
 

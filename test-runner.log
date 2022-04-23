@@ -1037,3 +1037,251 @@ ex3-lemonAllergy.test.js
 ✖ 2 problems (1 error, 1 warning)
 
 
+2022-04-23 11:46:59 info: -------------------------------------------------
+2022-04-23 11:46:59 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-04-23 11:46:59 info: -------------------------------------------------
+2022-04-23 11:47:07 info: All unit tests passed.
+2022-04-23 11:47:10 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  29:5  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-04-23 11:47:35 info: -------------------------------------------------
+2022-04-23 11:47:35 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-04-23 11:47:35 info: -------------------------------------------------
+2022-04-23 11:47:38 info: All unit tests passed.
+2022-04-23 11:47:40 info: All steps were completed successfully
+2022-04-23 11:52:21 info: -------------------------------------------------
+2022-04-23 11:52:21 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 11:52:21 info: -------------------------------------------------
+2022-04-23 11:52:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (1 ms)
+    ✕ should be able to be used on any array containing objects with duration properties (1 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    TypeError: Cannot read properties of undefined (reading 'toFixed')
+
+      33 |     accEarnings += duration * ratePerHour;
+      34 |   });
+    > 35 |   return `€${totalEarnings.toFixed(2)}`;
+         |                            ^
+      36 |
+      37 |   //   const totalTaskDuration = tasks.reduce(
+      38 |   //     (total, task) => total + task.duration / 60,
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:28)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:53:20)
+
+  ● computeEarnings › should be able to be used on any array containing objects with duration properties
+
+    TypeError: Cannot read properties of undefined (reading 'toFixed')
+
+      33 |     accEarnings += duration * ratePerHour;
+      34 |   });
+    > 35 |   return `€${totalEarnings.toFixed(2)}`;
+         |                            ^
+      36 |
+      37 |   //   const totalTaskDuration = tasks.reduce(
+      38 |   //     (total, task) => total + task.duration / 60,
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:28)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.539 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-04-23 11:52:24 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  37:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-04-23 11:54:01 info: -------------------------------------------------
+2022-04-23 11:54:01 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 11:54:01 info: -------------------------------------------------
+2022-04-23 11:54:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (1 ms)
+    ✕ should be able to be used on any array containing objects with duration properties (1 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    TypeError: Cannot read properties of undefined (reading 'toFixed')
+
+      33 |     accEarnings += duration * ratePerHour;
+      34 |   }, 0);
+    > 35 |   return `€${totalEarnings.toFixed(2)}`;
+         |                            ^
+      36 |
+      37 |   //   const totalTaskDuration = tasks.reduce(
+      38 |   //     (total, task) => total + task.duration / 60,
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:28)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:53:20)
+
+  ● computeEarnings › should be able to be used on any array containing objects with duration properties
+
+    TypeError: Cannot read properties of undefined (reading 'toFixed')
+
+      33 |     accEarnings += duration * ratePerHour;
+      34 |   }, 0);
+    > 35 |   return `€${totalEarnings.toFixed(2)}`;
+         |                            ^
+      36 |
+      37 |   //   const totalTaskDuration = tasks.reduce(
+      38 |   //     (total, task) => total + task.duration / 60,
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:28)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.545 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-04-23 11:54:05 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  37:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-04-23 11:54:50 info: -------------------------------------------------
+2022-04-23 11:54:50 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 11:54:50 info: -------------------------------------------------
+2022-04-23 11:54:52 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (2 ms)
+    ✕ should compute the earnings as a formatted Euro amount (1 ms)
+    ✕ should be able to be used on any array containing objects with duration properties (1 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    TypeError: Cannot read properties of undefined (reading 'toFixed')
+
+      33 |     accEarnings += duration;
+      34 |   }, 0);
+    > 35 |   return `€${totalEarnings.toFixed(2)}`;
+         |                            ^
+      36 |
+      37 |   //   const totalTaskDuration = tasks.reduce(
+      38 |   //     (total, task) => total + task.duration / 60,
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:28)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:53:20)
+
+  ● computeEarnings › should be able to be used on any array containing objects with duration properties
+
+    TypeError: Cannot read properties of undefined (reading 'toFixed')
+
+      33 |     accEarnings += duration;
+      34 |   }, 0);
+    > 35 |   return `€${totalEarnings.toFixed(2)}`;
+         |                            ^
+      36 |
+      37 |   //   const totalTaskDuration = tasks.reduce(
+      38 |   //     (total, task) => total + task.duration / 60,
+
+      at computeEarnings (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:35:28)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.56 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2022-04-23 11:54:54 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  23:33  error    'ratePerHour' is defined but never used  no-unused-vars
+  24:3   warning  Remove commented-out code                hyf/no-commented-out-code
+  37:3   warning  Remove commented-out code                hyf/no-commented-out-code
+
+✖ 3 problems (1 error, 2 warnings)
+
+
+2022-04-23 11:57:16 info: -------------------------------------------------
+2022-04-23 11:57:16 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 11:57:16 info: -------------------------------------------------
+2022-04-23 11:57:19 info: All unit tests passed.
+2022-04-23 11:57:20 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  38:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-04-23 12:02:07 info: -------------------------------------------------
+2022-04-23 12:02:07 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 12:02:07 info: -------------------------------------------------
+2022-04-23 12:02:10 info: All unit tests passed.
+2022-04-23 12:02:11 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  40:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-04-23 12:06:45 info: -------------------------------------------------
+2022-04-23 12:06:45 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 12:06:45 info: -------------------------------------------------
+2022-04-23 12:06:47 info: All unit tests passed.
+2022-04-23 12:06:48 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  37:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  48:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 3 problems (0 errors, 3 warnings)
+
+
+2022-04-23 12:10:19 info: -------------------------------------------------
+2022-04-23 12:10:19 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-04-23 12:10:19 info: -------------------------------------------------
+2022-04-23 12:10:21 info: All unit tests passed.
+2022-04-23 12:10:22 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  24:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  38:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+

@@ -1,0 +1,5 @@
+
+*** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:37:9 - Unknown word (conver)
+ex2-mondaysWorth.test.js:38:14 - Unknown word (conver)

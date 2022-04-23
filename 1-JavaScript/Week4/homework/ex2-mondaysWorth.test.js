@@ -13,7 +13,7 @@ Full description atL https://github.com/HackYourFuture/Homework/tree/main/1-Java
 const mondayTasks = [
   {
     name: 'Daily standup',
-    duration: 30, 
+    duration: 30,
   },
   {
     name: 'Feature discussion',
@@ -34,8 +34,8 @@ const hourlyRate = 25;
 function computeEarnings(tasks, hourlyRate) {
   const taskDuration = tasks.map((task) => (task.duration / 60) * hourlyRate);
   const totalEarn = taskDuration.reduce((total, task) => total + task, 0);
-  const converToDecimal = totalEarn.toFixed(2);
-  return `€${converToDecimal}`;
+  const conversionToDecimal = totalEarn.toFixed(2);
+  return `€${conversionToDecimal}`;
 }
 
 // ! Unit tests (using Jest)

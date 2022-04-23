@@ -21,26 +21,25 @@ const mondayTasks = [
 const hourlyRate = 25;
 
 function computeEarnings(tasks, ratePerHour) {
-  if (
-    tasks.every(
-      (task) => typeof task.duration === 'number' && task.duration >= 0
-    ) &&
-    typeof ratePerHour === 'number' &&
-    ratePerHour >= 0
-  ) {
-    const taskDurationsInHour = tasks.map((task) => task.duration / 60);
-    let totalEarnings = 0;
-    taskDurationsInHour.forEach((duration) => {
-      totalEarnings += duration * ratePerHour;
-    });
-    return `€${totalEarnings.toFixed(2)}`;
-  }
+  // if (
+  //   tasks.every(
+  //     (task) => typeof task.duration === 'number' && task.duration >= 0
+  //   ) &&
+  //   typeof ratePerHour === 'number' &&
+  //   ratePerHour >= 0
+  // )
+  const totalEarnings = tasks
+    .map((task) => (task.duration / 60) * ratePerHour)
+    .reduce((accEarnings, earnings) => accEarnings + earnings, 0);
+  return `€${totalEarnings.toFixed(2)}`;
 
-  //   const totalTaskDuration = tasks.reduce(
-  //     (total, task) => total + task.duration / 60,
-  //     0
-  //   );
-  //   return `€${(totalTaskDuration * ratePerHour).toFixed(2)}`;
+  //Solution 2
+
+  // const totalTaskDuration = tasks.reduce(
+  //   (total, task) => total + task.duration / 60,
+  //   0
+  // );
+  // return `€${(totalTaskDuration * ratePerHour).toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)

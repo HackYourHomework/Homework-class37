@@ -35,7 +35,7 @@ function computeEarnings(tasks, rate) {
   const getDuration = tasks.map((item) => (item.duration / 60) * rate);
   const sum = getDuration.reduce((total, amount) => total + amount);
   return `€${sum.toFixed(2)}`;
-  // TODO complete this function
+ 
 }
 
 // ! Unit tests (using Jest)

@@ -31,9 +31,10 @@ const cartForParty = {
 
 function calculateTotalPrice(forParty) {
   let amount = 0
-for (const item in forParty ){
- amount +=forParty[item]
+for (const [item,value] of Object.entries(forParty) ){
+ amount +=value
 }
+
 
   return "Total: € "+amount 
 }

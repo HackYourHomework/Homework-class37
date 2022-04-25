@@ -33,6 +33,7 @@ const hourlyRate = 25;
 
 function computeEarnings(tasks, rate) {
   
+  // eslint-disable-next-line new-cap
   const euro = Intl.NumberFormat("en", {
     style: "currency",
     currency: "EUR",

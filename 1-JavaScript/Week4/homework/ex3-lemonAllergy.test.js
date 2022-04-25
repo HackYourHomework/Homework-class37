@@ -26,9 +26,9 @@ const fruitBasket = [
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(fruitBasket, fruit) {
-  return fruitBasket.filter(function(element){
-    return element!==fruit;
+function sanitizeFruitBasket(fruitBasket, fruitOut) {
+  return fruitBasket.filter(function(fruit){
+    return fruit!==fruitOut;
   })
  }
 
@@ -45,7 +45,7 @@ describe('sanitizeFruitBasket', () => {
   });
 
   test('should return a new array that does not include the unwanted `lemon`', () => {
-    const expectedBasket = ['apple', 'grapefruit', 'banana', 'watermelon']
+    const expectedBasket = ['apple', 'grapefruit', 'banana', 'watermelon'];
     expect(sanitizeFruitBasket(fruitBasket, 'lemon')).toEqual(expectedBasket);
   });
 });

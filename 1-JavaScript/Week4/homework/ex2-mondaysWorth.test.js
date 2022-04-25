@@ -31,14 +31,16 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(mondayTasks, hourlyRate) {
+function computeEarnings(tasks, rate) {
+  
   const euro = Intl.NumberFormat("en", {
     style: "currency",
     currency: "EUR",
 });
-  const durationsTotal= mondayTasks.map(item => item.duration).reduce((previous, current) => previous + current, 0);
-  const totalHours= durationsTotal/60;
-  const result = euro.format(hourlyRate*totalHours);
+  
+  const durationsTotal= tasks.map(task => task.duration).reduce((previous, current) => previous + current, 0);
+  const totalHours= durationsTotal / 60;
+  const result = euro.format(rate*totalHours);
   return result;
 }
 

@@ -1,4 +1,8 @@
 'use strict';
+
+const { rest } = require('lodash');
+const { resolveConfig } = require('prettier');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-7-mind-the-privacy
 
@@ -30,8 +34,15 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function filterPrivateData(employeeRecords) {
+  //using map() to create a new array
+  const newEmployeeRecords = employeeRecords.map((element) => {
+    const { gender, salary, ...rest } = element;
+
+    return rest;
+  });
+  console.log(newEmployeeRecords);
+  return newEmployeeRecords;
 }
 
 // ! Test functions (plain vanilla JavaScript)

@@ -1,4 +1,7 @@
 'use strict';
+
+const { get } = require('systeminformation');
+
 /*------------------------------------------------------------------------------
 Full description atL https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week4#exercise-2-whats-your-monday-worth
 
@@ -31,8 +34,12 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(mondayTasks, hourlyRate) {
+  const getTask = mondayTasks
+    .map((task) => (task.duration / 60) * hourlyRate)
+    .reduce((total, task) => (total += task));
+  const totalEuro = { style: 'currency', currency: 'EUR' };
+  return new Intl.NumberFormat('en-US', totalEuro).format(getTask);
 }
 
 // ! Unit tests (using Jest)

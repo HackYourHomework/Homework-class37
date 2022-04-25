@@ -1,0 +1,173 @@
+2022-04-25 02:12:24 info: ------------------------------------------------------
+2022-04-25 02:12:24 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-25 02:12:24 info: ------------------------------------------------------
+2022-04-25 02:12:28 error: *** Unit Test Error Report ***
+
+console.log
+    [ 2, 4 ]
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:19:9)
+
+
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (29 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      32 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      33 |   const expected = [4, 8];
+    > 34 |   expect(actual).toEqual(expected);
+         |                  ^
+      35 | });
+      36 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:34:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.864 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-25 02:12:33 error: *** Spell Checker Report ***
+
+
+2022-04-25 02:16:35 info: Disclaimer turned off
+2022-04-25 02:16:43 info: ------------------------------------------------------
+2022-04-25 02:16:43 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-25 02:16:43 info: ------------------------------------------------------
+2022-04-25 02:16:46 error: *** Unit Test Error Report ***
+
+console.log
+    [ 6, 12 ]
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:22:9)
+
+
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (39 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      36 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      37 |   const expected = [4, 8];
+    > 38 |   expect(actual).toEqual(expected);
+         |                  ^
+      39 | });
+      40 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:38:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.681 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-25 02:16:49 error: *** Spell Checker Report ***
+
+
+2022-04-25 02:17:17 info: ------------------------------------------------------
+2022-04-25 02:17:17 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-25 02:17:17 info: ------------------------------------------------------
+2022-04-25 02:17:21 error: *** Unit Test Error Report ***
+
+console.log
+    [ 4, 8 ]
+
+      at doubleEvenNumbers (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:22:9)
+
+
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (29 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      36 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      37 |   const expected = [4, 8];
+    > 38 |   expect(actual).toEqual(expected);
+         |                  ^
+      39 | });
+      40 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:38:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.658 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-25 02:17:24 error: *** Spell Checker Report ***
+
+
+2022-04-25 02:33:47 info: ------------------------------------------------------
+2022-04-25 02:33:47 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-25 02:33:47 info: ------------------------------------------------------
+2022-04-25 02:33:53 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (8 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [4, 8]
+    Received: undefined
+
+      26 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      27 |   const expected = [4, 8];
+    > 28 |   expect(actual).toEqual(expected);
+         |                  ^
+      29 | });
+      30 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:28:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        1.078 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-04-25 02:33:58 error: *** Spell Checker Report ***
+
+
+2022-04-25 02:35:33 info: ------------------------------------------------------
+2022-04-25 02:35:33 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-04-25 02:35:33 info: ------------------------------------------------------
+2022-04-25 02:35:39 info: All unit tests passed.
+2022-04-25 02:35:46 error: *** Spell Checker Report ***
+
+

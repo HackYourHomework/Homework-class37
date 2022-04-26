@@ -1312,3 +1312,64 @@ Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 2022-04-26 01:57:25 error: *** Spell Checker Report ***
 
 
+2022-04-26 11:48:04 info: -------------------------------------------------
+2022-04-26 11:48:04 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-04-26 11:48:04 info: -------------------------------------------------
+2022-04-26 11:48:07 info: All unit tests passed.
+2022-04-26 11:48:11 error: *** Spell Checker Report ***
+
+
+2022-04-26 12:21:21 info: ------------------------------------------
+2022-04-26 12:21:21 info: >>> Running Unit Test `ex4-observable` <<<
+2022-04-26 12:21:21 info: ------------------------------------------
+2022-04-26 12:21:24 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  createObservable
+    √ should exist and be a function (2 ms)
+    √ should return an object with `subscribe` and a `notify` function properties
+    × should notify all subscribers of any notification (1 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    TypeError: name.subscriber is not a function
+
+      22 |     notify: function (message) {
+      23 |       const allSubscribers = subscribers.map((name)=>{
+    > 24 |         return name.subscriber(message)
+         |                     ^
+      25 |       })
+      26 |     },
+      27 |   };
+
+      at map (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.js:24:21)
+          at Array.map (<anonymous>)
+      at Object.notify (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.js:23:42)
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:27:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.668 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2022-04-26 12:21:28 error: *** Spell Checker Report ***
+
+
+2022-04-26 12:36:17 info: ------------------------------------------
+2022-04-26 12:36:17 info: >>> Running Unit Test `ex4-observable` <<<
+2022-04-26 12:36:17 info: ------------------------------------------
+2022-04-26 12:36:20 info: All unit tests passed.
+2022-04-26 12:36:23 error: *** Spell Checker Report ***
+
+
+2022-04-26 12:36:55 info: ------------------------------------------
+2022-04-26 12:36:55 info: >>> Running Unit Test `ex4-observable` <<<
+2022-04-26 12:36:55 info: ------------------------------------------
+2022-04-26 12:36:58 info: All unit tests passed.
+2022-04-26 12:37:03 error: *** Spell Checker Report ***
+
+

@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-5-improved-shopping-at-the-supermarket
 
@@ -16,8 +17,15 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCartArr,groceryItem) {
+const newShoppingCart=[...shoppingCartArr];
+if (groceryItem !== undefined) {
+  newShoppingCart.push(groceryItem);
+  if (newShoppingCart.length > 3) {
+    newShoppingCart.shift();
+  }
+}
+return newShoppingCart;
 }
 
 // ! Test functions (plain vanilla JavaScript)

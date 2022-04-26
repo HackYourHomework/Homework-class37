@@ -30,8 +30,23 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function filterPrivateData(employeeRecordsArr) {
+  if (employeeRecordsArr!==undefined){
+    /*
+    const employeePublicData=[];
+ for (let employeeData of employeeRecordsArr)
+ {
+  const {name,occupation,email}=employeeData;
+  employeePublicData.push({name,occupation,email});
+ }*/
+ const employeePublicData=employeeRecordsArr.map((elements)=> {
+  const {name,occupation,email}=elements;
+  return  {name,occupation,email};
+ });
+
+return employeePublicData;
+  }
+  
 }
 
 // ! Test functions (plain vanilla JavaScript)

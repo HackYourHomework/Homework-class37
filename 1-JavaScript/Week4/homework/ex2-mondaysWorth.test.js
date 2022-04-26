@@ -33,9 +33,8 @@ const hourlyRate = 25;
 
 function computeEarnings(tasks, hourlyRate) {
   const taskDuration = tasks.map((task) => (task.duration / 60) * hourlyRate);
-  const totalEarn = taskDuration.reduce((total, task) => total + task, 0);
-  const conversionToDecimal = totalEarn.toFixed(2);
-  return `€${conversionToDecimal}`;
+  const totalEarn = taskDuration.reduce((total, task) => total + task, 0).toFixed(2);
+  return `€${totalEarn}`;
 }
 
 // ! Unit tests (using Jest)

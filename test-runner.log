@@ -1373,3 +1373,114 @@ Ran all test suites matching /ex4-observable.test.js/i.
 2022-04-26 12:37:03 error: *** Spell Checker Report ***
 
 
+2022-04-26 12:47:18 info: --------------------------------------
+2022-04-26 12:47:18 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 12:47:18 info: --------------------------------------
+2022-04-26 12:47:22 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q3: What tooltip appears when hovering over the third debug button?
+✕ wallet q4: What is displayed in the console?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\Ba2oosh\OneDrive\Desktop\New folder\Homework-class37\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-04-26 12:47:25 error: *** Spell Checker Report ***
+
+
+2022-04-26 01:20:13 info: --------------------------------------
+2022-04-26 01:20:13 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 01:20:13 info: --------------------------------------
+2022-04-26 01:20:17 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q3: What tooltip appears when hovering over the third debug button?
+✕ wallet q4: What is displayed in the console?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\Ba2oosh\OneDrive\Desktop\New folder\Homework-class37\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-04-26 01:20:21 error: *** Spell Checker Report ***
+
+
+2022-04-26 01:22:43 info: --------------------------------------
+2022-04-26 01:22:43 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 01:22:43 info: --------------------------------------
+2022-04-26 01:22:46 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q3: What tooltip appears when hovering over the third debug button?
+✕ wallet q4: What is displayed in the console?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\Ba2oosh\OneDrive\Desktop\New folder\Homework-class37\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-04-26 01:22:50 error: *** Spell Checker Report ***
+
+
+2022-04-26 01:28:17 info: --------------------------------------
+2022-04-26 01:28:17 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 01:28:17 info: --------------------------------------
+2022-04-26 01:28:20 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q3: What tooltip appears when hovering over the third debug button?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\Ba2oosh\OneDrive\Desktop\New folder\Homework-class37\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-04-26 01:28:24 error: *** Spell Checker Report ***
+
+
+2022-04-26 01:36:32 info: --------------------------------------
+2022-04-26 01:36:32 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 01:36:32 info: --------------------------------------
+2022-04-26 01:36:35 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\Ba2oosh\OneDrive\Desktop\New folder\Homework-class37\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-04-26 01:36:39 error: *** Spell Checker Report ***
+
+
+2022-04-26 01:37:57 info: --------------------------------------
+2022-04-26 01:37:57 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 01:37:57 info: --------------------------------------
+2022-04-26 01:38:00 error: *** Unit Test Error Report ***
+
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\Ba2oosh\OneDrive\Desktop\New folder\Homework-class37\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-04-26 01:38:05 error: *** Spell Checker Report ***
+
+
+2022-04-26 01:39:35 info: --------------------------------------
+2022-04-26 01:39:35 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-04-26 01:39:35 info: --------------------------------------
+2022-04-26 01:39:38 info: All unit tests passed.
+2022-04-26 01:39:41 error: *** Spell Checker Report ***
+
+

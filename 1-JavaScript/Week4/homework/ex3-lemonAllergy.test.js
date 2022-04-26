@@ -11,8 +11,8 @@ const fruitBasket = [
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(fruitBasket, fruitToFilterOut) {
-  return fruitBasket.filter((fruit) => fruit !== fruitToFilterOut);
+function sanitizeFruitBasket(fruits, fruitToFilterOut) {
+  return fruits.filter((fruit) => fruit !== fruitToFilterOut);
 }
 
 // ! Unit tests (using Jest)

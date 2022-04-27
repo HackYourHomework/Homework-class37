@@ -26,8 +26,8 @@ const fruitBasket = [
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(fruitBaskets, allergicFruit) {
-  const newArray = fruitBaskets.filter((fruit) => fruit !== allergicFruit);
+function sanitizeFruitBasket(fruitInsideBasket, allergicFruit) {
+  const newArray = fruitInsideBasket.filter((fruit) => fruit !== allergicFruit);
   return newArray;
 }
 

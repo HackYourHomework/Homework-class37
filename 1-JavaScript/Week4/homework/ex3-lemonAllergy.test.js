@@ -28,7 +28,7 @@ const fruitBasket = [
 
 // ! Function under test
 function sanitizeFruitBasket(fruits, allergenFruit) {
-  return fruits.filter((fruit) => !fruit.includes(allergenFruit));
+  return fruits.filter((fruit) => fruit !== allergenFruit);
 }
 
 // ! Unit tests (using Jest)
@@ -41,7 +41,7 @@ describe('sanitizeFruitBasket', () => {
     // Save the original contents of the fruit basket
     const originalFruitBasketContents = [...fruitBasket];
     sanitizeFruitBasket(fruitBasket, 'lemon');
-    expect(fruitBasket).toEqual(originalFruitBasketContents);
+    expect(originalFruitBasketContents).toEqual(fruitBasket);
   });
 
   test('should return a new array that does not include the unwanted `lemon`', () => {

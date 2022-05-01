@@ -18,8 +18,32 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  books.forEach();
-  // TODO your code goes in here, return the ul element
+  const ulEl = document.createElement('ul');
+  ulEl.style.display = 'flex';
+  ulEl.style.justifyContent = 'space-evenly';
+  ulEl.style.listStyle = 'none';
+
+  books.forEach((book) => {
+    const liEl = document.createElement('li');
+    liEl.style.display = 'inline';
+    liEl.style.padding = '20';
+    liEl.style.marginRight = '40';
+    const bookTitle = document.createElement('p');
+    bookTitle.textContent = book.title + '-' + book.author;
+    liEl.appendChild(bookTitle);
+    const imgEl = document.createElement('img');
+    imgEl.height = 300;
+    imgEl.width = 200;
+    imgEl.src = book.url;
+    liEl.appendChild(imgEl);
+    ulEl.appendChild(liEl);
+    if (book.alreadyRead) {
+      liEl.style.backgroundColor = 'green';
+    } else {
+      liEl.style.backgroundColor = 'red';
+    }
+  });
+  return ulEl;
 }
 
 function main() {
@@ -29,18 +53,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
+      url: './assets/the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
+      url: './assets/the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
+      url: './assets/the_pragmatic_programmer.jpg',
     },
   ];
 

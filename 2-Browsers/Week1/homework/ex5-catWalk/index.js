@@ -30,22 +30,23 @@ function catWalk() {
     currentLeft > window.innerWidth - imgEl.width
   ) {
     imgEl.style.left = '0px';
+  } else if (
+    imgEl.src ===
+    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'
+  ) {
+    imgEl.style.left = currentLeft + 'px';
   } else {
     imgEl.style.left = currentLeft + 10 + 'px';
   }
 
-  if (
-    currentLeft <= window.innerWidth / 2 &&
-    currentLeft >= (window.innerWidth - imgEl.width) / 2
-  ) {
+  if (currentLeft === Math.trunc((window.innerWidth - imgEl.width) / 20) * 10) {
+    imgEl.src =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+    imgEl.alt = 'Cat dancing';
     setTimeout(() => {
-      imgEl.src =
-        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-      imgEl.alt = 'Cat dancing';
+      imgEl.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      imgEl.alt = 'Cat walking';
     }, 5000);
-
-    imgEl.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-    imgEl.alt = 'Cat walking';
   }
 }
 setInterval(catWalk, 50);

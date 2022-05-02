@@ -7,8 +7,27 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
   second). Use `setInterval()` to make sure the time stays current.
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
-function addCurrentTime() {
-  // TODO complete this function
+
+// TO add zero in front of numbers if the number < 10 (credits: W3school)
+function checkTime(i) {
+  if (i < 10) { i = "0" + i }
+  return i;
 }
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
+
+function addCurrentTime() {
+  const today = new Date();
+  const hour = today.getHours();
+  const minutes = checkTime(today.getMinutes());
+  const seconds = checkTime(today.getSeconds());
+
+  const time = document.querySelector('.time');
+
+  time.textContent = hour + ':' + minutes + ':' + seconds;
+}
+setInterval(addCurrentTime, 1000);
+window.onload = () => {
+  addCurrentTime();
+}
+
+

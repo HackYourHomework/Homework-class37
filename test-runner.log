@@ -283,3 +283,10 @@ Ran all test suites matching /ex3-hijackLogo.test.js/i.
 2022-05-02 10:26:53 error: *** Spell Checker Report ***
 
 
+2022-05-02 11:47:34 info: --------------------------------------------
+2022-05-02 11:47:34 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:47:34 info: --------------------------------------------
+2022-05-02 11:47:45 info: All unit tests passed.
+2022-05-02 11:47:48 error: *** Spell Checker Report ***
+
+

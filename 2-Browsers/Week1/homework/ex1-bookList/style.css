@@ -1,17 +1,1 @@
 /* Write your style here */
-#booklist {
-  width: 100vw;
-  height: 100vh;
-}
-.green {
-  width: 25vw;
-  height: 25vh;
-  background-color: green;
-  margin: 2vw;
-}
-.red {
-  width: 25vw;
-  height: 25vh;
-  background-color: red;
-  margin: 2vw;
-}

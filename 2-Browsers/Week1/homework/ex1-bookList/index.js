@@ -1,14 +1,14 @@
 function createBookList(books) {
   const ulEl = document.createElement('ul');
   ulEl.style.display = 'flex';
-  ulEl.style.justifyContent = 'space-evenly';
   ulEl.style.listStyle = 'none';
+  ulEl.style.padding = '15px';
 
   books.forEach((book) => {
     const liEl = document.createElement('li');
     liEl.style.display = 'inline';
-    liEl.style.padding = '20';
-    liEl.style.marginRight = '40';
+    liEl.style.padding = '20px';
+    liEl.style.marginRight = '40px';
     const bookTitle = document.createElement('p');
     bookTitle.textContent = book.title + '-' + book.author;
     liEl.appendChild(bookTitle);

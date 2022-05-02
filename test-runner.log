@@ -665,3 +665,8 @@ ex4-whatsTheTime/index.js
 2022-05-02 11:33:01 info: --------------------------------------------
 2022-05-02 11:33:09 info: All unit tests passed.
 2022-05-02 11:33:13 info: All steps were completed successfully
+2022-05-02 11:49:47 info: --------------------------------------------
+2022-05-02 11:49:47 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:49:47 info: --------------------------------------------
+2022-05-02 11:49:54 info: All unit tests passed.
+2022-05-02 11:49:59 info: All steps were completed successfully

@@ -10,7 +10,11 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 function addCurrentTime() {
   const today = new Date();
 
-  let hour = today.getHours();
+  let time = today.toTimeString();
+  time = time.split(' ')[0];
+
+  //below is my second way of solving this exercise but I like the above solution!
+  /*let hour = today.getHours();
   let minute = today.getMinutes();
   let second = today.getSeconds();
   if (hour < 10) {
@@ -22,7 +26,7 @@ function addCurrentTime() {
   if (second < 10) {
     second = `0${second}`;
   }
-  const time = hour + ':' + minute + ':' + second;
+  const time = hour + ':' + minute + ':' + second; */
   console.log(time);
   return time;
 }

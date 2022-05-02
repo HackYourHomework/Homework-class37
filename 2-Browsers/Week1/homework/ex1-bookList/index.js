@@ -19,9 +19,14 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 
 function createBookList(books) {
   const bookList = document.createElement('ul');
-
+  bookList.style.listStyle = 'none';
+  bookList.style.display = 'flex';
+  bookList.style.flexWrap = 'wrap';
   books.forEach((book, i) => {
     const bookListItems = document.createElement('li');
+    bookListItems.style.margin = '20px';
+    bookListItems.style.padding = '15px';
+    bookListItems.style.minWidth = '22%';
     const newParagraph = document.createElement('p');
     newParagraph.textContent = `${book.title} by ${book.author}`;
     const image = document.createElement('img');
@@ -42,6 +47,7 @@ function createBookList(books) {
 
     image.src = `./assets/${coverImage[i]}`;
     image.alt = `&{books.title}`;
+    image.style.width = '185px';
   });
 
   return bookList;

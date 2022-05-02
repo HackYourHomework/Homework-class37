@@ -35,6 +35,7 @@ function createBookList(books) {
     imgEl.height = 300;
     imgEl.width = 200;
     imgEl.src = book.url;
+    imgEl.alt = book.title;
     liEl.appendChild(imgEl);
     ulEl.appendChild(liEl);
     if (book.alreadyRead) {

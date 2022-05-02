@@ -28,8 +28,8 @@ function createBookList(books) {
     const liList = document.createElement('li');
 
     liList.style.display = 'inline';
-    liList.style.padding = '20';
-    liList.style.marginRight = '40';
+    liList.style.padding = '20px';
+    liList.style.marginRight = '40px';
 
     const bookDefinition = document.createElement('p');
     bookDefinition.textContent = book.title + "-" + book.author;
@@ -37,7 +37,7 @@ function createBookList(books) {
 
     const imgbook = document.createElement('img');
 
-    imgbook.height = 200;
+    imgbook.height = 350;
     imgbook.width = 200;
 
     imgbook.src = book.url;

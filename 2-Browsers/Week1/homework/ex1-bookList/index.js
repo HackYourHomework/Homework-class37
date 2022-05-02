@@ -10,7 +10,7 @@ function createBookList(books) {
     liEl.style.padding = '20px';
     liEl.style.marginRight = '40px';
     const bookTitle = document.createElement('p');
-    bookTitle.textContent = book.title + '-' + book.author;
+    bookTitle.textContent = `${book.title} - ${book.author}`;
     liEl.appendChild(bookTitle);
     const imgEl = document.createElement('img');
     imgEl.height = 300;

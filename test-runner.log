@@ -670,3 +670,46 @@ ex4-whatsTheTime/index.js
 2022-05-02 11:49:47 info: --------------------------------------------
 2022-05-02 11:49:54 info: All unit tests passed.
 2022-05-02 11:49:59 info: All steps were completed successfully
+2022-05-02 12:49:57 info: ---------------------------------------
+2022-05-02 12:49:57 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-05-02 12:49:57 info: ---------------------------------------
+2022-05-02 12:50:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    √ HTML should be syntactically valid (103 ms)
+    × should have all TODO comments removed (1 ms)
+    √ should use `setInterval()` and/or `setTimeout()`
+    √ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    √ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● catWalk › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.577 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2022-05-02 12:51:18 info: ---------------------------------------
+2022-05-02 12:51:18 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-05-02 12:51:18 info: ---------------------------------------
+2022-05-02 12:51:24 info: All unit tests passed.
+2022-05-02 12:51:29 info: All steps were completed successfully

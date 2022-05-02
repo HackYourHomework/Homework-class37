@@ -589,3 +589,79 @@ ex3-hijackLogo.js:11:49 - Unknown word (Xdpd)
 
 ex3-hijackLogo.js:11:49 - Unknown word (Xdpd)
 
+2022-05-02 11:13:03 info: --------------------------------------------
+2022-05-02 11:13:03 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:13:03 info: --------------------------------------------
+2022-05-02 11:13:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (5.428 s)
+  whatsTheTime
+    √ HTML should be syntactically valid (97 ms)
+    × should have all TODO comments removed (2 ms)
+    √ should use `setInterval()`
+    √ should not call `setInterval()` more than once (2008 ms)
+    √ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    √ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        5.535 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2022-05-02 11:13:13 error: *** ESLint Report ***
+
+ex4-whatsTheTime/index.js
+  11:7  warning  'today' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  12:7  warning  'time' is never reassigned. Use 'const' instead   no-autofix/prefer-const
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-05-02 11:13:47 info: --------------------------------------------
+2022-05-02 11:13:47 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:13:47 info: --------------------------------------------
+2022-05-02 11:13:55 info: All unit tests passed.
+2022-05-02 11:13:57 error: *** ESLint Report ***
+
+ex4-whatsTheTime/index.js
+  11:7  warning  'today' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  12:7  warning  'time' is never reassigned. Use 'const' instead   no-autofix/prefer-const
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-05-02 11:20:30 info: --------------------------------------------
+2022-05-02 11:20:30 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:20:30 info: --------------------------------------------
+2022-05-02 11:20:38 info: All unit tests passed.
+2022-05-02 11:20:42 info: All steps were completed successfully
+2022-05-02 11:24:49 info: --------------------------------------------
+2022-05-02 11:24:49 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:24:49 info: --------------------------------------------
+2022-05-02 11:24:57 info: All unit tests passed.
+2022-05-02 11:25:01 info: All steps were completed successfully
+2022-05-02 11:33:01 info: --------------------------------------------
+2022-05-02 11:33:01 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-02 11:33:01 info: --------------------------------------------
+2022-05-02 11:33:09 info: All unit tests passed.
+2022-05-02 11:33:13 info: All steps were completed successfully

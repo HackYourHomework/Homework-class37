@@ -28,7 +28,6 @@ let moveRight = 0;
 let hasDanced = true;
 function catWalk() {
   const screenWidth = window.innerWidth;
-  console.log(screenWidth);
 
   moveRight += 10;
   catImg.style.left = moveRight + 'px';

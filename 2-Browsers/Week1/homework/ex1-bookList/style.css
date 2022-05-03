@@ -1,1 +1,15 @@
 /* Write your style here */
+ul {
+    display: flex;
+    gap: 120px;
+    list-style: none;
+};
+
+li {
+    padding: 40px;
+    margin: 50px;
+}
+
+img {
+    width: 170px;
+}

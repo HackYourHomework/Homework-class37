@@ -1,0 +1,23 @@
+{
+  "node": "v16.13.0",
+  "system": {
+    "manufacturer": "Apple Inc.",
+    "model": "MacBookPro12,1"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i5-5257U",
+    "speed": 2.7
+  },
+  "memory": "8 GB",
+  "osInfo": {
+    "platform": "darwin",
+    "distro": "macOS",
+    "release": "12.3"
+  },
+  "vscodeInfo": {
+    "version": "",
+    "extensions": [],
+    "userSettings": {}
+  }
+}

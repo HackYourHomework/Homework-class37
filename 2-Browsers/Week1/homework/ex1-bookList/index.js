@@ -17,8 +17,43 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 -----------------------------------------------------------------------------*/
 //cspell: enable
 
+const getImages = [
+  "./assets/the_design_of_everyday_things.jpg",
+  "./assets/the_most_human_human.jpg",
+  "./assets/the_pragmatic_programmer.jpg",
+];
+
+let imageIndex = 0;
+
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const createUlElement = document.createElement("ul");
+  createUlElement.classList.add("ul-flex");
+
+  books.forEach((book) => {
+    const createList = document.createElement("li");
+    createList.classList.add("li");
+
+    const createParagraph = document.createElement("p");
+    createParagraph.textContent = `${book.title} - ${book.author}`;
+
+    const createImgElement = document.createElement("img");
+    createImgElement.classList.add("image");
+    createImgElement.src = "./assets/the_design_of_everyday_things.jpg";
+    createImgElement.alt = "book cover";
+    createImgElement.src = getImages[imageIndex];
+    imageIndex++
+
+    if (book.alreadyRead === true) {
+      createList.style.background = "green";
+    } else {
+      createList.style.background = "red";
+    }
+
+    createList.append(createParagraph, createImgElement);
+    createUlElement.appendChild(createList);
+  })
+
+  return createUlElement;
 }
 
 function main() {
@@ -42,7 +77,7 @@ function main() {
       alreadyRead: true,
     },
   ];
-
+ 
   const ulElement = createBookList(myBooks);
   document.querySelector('#bookList').appendChild(ulElement);
 }

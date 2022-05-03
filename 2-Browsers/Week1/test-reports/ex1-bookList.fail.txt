@@ -21,9 +21,9 @@ Command failed: npx jest ex1-bookList.test.js --colors
 
  FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
   Generated HTML
-    ✕ HTML should be syntactically valid (72 ms)
+    ✕ HTML should be syntactically valid (70 ms)
     ✓ should have all TODO comments removed
-    ✓ should contain a <ul> that is a child of <div id="bookList"> (1 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList">
     ✓ should contain a <ul> with 3 <li> elements (1 ms)
     ✓ should contain an <li> with title and author for each book of the `myBooks` array (1 ms)
     ✓ should contain an <img> element for each book
@@ -55,5 +55,5 @@ Command failed: npx jest ex1-bookList.test.js --colors
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 5 passed, 6 total
 Snapshots:   0 total
-Time:        1.753 s, estimated 2 s
+Time:        1.765 s, estimated 2 s
 Ran all test suites matching /ex1-bookList.test.js/i.

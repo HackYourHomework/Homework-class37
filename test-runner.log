@@ -1765,3 +1765,23 @@ Ran all test suites matching /ex5-catWalk.test.js/i.
 2022-05-03 12:50:05 info: ---------------------------------------
 2022-05-03 12:50:18 info: All unit tests passed.
 2022-05-03 12:50:27 info: All steps were completed successfully
+2022-05-03 01:32:29 info: --------------------------------------------
+2022-05-03 01:32:29 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-03 01:32:29 info: --------------------------------------------
+2022-05-03 01:32:44 info: All unit tests passed.
+2022-05-03 01:32:50 info: All steps were completed successfully
+2022-05-03 12:12:59 info: ---------------------------------------
+2022-05-03 12:12:59 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-05-03 12:12:59 info: ---------------------------------------
+2022-05-03 12:13:15 info: All unit tests passed.
+2022-05-03 12:13:23 info: All steps were completed successfully
+2022-05-03 12:20:04 info: --------------------------------------------
+2022-05-03 12:20:04 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-03 12:20:04 info: --------------------------------------------
+2022-05-03 12:20:18 info: All unit tests passed.
+2022-05-03 12:20:24 info: All steps were completed successfully
+2022-05-03 01:01:42 info: ----------------------------------------
+2022-05-03 01:01:42 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-05-03 01:01:42 info: ----------------------------------------
+2022-05-03 01:01:58 info: All unit tests passed.
+2022-05-03 01:02:07 info: All steps were completed successfully

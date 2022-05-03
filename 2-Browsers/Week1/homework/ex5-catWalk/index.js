@@ -17,7 +17,7 @@ function catWalk() {
     imgEl.style.left = currentLeft + 10 + 'px';
   }
 
-  if (currentLeft === Math.trunc(middleOfTheScreen / 10) * 10) {
+  if (currentLeft === Math.round(middleOfTheScreen / 10) * 10) {
     imgEl.src = dancingCat;
     imgEl.alt = 'Cat dancing';
     setTimeout(() => {

@@ -290,3 +290,10 @@ Ran all test suites matching /ex3-hijackLogo.test.js/i.
 2022-05-02 11:47:48 error: *** Spell Checker Report ***
 
 
+2022-05-03 03:53:04 info: ---------------------------------------
+2022-05-03 03:53:04 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-05-03 03:53:04 info: ---------------------------------------
+2022-05-03 03:53:12 info: All unit tests passed.
+2022-05-03 03:53:16 error: *** Spell Checker Report ***
+
+

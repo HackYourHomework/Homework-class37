@@ -1,1 +1,16 @@
-/* Write your style here */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 2vw;
+}
+
+.book-list li {
+  display: inline;
+  padding: 2vw;
+  margin-right: 4vw;
+}
+
+.book-list img {
+  height: 30vh;
+}

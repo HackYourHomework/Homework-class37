@@ -27,4 +27,4 @@ function catWalk() {
   }
 }
 setInterval(catWalk, 50);
-window.onload = () => catWalk();
+window.addEventListener('load', catWalk);

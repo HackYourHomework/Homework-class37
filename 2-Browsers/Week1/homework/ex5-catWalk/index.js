@@ -3,7 +3,8 @@
 function catWalk() {
   const imgEl = document.querySelector('img');
   const currentLeft = parseInt(imgEl.style.left);
-  const middleOfTheScreen = (window.innerWidth - imgEl.width) / 2;
+  const middleOfTheScreen =
+    Math.round((window.innerWidth - imgEl.width) / 20) * 10;
   const rightHandOfTheScreen = window.innerWidth - imgEl.width;
   const dancingCat =
     'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
@@ -17,7 +18,7 @@ function catWalk() {
     imgEl.style.left = currentLeft + 10 + 'px';
   }
 
-  if (currentLeft === Math.round(middleOfTheScreen / 10) * 10) {
+  if (currentLeft === middleOfTheScreen) {
     imgEl.src = dancingCat;
     imgEl.alt = 'Cat dancing';
     setTimeout(() => {

@@ -1,20 +1,15 @@
 function createBookList(books) {
   const ulEl = document.createElement('ul');
-  ulEl.style.display = 'flex';
-  ulEl.style.listStyle = 'none';
-  ulEl.style.padding = '15px';
+  ulEl.classList.add('book-list');
 
   books.forEach((book) => {
     const liEl = document.createElement('li');
-    liEl.style.display = 'inline';
-    liEl.style.padding = '20px';
-    liEl.style.marginRight = '40px';
+    liEl.classList.add('book-list');
     const bookTitle = document.createElement('p');
     bookTitle.textContent = `${book.title} - ${book.author}`;
     liEl.appendChild(bookTitle);
     const imgEl = document.createElement('img');
-    imgEl.height = 300;
-    imgEl.width = 200;
+    imgEl.classList.add('book-list');
     imgEl.src = book.url;
     imgEl.alt = book.title;
     liEl.appendChild(imgEl);

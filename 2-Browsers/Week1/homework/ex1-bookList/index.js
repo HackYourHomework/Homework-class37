@@ -18,7 +18,41 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const ulList = document.createElement('ul');
+
+  ulList.style.listStyle = 'none';
+  ulList.style.display = 'flex';
+  ulList.style.justifyContent = 'space-between';
+
+  books.forEach((book) => {
+    const liList = document.createElement('li');
+
+    liList.style.display = 'inline';
+    liList.style.padding = '20px';
+    liList.style.marginRight = '40px';
+
+    const bookDefinition = document.createElement('p');
+    bookDefinition.textContent = book.title + "-" + book.author;
+    liList.appendChild(bookDefinition);
+
+    const imgbook = document.createElement('img');
+
+    imgbook.height = 350;
+    imgbook.width = 200;
+
+    imgbook.src = book.url;
+    imgbook.alt = book.title;
+
+    liList.appendChild(imgbook);
+    ulList.appendChild(liList);
+
+    if (book.alreadyRead === true) {
+      liList.style.backgroundColor = 'green';
+    } else if (book.alreadyRead === false) {
+      liList.style.backgroundColor = 'red';
+    }
+  });
+  return ulList;
 }
 
 function main() {
@@ -28,18 +62,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
+      url: './assets/the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
+      url: './assets/the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
+      url: './assets/the_pragmatic_programmer.jpg',
     },
   ];
 

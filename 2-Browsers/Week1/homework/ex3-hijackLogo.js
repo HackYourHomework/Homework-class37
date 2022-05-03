@@ -8,7 +8,10 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
+  const logoGoogle = document.querySelector('.lnXdpd');
+  logoGoogle.src = 'https://www.google.com/';
+  (logoGoogle.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg'),
+    'https://www.hackyourfuture.dk/static/logo-dark.svg'
 }
 
 hijackGoogleLogo();

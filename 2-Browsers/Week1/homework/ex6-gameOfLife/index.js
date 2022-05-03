@@ -130,14 +130,7 @@ function createGame(context, numRows, numColumns) {
         cell.nextAlive = false;
         cell.lifeTime = 0;
       }
-      // if (cell.nextAlive === cell.alive) {
-      //   cell.lifeTime += 1;
-      // }
-      // else if (cell.nextAlive === true) {
-      //   cell.lifeTime = 1;
-      // } else if (cell.nextAlive === false) {
-      //   cell.lifeTime = 0;
-      // }
+
     });
 
     // Apply the newly computed state to the cells

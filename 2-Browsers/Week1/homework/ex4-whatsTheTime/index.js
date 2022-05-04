@@ -9,31 +9,15 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
   const today = new Date();
-
-  let time = today.toTimeString();
-  time = time.split(' ')[0];
-
-  //below is my second way of solving this exercise but I like the above solution!
-  /*let hour = today.getHours();
-  let minute = today.getMinutes();
-  let second = today.getSeconds();
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-  if (minute < 10) {
-    minute = `0${minute}`;
-  }
-  if (second < 10) {
-    second = `0${second}`;
-  }
-  const time = hour + ':' + minute + ':' + second; */
+  const time = document.querySelector('#time');
+  time.textContent = today.toTimeString().split(' ')[0];
+  setInterval(addCurrentTime, 1000);
   console.log(time);
+  time.style.fontFamily = 'Times New Roman", Times, serif';
+  time.style.fontSize = '50px';
+  time.style.textAlign = 'center';
+
   return time;
 }
-addCurrentTime();
-window.addEventListener('load', addCurrentTime);
-setInterval(addCurrentTime, 1000);
 
-/* window.onload = function () {
-  setInterval(addCurrentTime, 1000);
-}; */
+window.addEventListener('load', addCurrentTime);

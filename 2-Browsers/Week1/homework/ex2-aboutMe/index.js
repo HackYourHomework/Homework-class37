@@ -13,12 +13,11 @@ const nickName = document.querySelector('#nickname');
 nickName.textContent = 'Serva';
 
 const favoriteFood = document.querySelector('#fav-food');
-favoriteFood.texContent = 'Ghorme Sabzi';
+favoriteFood.textContent = 'Ghorme Sabzi';
 
 const hometown = document.querySelector('#hometown');
 hometown.textContent = 'Baneh';
 
-const myListItems = document.querySelectorAll('li');
+const myListItem = document.querySelectorAll('li');
 
-myListItems.forEach((item) => (item.className = 'list-item'));
-document.body.style.fontFamily = 'Arial, sans-serif';
+myListItem.forEach((item) => (item.className = 'list-item'));

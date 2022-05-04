@@ -22,31 +22,28 @@ function createBookList(books) {
   bookList.style.listStyle = 'none';
   bookList.style.display = 'flex';
   bookList.style.flexWrap = 'wrap';
+  const coverImages = [
+    'the_design_of_everyday_things.jpg',
+    'the_most_human_human.jpg',
+    'the_pragmatic_programmer.jpg',
+  ];
   books.forEach((book, i) => {
-    const bookListItems = document.createElement('li');
-    bookListItems.style.margin = '20px';
-    bookListItems.style.padding = '15px';
-    bookListItems.style.minWidth = '22%';
+    const bookListItem = document.createElement('li');
+    bookListItem.style.margin = '20px';
+    bookListItem.style.padding = '15px';
+    bookListItem.style.minWidth = '22%';
     const newParagraph = document.createElement('p');
     newParagraph.textContent = `${book.title} by ${book.author}`;
     const image = document.createElement('img');
 
-    bookList.appendChild(bookListItems);
-    bookListItems.appendChild(newParagraph);
-    bookListItems.appendChild(image);
+    bookList.appendChild(bookListItem);
+    bookListItem.appendChild(newParagraph);
+    bookListItem.appendChild(image);
 
-    book.alreadyRead
-      ? (bookListItems.style.background = 'green')
-      : (bookListItems.style.background = 'red');
+    bookListItem.style.background = book.alreadyRead ? 'green' : 'red';
 
-    const coverImage = [
-      'the_design_of_everyday_things.jpg',
-      'the_most_human_human.jpg',
-      'the_pragmatic_programmer.jpg',
-    ];
-
-    image.src = `./assets/${coverImage[i]}`;
-    image.alt = `&{books.title}`;
+    image.src = `./assets/${coverImages[i]}`;
+    image.alt = books.title;
     image.style.width = '185px';
   });
 

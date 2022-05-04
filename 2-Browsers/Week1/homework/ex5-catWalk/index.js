@@ -30,11 +30,13 @@ function catWalk() {
   moveToRight += 10;
   catImage.style.left = `${moveToRight}px`;
 
+  const middleOfTheScreen =
+    Math.round((window.innerWidth - catImage.width) / 20) * 10;
   if (moveToRight > window.innerWidth - catImage.width) {
     moveToRight = 0;
   }
 
-  if (moveToRight === (window.innerWidth - catImage.width) / 2) {
+  if (moveToRight === middleOfTheScreen) {
     clearInterval(move);
     catImage.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';

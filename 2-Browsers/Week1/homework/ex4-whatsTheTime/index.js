@@ -1,7 +1,5 @@
 'use strict';
 
-const { time } = require('systeminformation');
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-4-whats-the-time
 
@@ -10,15 +8,24 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
   second). Use `setInterval()` to make sure the time stays current.
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
+
+function padZeros(value) {
+  ('0' + value).slice(-2);
+  return value;
+}
 function addCurrentTime() {
   const timeEl = new Date();
-  document.getElementById('time').textContent =
-    ('0' + timeEl.getHours()).slice(-2) +
-    ':' +
-    ('0' + timeEl.getMinutes()).slice(-2) +
-    ':' +
-    ('0' + timeEl.getSeconds() + 1).slice(-2);
+  const hours = timeEl.getHours();
+  const minutes = timeEl.getMinutes();
+  const seconds = timeEl.getSeconds();
+  const time = document.getElementById('time');
+  time.textContent =
+    padZeros(hours) + ':' + padZeros(minutes) + ':' + padZeros(seconds);
+
+  console.log(time);
 }
+
+addCurrentTime();
 
 window.onload = () => {
   setInterval(addCurrentTime, 1000);

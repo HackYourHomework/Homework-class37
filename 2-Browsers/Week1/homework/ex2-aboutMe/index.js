@@ -11,9 +11,13 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 document.querySelector('#nickname').textContent = 'Mansoor';
+
 document.querySelector('#fav-food').textContent = 'Pizza';
+
 document.querySelector('#hometown').textContent = 'Heemskerk';
+
 document.body.style.fontFamily = 'Arial, sans-serif';
+
 document.querySelectorAll('li').forEach((item) => {
   item.classList.add('list-item');
 });

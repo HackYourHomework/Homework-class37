@@ -9,11 +9,13 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 function addCurrentTime() {
-  const currentTime = (document.body.textContent =
-    new Date().toLocaleTimeString());
-  document.body.style.fontSize = ' 50px';
-  console.log(currentTime);
+  setInterval(() => {
+    const currentTime = (document.body.textContent =
+      new Date().toLocaleTimeString());
+
+    document.body.style.fontSize = ' 50px';
+
+    console.log(currentTime);
+  }, 1000);
 }
-window.onload = () => {
-  setInterval(addCurrentTime, 1000);
-};
+window.addEventListener('load', addCurrentTime);

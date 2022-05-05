@@ -25,7 +25,7 @@ const cat = document.querySelector('img');
 cat.style.left = '0px';
 let startMoving = 0;
 let startWalking = setInterval(catWalk, 50);
-let walking = true;
+let hasntDanced = true;
 const screen = window.innerWidth - cat.width;
 const middleScreen = (window.innerWidth - cat.width)/2;
 function catWalk() {
@@ -33,9 +33,8 @@ function catWalk() {
    cat.style.left = startMoving + 'px';
    if (startMoving > screen) {
       startMoving = 0;
-      walking = true;
-   } else if (walking === true && startMoving >= middleScreen) {
-      walking = false;
+      hasntDanced = true;
+   } else if (startMoving === middleScreen) {
       cat.src =
         'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
         clearInterval(startWalking); 

@@ -8,7 +8,6 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    `list-item`.
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
-const body = document.getElementsByTagName('body');
 document.body.style.fontFamily = 'Arial, sans-serif';
 const nickName = document.getElementById('nickname');
 const favoriteFood = document.getElementById('fav-food');

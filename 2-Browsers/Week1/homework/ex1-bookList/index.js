@@ -25,9 +25,7 @@ function createBookList(books) {
     newP.textContent = `${book.title}- ${book.author}`;
     const newLi = document.createElement('li');
 
-    !book.alreadyRead
-      ? (newLi.style.background = 'red')
-      : (newLi.style.background = 'green');
+newLi.style.background = book.alreadyRead ? 'green' : 'red';
 
     const img = document.createElement('img');
     newLi.appendChild(newP);
@@ -36,15 +34,15 @@ function createBookList(books) {
 
     if (book.title === 'The Design of Everyday Things') {
       img.src = 'assets/the_design_of_everyday_things.jpg ';
-      img.alt = ' The Design of Everyday Things';
+      img.alt = book.title;
     } else if (book.title === 'The Most Human Human') {
       img.src = 'assets/the_most_human_human.jpg ';
-      img.alt = ' The Most Human Human';
+      img.alt = book.title;
     } else {
       img.src = 'assets/the_pragmatic_programmer.jpg';
-      img.alt = ' The Pragmatic Programmer';
+      img.alt = book.title;
     }
-    return newUl;
+    
   });
   return newUl;
 }

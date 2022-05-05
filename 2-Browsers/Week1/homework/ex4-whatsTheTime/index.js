@@ -8,5 +8,5 @@ function addCurrentTime() {
   timeEl.textContent = new Date().toLocaleTimeString('it-IT');
   console.log(timeEl.textContent);
 }
-setInterval(addCurrentTime, 1000);
-window.addEventListener('load', addCurrentTime);
+
+window.addEventListener('load', setInterval(addCurrentTime, 1000));

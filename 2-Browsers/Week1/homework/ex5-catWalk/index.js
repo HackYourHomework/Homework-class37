@@ -23,10 +23,10 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 
 function catWalk() {
+  const imgEl = document.querySelector('img');
+  const walkingCat = imgEl.src;
   const dancingCat =
     'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-  const walkingCat = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-  const imgEl = document.querySelector('img');
   const startLeft = parseInt(imgEl.style.left);
   const middleOfScreen =
     Math.round((window.innerWidth - imgEl.width) / 20) * 10;

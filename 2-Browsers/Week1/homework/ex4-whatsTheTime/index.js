@@ -12,10 +12,12 @@ function addCurrentTime() {
   const currentTime = getTime.toLocaleTimeString();
   document.body.textContent = currentTime;
   console.log(currentTime);
+  
 }
 window.onload = () => {
   setInterval(addCurrentTime, 1000);
+  addCurrentTime();
 };
-addCurrentTime();
+
 
 

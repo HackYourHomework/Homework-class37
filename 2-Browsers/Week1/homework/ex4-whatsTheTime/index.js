@@ -11,13 +11,12 @@ function addCurrentTime() {
   const today = new Date();
   const time = document.querySelector('#time');
   time.textContent = today.toTimeString().split(' ')[0];
-  setInterval(addCurrentTime, 1000);
-  console.log(time);
+
   time.style.fontFamily = 'Times New Roman", Times, serif';
   time.style.fontSize = '50px';
   time.style.textAlign = 'center';
-
+  console.log(time);
   return time;
 }
-
+setInterval(addCurrentTime, 1000);
 window.addEventListener('load', addCurrentTime);

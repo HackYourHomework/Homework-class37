@@ -10,7 +10,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 function padZeros(value) {
-  ('0' + value).slice(-2);
+  value = ('0' + value).slice(-2);
   return value;
 }
 function addCurrentTime() {
@@ -25,8 +25,7 @@ function addCurrentTime() {
   console.log(time);
 }
 
-addCurrentTime();
-
 window.onload = () => {
   setInterval(addCurrentTime, 1000);
+  addCurrentTime();
 };

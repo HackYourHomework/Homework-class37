@@ -1,0 +1,7 @@
+
+*** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:25 - Unknown word (Serva)
+ex2-aboutMe/index.js:17:29 - Unknown word (Ghorme)
+ex2-aboutMe/index.js:17:36 - Unknown word (Sabzi)
+ex2-aboutMe/index.js:20:25 - Unknown word (Baneh)

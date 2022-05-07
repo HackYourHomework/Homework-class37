@@ -1101,3 +1101,8 @@ ex5-catWalk/index.js
 2022-05-07 08:29:53 info: ---------------------------------------
 2022-05-07 08:30:03 info: All unit tests passed.
 2022-05-07 08:30:12 info: All steps were completed successfully
+2022-05-07 08:40:46 info: --------------------------------------------
+2022-05-07 08:40:46 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-05-07 08:40:46 info: --------------------------------------------
+2022-05-07 08:40:58 info: All unit tests passed.
+2022-05-07 08:41:07 info: All steps were completed successfully

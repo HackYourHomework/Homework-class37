@@ -15,55 +15,37 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 
 function createBookList(books) {
   const myList = document.getElementById('bookList');
+
   books.forEach(({ title, author, alreadyRead, src }) => {
+
+    const ul = document.createElement('ul');
+    myList.appendChild(ul);
+
     const newList = document.createElement('li');
-    myList.appendChild(newList);
+    ul.appendChild(newList);
     newList.classList.add('book-list');
+
     const paragraph = document.createElement('p');
     newList.appendChild(paragraph);
-    paragraph.textContent = `${title} written by ${author}`;
+    paragraph.textContent = `${title} written by ${author}`;  
+
     const image = document.createElement('img');
     newList.appendChild(image);
     image.classList.add('book-cover');
     image.src = src;
-    if (alreadyRead === true) {
-      const theBookList = document.getElementsByClassName('book-list');
-      for (let i = 0; i < theBookList.length; i++)
-        theBookList[i].classList.add('read');
-    } else {
-      const theBookList = document.getElementsByClassName('book-list');
-      for (let i = 0; i < theBookList.length; i++) {
-        theBookList[i].classList.add('unread');
+
+    const theBookList = document.getElementsByClassName('book-list');
+    for (let i = 0; i < theBookList.length; i++){
+      if (alreadyRead === true) {
+         newList.classList.add('read');
+      } 
+      else if (alreadyRead === false) {
+        newList.classList.add('unread');
+        }
       }
-    }
-  });
+    });
 }
 
-// why this way is not working?
-
-// function createBookList(books) {
-//   const myList = document.getElementById('bookList');
-//   books.forEach(({ title, author, alreadyRead, src }) => {
-//     const newList = document.createElement('li');
-//     myList.appendChild(newList);
-//     newList.classList.add('book-list');
-//     const paragraph = document.createElement('p');
-//     newList.appendChild(paragraph);
-//     paragraph.textContent = `${title} written by ${author}`;
-//     const image = document.createElement('img');
-//     newList.appendChild(image);
-//     image.classList.add('book-cover');
-//     image.src = src;
-//     const theBookList = document.getElementsByClassName('book-list');
-//     for (let i = 0; i < theBookList.length; i++) {
-//       if (alreadyRead === true) {
-//         theBookList[i].add('read');
-//       } else {
-//         theBookList[i].add('unread');
-//       }
-//     }
-//   });
-// }
 
 function main() {
   const myBooks = [
@@ -72,21 +54,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
-      src: 'C:Users/User/Desktop/HYF/DOM/Homework/ex1-bookList/Image/the_design_of_everyday_things.jpg',
+      src: 'C:/Users/User/Desktop/HYF/Homework-class37/2-Browsers/Week1/homework/ex1-bookList/assets/the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
-      src: 'C:Users/User/Desktop/HYF/DOM/Homework/ex1-bookList/Image/the_most_human_human.jpg',
+      src: 'C:/Users/User/Desktop/HYF/Homework-class37/2-Browsers/Week1/homework/ex1-bookList/assets/the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
-      src: 'C:Users/User/Desktop/HYF/DOM/Homework/ex1-bookList/Image/the_pragmatic_programmer.jpg',
+      src: 'C:/Users/User/Desktop/HYF/Homework-class37/2-Browsers/Week1/homework/ex1-bookList/assets/the_pragmatic_programmer.jpg',
     },
   ];
 

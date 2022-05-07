@@ -8,5 +8,17 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    `list-item`.
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
+const nicknameEl = document.getElementById("nickname");
+nicknameEl.textContent = "Crazzy Bob";
 
-// TODO add your JavaScript code here.
+const favFoodEl = document.getElementById("fav-food");
+favFoodEl.textContent = "Pizza";
+
+const hometownEl = document.getElementById("hometown");
+hometownEl.textContent = "New York";
+
+const newClass = document.querySelectorAll("li");
+
+newClass.forEach((li) => {
+   li.classList.add('list-item');
+});

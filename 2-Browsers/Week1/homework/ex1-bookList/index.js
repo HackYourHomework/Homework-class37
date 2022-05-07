@@ -38,7 +38,7 @@ function createBookList(books) {
     list.appendChild(titleAuthor);
     list.appendChild(img);
     
-    book.alreadyRead ? list.style.backgroundColor = 'green' : list.style.backgroundColor = 'red';
+    list.style.backgroundColor = book.alreadyRead ? 'green' : 'red';    
     
     bookList.appendChild(list);
   });

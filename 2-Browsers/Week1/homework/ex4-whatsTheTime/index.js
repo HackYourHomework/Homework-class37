@@ -13,13 +13,16 @@ function addCurrentTime() {
   currentTime.id = 'clock';
   const setTime = new Date();
   const hh = setTime.getHours();
+  const hours = hh.toString().padStart(2, '0')
   const mm = setTime.getMinutes();
+  const minutes = mm.toString().padStart(2, '0')
   const ss = setTime.getSeconds();
-  document.getElementById('clock').textContent = `HH ${hh}: MM ${mm}: SS ${ss}`;
+  const seconds = ss.toString().padStart(2, '0')
+  document.getElementById('clock').innerHTML = `HH ${hours}: MM ${minutes}: SS ${seconds}`;
+  console.log(setTime);
 }
+
 
 const timeId = setInterval(addCurrentTime, 1000);
 
-console.log(timeId);
-
-window.addEventListener('load', timeId);
+window.addEventListener('load', addCurrentTime);

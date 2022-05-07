@@ -9,14 +9,15 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
   const today = new Date();
-  const time = document.querySelector('#time');
-  time.textContent = today.toTimeString().split(' ')[0];
+  const timeEl = document.querySelector('#time');
+  timeEl.textContent = today.toTimeString().split(' ')[0];
 
-  time.style.fontFamily = 'Times New Roman", Times, serif';
-  time.style.fontSize = '50px';
-  time.style.textAlign = 'center';
-  console.log(time);
-  return time;
+  timeEl.style.fontFamily = 'Times New Roman", Times, serif';
+  timeEl.style.fontSize = '50px';
+  timeEl.style.textAlign = 'center';
+  setInterval(addCurrentTime, 1000);
+  console.log(timeEl.textContent);
+  return timeEl;
 }
-setInterval(addCurrentTime, 1000);
+
 window.addEventListener('load', addCurrentTime);

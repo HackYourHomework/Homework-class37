@@ -23,7 +23,7 @@ hijackGoogleLogo();
 // Why here it didn't work the selector?
 
 // function hijackGoogleLogo() {
-  // TODO your code goes in here
+//   TODO your code goes in here
 //   const newLogo = document.getElementsByClassName('lnXdpd');
 //   newLogo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
 //   newLogo.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg';

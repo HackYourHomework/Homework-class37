@@ -10,35 +10,24 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
 // TODO add your JavaScript code here.
 
-// There are more solution of this part and all are working,
-// but i don't know what is the difference between all of them.
-// Could you please help me understanding the differences?
+// Solution A
 
-const personalInfo = document.getElementsByTagName('span');
-for (let i = 0; i < personalInfo.length; i++) {
-  personalInfo[0].innerHTML = 'Naddaf';
-  personalInfo[1].innerHTML = 'Butter chicken';
-  personalInfo[2].innerHTML = 'Woerden';
-}
+const textColor = document.querySelector('ul');
+textColor.classList.add('list-item')
 
-const list = document.getElementsByTagName('li');
-for (let i = 0; i < list.length; i++) {
-  list[i].classList.add('list-item');
-}
+const nickName = document.getElementById('nickname');
+nickName.innerText = 'Naddaf';
+
+const food = document.getElementById('fav-food');
+food.innerText = 'Butter chicken';
+
+const myTown = document.getElementById('hometown');
+myTown.innerText = 'Woerden';
 
 ///////////////////////////////////////////////////////////////////
-// Other solution A
-// const nickName = document.getElementById('nickname');
-// nickName.innerText = 'Naddaf';
+// Solution B
+// Why this solution doesn't work?
 
-// const food = document.getElementById('fav-food');
-// food.innerText = 'Butter chicken';
-
-// const myTown = document.getElementById('hometown');
-// myTown.innerText = 'Woerden';
-
-///////////////////////////////////////////////////////////////////
-// Other solution B
 
 // const nickName = document.getElementById('nickname');
 // nickName.textContent = 'Naddaf';
@@ -48,3 +37,6 @@ for (let i = 0; i < list.length; i++) {
 
 // const myTown = document.getElementById('hometown');
 // myTown.textContent = 'Woerden';
+
+// const textColor = document.querySelectorAll('span');
+// textColor.classList.add('list-item');

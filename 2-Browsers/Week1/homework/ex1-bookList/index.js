@@ -38,7 +38,7 @@ newLi.style.background = book.alreadyRead ? 'green' : 'red';
     } else if (book.title === 'The Most Human Human') {
       img.src = 'assets/the_most_human_human.jpg ';
       img.alt = book.title;
-    } else {
+    } else if (book.title === 'The Pragmatic Programmer') {
       img.src = 'assets/the_pragmatic_programmer.jpg';
       img.alt = book.title;
     }

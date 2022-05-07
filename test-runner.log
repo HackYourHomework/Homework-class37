@@ -1034,3 +1034,70 @@ Ran all test suites matching /ex4-whatsTheTime.test.js/i.
 2022-05-07 08:07:36 info: ---------------------------------------
 2022-05-07 08:07:46 info: All unit tests passed.
 2022-05-07 08:07:53 info: All steps were completed successfully
+2022-05-07 08:22:37 info: ---------------------------------------
+2022-05-07 08:22:37 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-05-07 08:22:37 info: ---------------------------------------
+2022-05-07 08:22:47 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    √ HTML should be syntactically valid (145 ms)
+    √ should have all TODO comments removed (1 ms)
+    × should use `setInterval()` and/or `setTimeout()` (1 ms)
+    × should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    √ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● catWalk › should use `setInterval()` and/or `setTimeout()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      46 |
+      47 |   test('should use `setInterval()` and/or `setTimeout()`', () => {
+    > 48 |     expect(state.timer).toBeDefined();
+         |                         ^
+      49 |   });
+      50 |
+      51 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:48:25)
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      50 |
+      51 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 52 |     expect(state.onload).toBeDefined();
+         |                          ^
+      53 |   });
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:52:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        4.965 s, estimated 5 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2022-05-07 08:22:49 error: *** ESLint Report ***
+
+ex5-catWalk/index.js
+  38:48  error  Parsing error: Unexpected token {
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-05-07 08:29:53 info: ---------------------------------------
+2022-05-07 08:29:53 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-05-07 08:29:53 info: ---------------------------------------
+2022-05-07 08:30:03 info: All unit tests passed.
+2022-05-07 08:30:12 info: All steps were completed successfully

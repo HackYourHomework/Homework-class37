@@ -9,16 +9,23 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
 function addCurrentTime() {
   const currentTime = document.createElement('div');
+  currentTime.style.color = 'red';
+  currentTime.style.fontSize = '40px'
   document.body.append(currentTime);
+
   currentTime.id = 'clock';
   const setTime = new Date();
+  
   const hh = setTime.getHours();
   const hours = hh.toString().padStart(2, '0')
+
   const mm = setTime.getMinutes();
   const minutes = mm.toString().padStart(2, '0')
+
   const ss = setTime.getSeconds();
   const seconds = ss.toString().padStart(2, '0')
-  document.getElementById('clock').innerHTML = `HH ${hours}: MM ${minutes}: SS ${seconds}`;
+
+  document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
   console.log(setTime);
 }
 

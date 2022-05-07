@@ -18,38 +18,50 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    Dancing cat URL:
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-// const background = document.querySelector('body');
-// background.style.backgroundColor = 'rgb(84, 84, 84)';
 
+
+let catPosition = 0;
 const image = document.querySelector('img');
+image.style.left = catPosition
+image.setAttribute('width', '200px');
+
+// to be used when the cat at the middle of the screen. ------------
 const catWidth = image.width;
-// image.setAttribute('id', 'cat-pic');
-const screenWidth = window.innerWidth;
-image.style.left = '0px';
+const centerOfCatImage = catWidth / 2;
 
-function catWalk(e) {
-  const image = document.querySelector('img');
-  image.style.left = e.screenX + 'px';
+const screenWidth = window.innerWidth
+const centerOfTheScreen = screenWidth / 2
 
-  // catWalk();
+const center = centerOfTheScreen - centerOfCatImage;
+
+let interval = 50;
+// -----------------------------------------------------------------
+
+function catWalk() {
+  if (catPosition < screenWidth) {
+    image.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif'
+    image.style.left = catPosition + 'px';
+    catPosition += 10
+    interval = 50;
+  if (catPosition + centerOfCatImage === center) {
+    image.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'
+    interval = 5000;
+    setTimeout(() => {
+      image.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif'
+      interval = 50;
+      }, 5000);
+    }
+  if (catPosition === screenWidth - catWidth) {
+      catPosition = 0;
+    }
+  }
 }
 
-window.onload = function () {
-  catWalk();
-};
-// window.addEventListener('load', catWalk);
+  const timer = window.setInterval(catWalk, 50);
 
-// const background = document.querySelector('body');
-// background.style.backgroundColor = 'rgb(84, 84, 84)';
+  window.addEventListener('load', catWalk)
 
-// const image = document.querySelector('img');
-// image.style.left = '0px';
-// let catWidth = image.width;
-// const screenWidth = window.innerWidth;
 
-// function catWalk() {
-//   image.style.left = catWidth + 'px';
-//   catWalk();
-// }
 
-// window.addEventListener('load', catWalk);
+
+  

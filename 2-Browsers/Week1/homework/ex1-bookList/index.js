@@ -15,14 +15,14 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 
 function createBookList(books) {
   const myList = document.getElementById('bookList');
-
+  
+  const ulElement = document.createElement('ul');
+  ulElement.style.display = 'flex'
+  
   books.forEach(({ title, author, alreadyRead, src }) => {
-
-    const ul = document.createElement('ul');
-    myList.appendChild(ul);
-
+    
     const newList = document.createElement('li');
-    ul.appendChild(newList);
+    ulElement.appendChild(newList);
     newList.classList.add('book-list');
 
     const paragraph = document.createElement('p');
@@ -34,17 +34,16 @@ function createBookList(books) {
     image.classList.add('book-cover');
     image.src = src;
 
-    const theBookList = document.getElementsByClassName('book-list');
-    for (let i = 0; i < theBookList.length; i++){
       if (alreadyRead === true) {
          newList.classList.add('read');
       } 
       else if (alreadyRead === false) {
         newList.classList.add('unread');
         }
-      }
-    });
-}
+      })
+      return ulElement
+    }
+
 
 
 function main() {
@@ -54,21 +53,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
-      src: 'C:/Users/User/Desktop/HYF/Homework-class37/2-Browsers/Week1/homework/ex1-bookList/assets/the_design_of_everyday_things.jpg',
+      src: 'assets/the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
-      src: 'C:/Users/User/Desktop/HYF/Homework-class37/2-Browsers/Week1/homework/ex1-bookList/assets/the_most_human_human.jpg',
+      src: 'assets/the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
-      src: 'C:/Users/User/Desktop/HYF/Homework-class37/2-Browsers/Week1/homework/ex1-bookList/assets/the_pragmatic_programmer.jpg',
+      src: 'assets/the_pragmatic_programmer.jpg',
     },
   ];
 

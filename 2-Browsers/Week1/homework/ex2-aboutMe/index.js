@@ -19,6 +19,6 @@ hometownEl.textContent = "New York";
 
 const newClass = document.querySelectorAll("li");
 
-for (let i in newClass){
-   newClass[i].className = "list-item";
-}
+newClass.forEach((li) => {
+   li.classList.add('list-item');
+});

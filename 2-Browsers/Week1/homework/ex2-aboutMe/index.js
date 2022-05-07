@@ -16,13 +16,13 @@ const textColor = document.querySelector('ul');
 textColor.classList.add('list-item')
 
 const nickName = document.getElementById('nickname');
-nickName.innerText = 'Naddaf';
+nickName.textContent = 'Naddaf';
 
 const food = document.getElementById('fav-food');
-food.innerText = 'Butter chicken';
+food.textContent = 'Butter chicken';
 
 const myTown = document.getElementById('hometown');
-myTown.innerText = 'Woerden';
+myTown.textContent = 'Woerden';
 
 ///////////////////////////////////////////////////////////////////
 // Solution B

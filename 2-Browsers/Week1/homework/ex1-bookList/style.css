@@ -1,1 +1,17 @@
 /* Write your style here */
+ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+li {
+  display: inline-block;
+  padding: 10px;
+  margin: 15px;
+  min-width: 350px;
+}
+
+img {
+  width: 180px;
+}

@@ -19,7 +19,7 @@ function addCurrentTime() {
     
   let time = hours + ":" + minutes + ":" + seconds;
   document.getElementById("clock").textContent = time; 
-  setTimeout(function(){addCurrentTime()}, 1000);
+  setTimeout(addCurrentTime, 1000);
 }
 addCurrentTime();
 

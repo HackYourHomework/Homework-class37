@@ -23,30 +23,39 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 const catImg = document.querySelector('img');
 catImg.style.left = '0px';
-let moving = setInterval(catWalk, 50);
+let moving = null;
 let moveRight = 0;
-let hasDanced = true;
-function catWalk() {
-  const screenWidth = window.innerWidth;
+let hasStartedWalkingButDidntDance = true;
 
+function catWalk() {
+  moving = setInterval(() => {
+    const screenWidth = window.innerWidth;
   moveRight += 10;
   catImg.style.left = moveRight + 'px';
+
+  // Here we check if the cat is at the end of the screen;
+  // if the cat is at the end of the screen, we reset all variables
   if (moveRight > screenWidth - catImg.width) {
     moveRight = 0;
-    hasDanced = true;
+    hasStartedWalkingButDidntDance = true;
+
+  // Here we check if the cat arrived at the center of the screen;
+  // We use the boolean to only execute the code in this condition once
   } else if (
-    hasDanced === true &&
+    hasStartedWalkingButDidntDance&&
     moveRight >= (screenWidth - catImg.width) / 2
   ) {
-    hasDanced = false;
+    hasStartedWalkingButDidntDance = false;
     catImg.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
     clearInterval(moving);
 
     setTimeout(() => {
       catImg.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-      moving = setInterval(catWalk, 50);
+      catWalk();
     }, 5000);
   }
+  }, 50);
+  
 }
 window.addEventListener('load', catWalk);

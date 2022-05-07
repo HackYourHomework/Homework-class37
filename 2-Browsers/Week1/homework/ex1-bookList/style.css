@@ -1,1 +1,14 @@
-/* Write your style here */
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+li {
+  margin: 15px;
+  padding: 10px;
+  min-width: 350px;
+}
+img {
+  width: 185px;
+}

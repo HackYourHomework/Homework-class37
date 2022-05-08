@@ -43,7 +43,7 @@ function createBookList(books) {
     createImgElement.src = getImages[imageIndex];
     imageIndex++
 
-    if (book.alreadyRead === true) {
+    if (book.alreadyRead) {
       createList.style.background = "green";
     } else {
       createList.style.background = "red";

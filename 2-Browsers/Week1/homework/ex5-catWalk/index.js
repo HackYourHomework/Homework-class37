@@ -25,7 +25,7 @@ const image = document.querySelector('img');
 const bodyWidth = window.innerWidth; // variable for the window size
 const screenCenter = (bodyWidth - image.clientWidth) / 2; // Variables that divided the screen into two parts
 
-const dancingCatUrl = document.createElement('img');
+const dancingCatImg = document.createElement('img');
 dancingCatUrl.alt = 'Dancing cat';
 dancingCatUrl.src =
   'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';

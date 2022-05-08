@@ -1,1 +1,22 @@
 /* Write your style here */
+
+div {
+  display: flex;
+}
+.ul-flex {
+  display: flex;
+  gap: 1rem;
+  width: 300px;
+  height: 400px;
+}
+
+.image {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+}
+
+.li {
+  list-style: none;
+  padding: 0 1rem;
+}

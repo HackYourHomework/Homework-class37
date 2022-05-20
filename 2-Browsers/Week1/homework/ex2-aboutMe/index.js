@@ -10,11 +10,10 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
 // TODO add your JavaScript code here.
 
-// Solution A
-
-const textColor = document.querySelector('ul');
-textColor.classList.add('list-item')
-
+const textColor = document.querySelectorAll('span');
+for( let i = 0; i < textColor.length; i++ ){
+textColor[i].classList.add('list-item')
+}
 const nickName = document.getElementById('nickname');
 nickName.textContent = 'Naddaf';
 
@@ -23,20 +22,3 @@ food.textContent = 'Butter chicken';
 
 const myTown = document.getElementById('hometown');
 myTown.textContent = 'Woerden';
-
-///////////////////////////////////////////////////////////////////
-// Solution B
-// Why this solution doesn't work?
-
-
-// const nickName = document.getElementById('nickname');
-// nickName.textContent = 'Naddaf';
-
-// const food = document.getElementById('fav-food');
-// food.textContent = 'Butter chicken';
-
-// const myTown = document.getElementById('hometown');
-// myTown.textContent = 'Woerden';
-
-// const textColor = document.querySelectorAll('span');
-// textColor.classList.add('list-item');

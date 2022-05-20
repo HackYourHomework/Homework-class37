@@ -20,48 +20,49 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 
 
-let catPosition = 0;
 const image = document.querySelector('img');
-image.style.left = catPosition
 image.setAttribute('width', '200px');
+image.style.left = '0px'
+
+const danceImage = document.createElement('img')
+danceImage.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'
+danceImage.style.display = 'none'
+image.appendChild(danceImage)
+
+
 
 // to be used when the cat at the middle of the screen. ------------
+
+// -----------------------------------------------------------------
 const catWidth = image.width;
 const centerOfCatImage = catWidth / 2;
 
 const screenWidth = window.innerWidth
+const screenCenter = screenWidth - catWidth
 const centerOfTheScreen = screenWidth / 2
 
 const center = centerOfTheScreen - centerOfCatImage;
 
-let interval = 50;
-// -----------------------------------------------------------------
+let catPosition = 0;
+let moving = 10;
 
 function catWalk() {
-  if (catPosition < screenWidth) {
-    image.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif'
-    image.style.left = catPosition + 'px';
-    catPosition += 10
-    interval = 50;
-  if (catPosition + centerOfCatImage === center) {
-    image.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'
-    interval = 5000;
+  catPosition += moving
+  image.style.left = `${catPosition}px`;
+
+  if(catPosition >= center){
+    clearInterval(timer)
+    danceImage.style.display = 'block'
+    
     setTimeout(() => {
-      image.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif'
-      interval = 50;
-      }, 5000);
-    }
-  if (catPosition === screenWidth - catWidth) {
-      catPosition = 0;
-    }
+      danceImage.style.display = 'none'
+      timer = window.setInterval(catWalk, 50);
+    },5000)
+  }
+  if(catPosition > screenCenter) {
+    catPosition = 0;
   }
 }
 
-  const timer = window.setInterval(catWalk, 50);
-
-  window.addEventListener('load', catWalk)
-
-
-
-
-  
+const timer = window.setInterval(catWalk, 50);
+window.addEventListener('load', catWalk)

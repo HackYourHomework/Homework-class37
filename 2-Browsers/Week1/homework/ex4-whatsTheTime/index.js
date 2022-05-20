@@ -30,6 +30,6 @@ function addCurrentTime() {
 }
 
 
-const timeId = setInterval(addCurrentTime, 1000);
+setInterval(addCurrentTime, 1000);
 
 window.addEventListener('load', addCurrentTime);

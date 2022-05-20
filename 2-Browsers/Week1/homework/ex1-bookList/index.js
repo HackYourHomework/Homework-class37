@@ -14,7 +14,6 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  const myList = document.getElementById('bookList');
   
   const ulElement = document.createElement('ul');
   ulElement.style.display = 'flex'

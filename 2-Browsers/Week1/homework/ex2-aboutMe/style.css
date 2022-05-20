@@ -3,3 +3,7 @@
 .list-item {
   color: red;
 }
+
+ul {
+  list-style-type: none;
+}

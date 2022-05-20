@@ -20,15 +20,9 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 
 
-const image = document.querySelector('img');
+const image = document.querySelector("img");
 image.setAttribute('width', '200px');
 image.style.left = '0px'
-
-const danceImage = document.createElement('img')
-danceImage.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'
-danceImage.style.display = 'none'
-image.appendChild(danceImage)
-
 
 
 // to be used when the cat at the middle of the screen. ------------
@@ -44,7 +38,7 @@ const centerOfTheScreen = screenWidth / 2
 const center = centerOfTheScreen - centerOfCatImage;
 
 let catPosition = 0;
-let moving = 10;
+const moving = 10;
 
 function catWalk() {
   catPosition += moving
@@ -52,10 +46,9 @@ function catWalk() {
 
   if(catPosition >= center){
     clearInterval(timer)
-    danceImage.style.display = 'block'
-    
+    image.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif"
     setTimeout(() => {
-      danceImage.style.display = 'none'
+      image.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif"
       timer = window.setInterval(catWalk, 50);
     },5000)
   }
@@ -64,5 +57,5 @@ function catWalk() {
   }
 }
 
-const timer = window.setInterval(catWalk, 50);
+let timer = window.setInterval(catWalk, 50);
 window.addEventListener('load', catWalk)

@@ -25,9 +25,8 @@ image.setAttribute('width', '200px');
 image.style.left = '0px'
 
 
-// to be used when the cat at the middle of the screen. ------------
+// to be used when the cat at the middle of the screen.
 
-// -----------------------------------------------------------------
 const catWidth = image.width;
 const centerOfCatImage = catWidth / 2;
 
@@ -35,7 +34,7 @@ const screenWidth = window.innerWidth
 const screenCenter = screenWidth - catWidth
 const centerOfTheScreen = screenWidth / 2
 
-const center = centerOfTheScreen - centerOfCatImage;
+let center = centerOfTheScreen - centerOfCatImage;
 
 let catPosition = 0;
 const moving = 10;
@@ -44,7 +43,7 @@ function catWalk() {
   catPosition += moving
   image.style.left = `${catPosition}px`;
 
-  if(catPosition >= center){
+  if(catPosition === center){
     clearInterval(timer)
     image.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif"
     setTimeout(() => {

@@ -1431,3 +1431,8 @@ ex1-johnWho.js
 ✖ 4 problems (1 error, 3 warnings)
 
 
+2022-05-21 09:48:22 info: ---------------------------------------
+2022-05-21 09:48:22 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-05-21 09:48:22 info: ---------------------------------------
+2022-05-21 09:48:24 info: All unit tests passed.
+2022-05-21 09:48:29 info: All steps were completed successfully

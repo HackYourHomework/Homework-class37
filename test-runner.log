@@ -1860,3 +1860,8 @@ Tests:       2 failed, 9 passed, 11 total
 Snapshots:   0 total
 Time:        0.641 s, estimated 1 s
 Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2022-05-21 10:08:12 info: -------------------------------------------------
+2022-05-21 10:08:12 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-05-21 10:08:12 info: -------------------------------------------------
+2022-05-21 10:08:15 info: All unit tests passed.
+2022-05-21 10:08:20 info: All steps were completed successfully

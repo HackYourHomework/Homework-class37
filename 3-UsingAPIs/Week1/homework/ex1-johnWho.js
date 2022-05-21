@@ -1,7 +1,7 @@
 'use strict';
 
 const getAnonName = (firstName) => {
-  const myFirstPromise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!firstName) {
         reject(new Error("You didn't pass in a first name!"));
@@ -12,7 +12,6 @@ const getAnonName = (firstName) => {
       resolve(fullName);
     }, 1000);
   });
-  return myFirstPromise;
 };
 
 function main() {

@@ -1905,3 +1905,8 @@ Tests:       1 failed, 6 passed, 7 total
 Snapshots:   0 total
 Time:        0.711 s
 Ran all test suites matching /ex3-rollDie.test.js/i.
+2022-05-21 10:52:51 info: ---------------------------------------
+2022-05-21 10:52:51 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-05-21 10:52:51 info: ---------------------------------------
+2022-05-21 10:52:55 info: All unit tests passed.
+2022-05-21 10:52:59 info: All steps were completed successfully

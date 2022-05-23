@@ -194,3 +194,92 @@ Ran all test suites matching /ex1-johnWho.test.js/i.
 2022-05-23 07:08:58 info: ---------------------------------------
 2022-05-23 07:08:58 info: All unit tests passed.
 2022-05-23 07:08:59 info: All steps were completed successfully
+2022-05-23 07:15:03 info: -------------------------------------------------
+2022-05-23 07:15:03 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2022-05-23 07:15:03 info: -------------------------------------------------
+2022-05-23 07:15:04 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-checkDoubleDigits.test.js --colors
+● Deprecation Warning:
+
+  Option "extraGlobals" was replaced by "sandboxInjectedGlobals".
+
+  Please update your configuration.
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+● Deprecation Warning:
+
+  Option "extraGlobals" was replaced by "sandboxInjectedGlobals".
+
+  Please update your configuration.
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js
+  checkDoubleDigits
+    ✓ should exist and be executable
+    ✓ should have all TODO comments removed
+    ✓ `checkDoubleDigits` should not contain unneeded console.log calls (1 ms)
+    ✓ should call new Promise()
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should be a function that takes a single argument
+    ✕ (9) should return a rejected promise with an Error object (1 ms)
+    ✓ (10) should return a promise that resolves to "This is a double digit number!"
+    ✓ (99) should return a promise that resolves to "This is a double digit number!"
+    ✕ (100) should return a rejected promise with an Error object (1 ms)
+
+  ● checkDoubleDigits › (9) should return a rejected promise with an Error object
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+    Received constructor: Object
+
+      65 |     const promise = checkDoubleDigits(9);
+      66 |     expect(promise).toBeInstanceOf(Promise);
+    > 67 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      68 |   });
+      69 |
+      70 |   test('(10) should return a promise that resolves to "This is a double digit number!"', () => {
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:67:36)
+
+  ● checkDoubleDigits › (100) should return a rejected promise with an Error object
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+    Received constructor: Object
+
+      91 |     const promise = checkDoubleDigits(100);
+      92 |     expect(promise).toBeInstanceOf(Promise);
+    > 93 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      94 |   });
+      95 | });
+      96 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:93:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 9 passed, 11 total
+Snapshots:   0 total
+Time:        0.2 s
+Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2022-05-23 07:15:22 info: ---------------------------------------
+2022-05-23 07:15:22 info: >>> Running Unit Test `ex3-rollDie` <<<
+2022-05-23 07:15:22 info: ---------------------------------------
+2022-05-23 07:15:22 info: All unit tests passed.
+2022-05-23 07:15:24 info: All steps were completed successfully
+2022-05-23 07:15:34 info: --------------------------------------------
+2022-05-23 07:15:34 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-05-23 07:15:34 info: --------------------------------------------
+2022-05-23 07:15:35 info: All unit tests passed.
+2022-05-23 07:15:36 info: All steps were completed successfully

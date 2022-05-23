@@ -215,3 +215,10 @@ Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
 2022-05-23 05:04:01 error: *** Spell Checker Report ***
 
 
+2022-05-23 05:09:26 info: ----------------------------------------------
+2022-05-23 05:09:26 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-05-23 05:09:26 info: ----------------------------------------------
+2022-05-23 05:09:32 info: All unit tests passed.
+2022-05-23 05:09:38 error: *** Spell Checker Report ***
+
+

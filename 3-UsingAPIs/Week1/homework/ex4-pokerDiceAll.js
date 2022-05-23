@@ -27,9 +27,9 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const anArrayOfPromises = dice.map((element) => rollDie(element));
+  return Promise.all(anArrayOfPromises);
 }
 
 function main() {
@@ -37,6 +37,7 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
+
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {

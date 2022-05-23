@@ -127,3 +127,91 @@ Ran all test suites matching /ex1-johnWho.test.js/i.
 2022-05-23 04:57:36 error: *** Spell Checker Report ***
 
 
+2022-05-23 05:02:15 info: --------------------------------------------
+2022-05-23 05:02:15 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-05-23 05:02:15 info: --------------------------------------------
+2022-05-23 05:02:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    √ should exist and be executable (2 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDice` should not contain unneeded console.log calls (1 ms)
+    √ should use `dice.map()` (1 ms)
+    √ should use `Promise.all()`
+    × should resolve when all dice settle successfully (1 ms)
+    × should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    ReferenceError: dice is not defined
+
+      28 |
+      29 | function rollDice() {
+    > 30 |   const anArrayOfPromises = dice.map((element) => rollDie(element));
+         |                             ^
+      31 |   return Promise.all(anArrayOfPromises);
+      32 | }
+      33 |
+
+      at rollDice (3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:30:29)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:53:21)
+
+  ● ex4-pokerDiceAll › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received one assertion call.
+
+      46 |
+      47 |   test('should resolve when all dice settle successfully', async () => {
+    > 48 |     expect.assertions(4);
+         |            ^
+      49 |     expect(exported).toBeDefined();
+      50 |
+      51 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:48:12)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.378 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2022-05-23 05:02:27 error: *** Spell Checker Report ***
+
+
+2022-05-23 05:03:19 info: --------------------------------------------
+2022-05-23 05:03:19 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-05-23 05:03:19 info: --------------------------------------------
+2022-05-23 05:03:24 info: All unit tests passed.
+2022-05-23 05:03:30 error: *** Spell Checker Report ***
+
+
+2022-05-23 05:03:49 info: --------------------------------------------
+2022-05-23 05:03:49 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-05-23 05:03:49 info: --------------------------------------------
+2022-05-23 05:03:55 info: All unit tests passed.
+2022-05-23 05:04:01 error: *** Spell Checker Report ***
+
+

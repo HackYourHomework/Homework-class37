@@ -189,3 +189,8 @@ Tests:       7 failed, 2 passed, 9 total
 Snapshots:   0 total
 Time:        0.233 s
 Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-05-23 07:08:58 info: ---------------------------------------
+2022-05-23 07:08:58 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-05-23 07:08:58 info: ---------------------------------------
+2022-05-23 07:08:58 info: All unit tests passed.
+2022-05-23 07:08:59 info: All steps were completed successfully

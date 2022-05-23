@@ -119,3 +119,9 @@ dist
 .recent.json
 .disclaimer
 @homework*
+
+# vscode
+.vscode
+
+# DS_Store
+.DS_Store

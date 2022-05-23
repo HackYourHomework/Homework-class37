@@ -1,1 +1,13 @@
 /* 3. Add a css rule for .list-item to make the color red. */
+
+.list-item {
+  color: blue;
+}
+
+ul {
+  list-style-type: none;
+}
+
+span {
+  color: red;
+}

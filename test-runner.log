@@ -336,3 +336,8 @@ Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
 Time:        0.248 s
 Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2022-05-23 07:18:58 info: ----------------------------------------------
+2022-05-23 07:18:58 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-05-23 07:18:58 info: ----------------------------------------------
+2022-05-23 07:18:58 info: All unit tests passed.
+2022-05-23 07:18:59 info: All steps were completed successfully

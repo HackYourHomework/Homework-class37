@@ -11,10 +11,12 @@ function rollDie() {
 
       if (roll > 6) {
         reject(new Error('Oops... Die rolled off the table.'));
+        return;
       }
 
       if (roll === randomRollsToDo) {
         resolve(value);
+        return;
       }
 
       if (roll < randomRollsToDo) {

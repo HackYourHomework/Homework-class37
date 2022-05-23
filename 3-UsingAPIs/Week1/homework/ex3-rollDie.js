@@ -53,3 +53,8 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+// After we switched the callbacks to the promises there is no problem anymore.
+// Because we have a special catch method in the promise, we can catch the error in the the promise.
+// In this case, the catch is not called on the original promise, it is called on the promise returned by then method.
+// That's why the promise ends when the catch fulfills its obligation and we don't see the resolve message.

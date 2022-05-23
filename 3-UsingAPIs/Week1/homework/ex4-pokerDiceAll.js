@@ -27,9 +27,8 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  return Promise.all(dice.map(rollDie));
 }
 
 function main() {
@@ -43,3 +42,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+//Promise.all waits until all of the input's promises have resolved.
+//Thanks to this, every promises can finish on a different time and work asynchronously.
+// That's why dice continue to roll even if there is a rejected promise.

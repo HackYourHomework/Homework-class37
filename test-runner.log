@@ -1,0 +1,115 @@
+2022-05-23 04:39:04 info: ---------------------------------------
+2022-05-23 04:39:04 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-05-23 04:39:04 info: ---------------------------------------
+2022-05-23 04:39:12 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (4 ms)
+    × should have all TODO comments removed (5 ms)
+    √ `getAnonName` should not contain unneeded console.log calls (2 ms)
+    √ should call `new Promise()` (1 ms)
+    × should take a single argument (4 ms)
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument (1 ms)
+    √ should resolve when called with a string argument (2 ms)
+    √ should reject with an Error object when called without an argument (2 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should take a single argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      58 |
+      59 |   test('should take a single argument', () => {
+    > 60 |     expect(state.paramCount).toBe(1);
+         |                              ^
+      61 |   });
+      62 |
+      63 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:60:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.571 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-05-23 04:39:18 error: *** Spell Checker Report ***
+
+
+2022-05-23 04:40:19 info: ---------------------------------------
+2022-05-23 04:40:19 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-05-23 04:40:19 info: ---------------------------------------
+2022-05-23 04:40:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (2 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    √ should call `new Promise()` (1 ms)
+    × should take a single argument (3 ms)
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (2 ms)
+    √ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should take a single argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      58 |
+      59 |   test('should take a single argument', () => {
+    > 60 |     expect(state.paramCount).toBe(1);
+         |                              ^
+      61 |   });
+      62 |
+      63 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:60:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        1.016 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-05-23 04:40:31 error: *** Spell Checker Report ***
+
+
+2022-05-23 04:41:16 info: ---------------------------------------
+2022-05-23 04:41:17 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-05-23 04:41:17 info: ---------------------------------------
+2022-05-23 04:41:22 info: All unit tests passed.
+2022-05-23 04:41:28 error: *** Spell Checker Report ***
+
+

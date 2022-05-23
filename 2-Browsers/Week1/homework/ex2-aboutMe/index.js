@@ -10,10 +10,11 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
 // TODO add your JavaScript code here.
 
-const textColor = document.querySelectorAll('span');
+const textColor = document.querySelectorAll('li');
 for( let i = 0; i < textColor.length; i++ ){
 textColor[i].classList.add('list-item')
-}
+};
+
 const nickName = document.getElementById('nickname');
 nickName.textContent = 'Naddaf';
 

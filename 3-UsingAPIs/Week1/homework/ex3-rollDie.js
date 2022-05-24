@@ -11,52 +11,51 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-Usin
   explanation? Add your answer as a comment to be bottom of the file.
 ------------------------------------------------------------------------------*/
 
-// TODO Remove callback and return a promise
-function rollDie(callback) {
-  // Compute a random number of rolls (3-10) that the die MUST complete
-  const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
-  console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
 
-  const rollOnce = (roll) => {
-    // Compute a random die value for the current roll
-    const value = Math.floor(Math.random() * 6) + 1;
-    console.log(`Die value is now: ${value}`);
+function rollDie() {
+  return new Promise((resolve, reject) => {
+    const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
+    console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
+  
+    const rollOnce = (roll) => {
+      const value = Math.floor(Math.random() * 6) + 1;
+      console.log(`Die value is now: ${value}`);
+      if (roll > 6) {
 
-    // Use callback to notify that the die rolled off the table after 6 rolls
-    if (roll > 6) {
-      // TODO replace "error" callback
-      callback(new Error('Oops... Die rolled off the table.'));
-    }
+        reject(new Error('Oops... Die rolled off the table.'));
+      }
+      if (roll === randomRollsToDo) {
 
-    // Use callback to communicate the final die value once finished rolling
-    if (roll === randomRollsToDo) {
-      // TODO replace "success" callback
-      callback(null, value);
-    }
+        resolve(value);
+      }
+      if (roll < randomRollsToDo) {
+        setTimeout(() => rollOnce(roll + 1), 500);
+      }
+    };
+    rollOnce(1);
+  });
 
-    // Schedule the next roll todo until no more rolls to do
-    if (roll < randomRollsToDo) {
-      setTimeout(() => rollOnce(roll + 1), 500);
-    }
-  };
-
-  // Start the initial roll
-  rollOnce(1);
 }
 
 function main() {
-  // TODO Refactor to use promise
-  rollDie((error, value) => {
-    if (error !== null) {
-      console.log(error.message);
-    } else {
-      console.log(`Success! Die settled on ${value}.`);
-    }
-  });
+  
+  rollDie()
+  .then((value) => {
+    console.log(`Success! Die settled on ${value}.`)
+  })
+  .catch((error) => {
+    console.error(error.message);
+  })
 }
 
-// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+/* In the callBack function if the die rolled more than 6 rolls it will print an error message
+and when it finished the course of the die scheduled then it will printout the success message.
+But by using Promise that means when the die course finished without getting out of the
+table it will printout Success because it complete the promise, but if the die rolled out the
+table it will printout an error or an errors only because it fulfill the promise
+in this case like( it didn't keep it promise :) )*/

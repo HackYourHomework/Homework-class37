@@ -22,14 +22,11 @@ Can you explain why? Please add your answer as a comment to the end of the
 exercise file.
 ------------------------------------------------------------------------------*/
 
-// The line below makes the rollDie() function available to this file.
-// Do not change or remove it.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  return Promise.all(dice.map(rollDie))
 }
 
 function main() {
@@ -43,3 +40,8 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/* In the callBack code is running the die we are targeting only not all the 5 dice at the same
+time but when we used the Promise.all so all the dice start rolling at the same moment.
+The reason of the die continue rolling after rejected promise because we didn't return the reject
+statement to let the die finish his course. */

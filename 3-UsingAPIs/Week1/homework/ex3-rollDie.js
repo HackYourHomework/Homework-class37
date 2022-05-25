@@ -16,16 +16,13 @@ function rollDie() {
   return new Promise((resolve, reject) => {
     const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
     console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
-  
     const rollOnce = (roll) => {
       const value = Math.floor(Math.random() * 6) + 1;
       console.log(`Die value is now: ${value}`);
       if (roll > 6) {
-
         reject(new Error('Oops... Die rolled off the table.'));
       }
       if (roll === randomRollsToDo) {
-
         resolve(value);
       }
       if (roll < randomRollsToDo) {

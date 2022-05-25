@@ -11,7 +11,6 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-Usin
   explanation? Add your answer as a comment to be bottom of the file.
 ------------------------------------------------------------------------------*/
 
-
 function rollDie() {
   return new Promise((resolve, reject) => {
     const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
@@ -31,18 +30,16 @@ function rollDie() {
     };
     rollOnce(1);
   });
-
 }
 
 function main() {
-  
   rollDie()
-  .then((value) => {
-    console.log(`Success! Die settled on ${value}.`)
-  })
-  .catch((error) => {
-    console.error(error.message);
-  })
+    .then((value) => {
+      console.log(`Success! Die settled on ${value}.`);
+    })
+    .catch((error) => {
+      console.error(error.message);
+    });
 }
 
 if (process.env.NODE_ENV !== 'test') {

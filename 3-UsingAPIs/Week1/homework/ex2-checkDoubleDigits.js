@@ -19,9 +19,7 @@ function checkDoubleDigits(number) {
     if (number > minNumber && number < maxNumber) {
       resolve('This is a double digit number!');
     } else {
-      reject({
-        message: `Expected a double digit number but got ${number}.`,
-      });
+      reject( new Error(`Expected a double digit number but got ${number}.`))
     }
   });
 }

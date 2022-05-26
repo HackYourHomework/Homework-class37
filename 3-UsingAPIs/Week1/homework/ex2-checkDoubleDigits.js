@@ -12,8 +12,18 @@ Complete the function called `checkDoubleDigits` such that:
   "Expected a double digit number but got `number`", where `number` is the 
   number that was passed as an argument.
 ------------------------------------------------------------------------------*/
-function checkDoubleDigits(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+const MIN_NUMBER = 10;
+const MAX_NUMBER = 99;
+
+function checkDoubleDigits(number) {
+  return new Promise((resolve, reject) => {
+ 
+    if (number >= MIN_NUMBER && number <= MAX_NUMBER) {
+      resolve('This is a double digit number!');
+    } else {
+      reject( new Error(`Expected a double digit number but got ${number}.`))
+    }
+  });
 }
 
 function main() {

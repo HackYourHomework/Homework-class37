@@ -2,22 +2,22 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const results = [];
+  const successHandler = (value, promise, die) => {
+    results.push(value);
+    return promise(die);
+  };
   return rollDie(1)
     .then((value) => {
-      results.push(value);
-      return rollDie(2);
+      successHandler(value, rollDie, 2);
     })
     .then((value) => {
-      results.push(value);
-      return rollDie(3);
+      successHandler(value, rollDie, 3);
     })
     .then((value) => {
-      results.push(value);
-      return rollDie(4);
+      successHandler(value, rollDie, 4);
     })
     .then((value) => {
-      results.push(value);
-      return rollDie(5);
+      successHandler(value, rollDie, 5);
     })
     .then((value) => {
       results.push(value);

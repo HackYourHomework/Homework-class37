@@ -1,7 +1,5 @@
 'use strict';
 
-const { reject } = require("lodash");
-const { resolveConfig } = require("prettier");
 
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-3-roll-a-die
@@ -54,9 +52,7 @@ function main() {
   rollDie().then((value)=>{
     console.log(`Success! Die settled on ${value}.`);
   }).catch((error) => {
-    if (error !== null) {
       console.log(error.message);
-    }
   })
   
   }

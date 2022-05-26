@@ -1,8 +1,5 @@
 'use strict';
 
-const { reject } = require('lodash');
-const { error } = require('winston');
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-2-is-it-a-double-digit-number
 
@@ -18,12 +15,10 @@ Complete the function called `checkDoubleDigits` such that:
 ------------------------------------------------------------------------------*/
 function checkDoubleDigits(number) {
   return new Promise((resolve, reject) => {
-    if (number > 9 || number < 100) {
+    if (number > 9 && number < 100) {
       resolve('This is a double digit number!');
     } else {
-      reject({ 
-        message: `Expected a double digit number but got ${number}.`, 
-    });
+      reject(new Error(`Expected a double digit number but got ${number}.`));
     }
   });
 }

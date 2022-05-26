@@ -27,9 +27,8 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  return Promise.all(dice.map(rollDie));
 }
 
 function main() {
@@ -43,3 +42,8 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+
+// JavaScript has so-called run-to-completion semantics: The current task is always finished before the next task is executed. 
+// That means that each task has complete control over all current state and doesn't have to worry about concurrent modification.
+// but in this case the dice that have not yet finished their roll continue to do so since Javascript reached  neither return statement nor end.

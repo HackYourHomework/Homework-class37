@@ -303,3 +303,8 @@ Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
 Time:        3.447 s, estimated 4 s
 Ran all test suites matching /ex1-programmerFun.test.js/i.
+2022-05-27 10:08:00 info: ---------------------------------------------
+2022-05-27 10:08:00 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-05-27 10:08:00 info: ---------------------------------------------
+2022-05-27 10:08:06 info: All unit tests passed.
+2022-05-27 10:08:11 info: All steps were completed successfully

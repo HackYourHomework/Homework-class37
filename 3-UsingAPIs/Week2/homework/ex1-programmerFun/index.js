@@ -27,6 +27,7 @@ function requestData(url) {
 function renderImage(data) {
   const image = document.createElement('img');
   image.src = data.img;
+  image.alt = data.title;
   document.body.appendChild(image);
   console.log(data);
 }

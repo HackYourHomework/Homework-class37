@@ -18,12 +18,9 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 function requestData(url) {
-  fetch(url)
+  return fetch(url)
     .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      return data;
-    })
+
     .catch((error) => console.log(error));
 }
 
@@ -38,7 +35,7 @@ function renderError(error) {
   const errorEl = document.createElement('h1');
   errorEl.textContent = error;
   document.body.appendChild(errorEl);
-  console.log(errorEl);
+  console.log(error);
 }
 
 async function main() {

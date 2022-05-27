@@ -35,7 +35,7 @@ function renderError(error) {
   const errorEl = document.createElement('h1');
   errorEl.textContent = error;
   document.body.appendChild(errorEl);
-  console.log(error);
+  console.log(errorEl);
 }
 
 async function main() {

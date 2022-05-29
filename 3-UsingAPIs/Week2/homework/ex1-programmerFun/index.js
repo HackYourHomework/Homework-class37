@@ -17,16 +17,14 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    url with `.shx`. There is no server at the modified url, therefore this 
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
-function requestData(url) {
+async function requestData(url) {
   // TODO return a promise using `fetch()`
-  return fetch(url).then((response) => {
-    console.log(response);
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw 'HTTP ERROR';
-    }
-  });
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw 'HTTP ERROR';
+  }
+
+  return response.json();
 }
 
 function renderImage(data) {

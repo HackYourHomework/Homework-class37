@@ -1,4 +1,7 @@
 'use strict';
+
+const { result } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-1-john-who
 
@@ -14,15 +17,18 @@ const getAnonName = (firstName) => {
       if (!firstName) {
         reject(new Error("You didn't pass in a first name!"));
         return;
+      } else {
+        const fullName = `${firstName} Doe`;
+        resolve(fullName);
       }
-      const fullName = `${firstName} Doe`;
-      resolve(fullName);
     }, 1000);
   });
 };
 
 function main() {
-  getAnonName('John', console.log);
+  getAnonName('John')
+    .then(() => console.log(result))
+    .catch((err) => console.log(err.message));
 }
 
 // ! Do not change or remove the code below

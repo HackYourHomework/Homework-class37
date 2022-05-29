@@ -43,8 +43,8 @@ function rollDie() {
 }
 
 function main() {
-  rollDie((error, value) => {
-    return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
+    rollDie((error, value) => {
       if (error !== null) {
         reject(error.message);
       } else {
@@ -56,7 +56,9 @@ function main() {
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
-  main();
+  main()
+    .then((result) => console.log(result))
+    .catch((err) => console.log(err.message));
 }
 
 module.exports = rollDie;

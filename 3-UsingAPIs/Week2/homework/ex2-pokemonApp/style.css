@@ -4,14 +4,21 @@ body {
   display: flex;
   justify-content: center;
   padding: 10vh;
-  background-color: rgb(240, 236, 226);
+  min-height: 100%;
+  margin: 0;
+
+  background: linear-gradient(rgb(5, 6, 6), rgb(246, 233, 187));
+}
+
+html {
+  min-height: 100%;
 }
 .pokmon-button,
 .select {
   height: 6vh;
   width: 10vw;
   border-radius: 2rem;
-  background: rgb(228, 215, 128);
+  background: rgb(230, 222, 172);
   font-size: 1rem;
   margin: 1rem;
 }

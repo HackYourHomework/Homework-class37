@@ -308,3 +308,20 @@ Ran all test suites matching /ex1-programmerFun.test.js/i.
 2022-05-27 10:08:00 info: ---------------------------------------------
 2022-05-27 10:08:06 info: All unit tests passed.
 2022-05-27 10:08:11 info: All steps were completed successfully
+2022-05-29 10:45:04 info: ----------------------------------------
+2022-05-29 10:45:04 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-05-29 10:45:04 info: ----------------------------------------
+2022-05-29 10:45:04 warn: A unit test file was not provided.
+2022-05-29 10:45:13 error: *** Spell Checker Report ***
+
+
+2022-05-29 10:50:47 info: ----------------------------------------
+2022-05-29 10:50:47 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-05-29 10:50:47 info: ----------------------------------------
+2022-05-29 10:50:47 warn: A unit test file was not provided.
+2022-05-29 10:50:55 info: All steps were completed successfully
+2022-05-29 10:51:08 info: ----------------------------------------
+2022-05-29 10:51:08 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-05-29 10:51:08 info: ----------------------------------------
+2022-05-29 10:51:08 warn: A unit test file was not provided.
+2022-05-29 10:51:15 info: All steps were completed successfully

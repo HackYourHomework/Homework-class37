@@ -325,3 +325,135 @@ Ran all test suites matching /ex1-programmerFun.test.js/i.
 2022-05-29 10:51:08 info: ----------------------------------------
 2022-05-29 10:51:08 warn: A unit test file was not provided.
 2022-05-29 10:51:15 info: All steps were completed successfully
+2022-05-29 01:34:08 info: -----------------------------------------
+2022-05-29 01:34:08 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-05-29 01:34:08 info: -----------------------------------------
+2022-05-29 01:34:12 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Exception in PromiseRejectCallback:
+D:\HYF\Homework-class37\3-UsingAPIs\helpers\pokerDiceRoller.js:37
+  return new Promise((resolve, reject) => {
+         ^
+
+RangeError: Maximum call stack size exceeded
+Exception in PromiseRejectCallback:
+D:\HYF\Homework-class37\3-UsingAPIs\Week2\homework\ex3-rollAnAce.js:24
+  return value;
+
+RangeError: Maximum call stack size exceeded
+Exception in PromiseRejectCallback:
+D:\HYF\Homework-class37\3-UsingAPIs\helpers\pokerDiceRoller.js:37
+  return new Promise((resolve, reject) => {
+         ^
+
+RangeError: Maximum call stack size exceeded
+Exception in PromiseRejectCallback:
+D:\HYF\Homework-class37\3-UsingAPIs\Week2\homework\ex3-rollAnAce.js:24
+  return value;
+
+RangeError: Maximum call stack size exceeded
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    × should have all TODO comments removed (3 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    × should not include a recursive call (1 ms)
+    √ should use async/wait (1 ms)
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (58 ms)
+    √ should reject with an Error when a die rolls off the table (29 ms)
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    expect(received).toBeUndefined()
+
+    Received: true
+
+      53 |
+      54 |   test('should not include a recursive call', () => {
+    > 55 |     expect(state.recursive).toBeUndefined();
+         |                             ^
+      56 |   });
+      57 |
+      58 |   test('should use async/wait', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:55:29)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    RangeError: Maximum call stack size exceeded
+
+      46 | const getRandomNumber = (max) => Math.floor(Math.random() * max);
+      47 |
+    > 48 | function rollDie(die = 1) {
+         | ^
+      49 |   return new Promise((resolve, reject) => {
+      50 |     // Introduce a slightly random variation in roll time.
+      51 |     const rollTime = ROLL_TIME - 5 + getRandomNumber(10);
+
+      at rollDie (3-UsingAPIs/helpers/pokerDiceRoller.js:48:1)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:17:17)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+      at rollDieUntil (3-UsingAPIs/Week2/homework/ex3-rollAnAce.js:19:12)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 4 passed, 7 total
+Snapshots:   0 total
+Time:        0.921 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+D:\HYF\Homework-class37\3-UsingAPIs\helpers\pokerDiceRoller.js:64
+        reject(new Error(`Die ${die} rolled off the table.\n`));
+               ^
+
+Error: Die 1 rolled off the table.
+
+    at rollOnce (D:\HYF\Homework-class37\3-UsingAPIs\helpers\pokerDiceRoller.js:83:16)
+    at Timeout._onTimeout (D:\HYF\Homework-class37\3-UsingAPIs\helpers\pokerDiceRoller.js:96:26)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+2022-05-29 03:34:18 info: -----------------------------------------
+2022-05-29 03:34:18 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-05-29 03:34:18 info: -----------------------------------------
+2022-05-29 03:34:22 info: All unit tests passed.
+2022-05-29 03:34:26 info: All steps were completed successfully

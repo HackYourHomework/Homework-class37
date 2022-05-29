@@ -1,1 +1,17 @@
 /* add your styling here */
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 10vh;
+  background-color: rgb(240, 236, 226);
+}
+.pokmon-button,
+.select {
+  height: 6vh;
+  width: 10vw;
+  border-radius: 2rem;
+  background: rgb(239, 216, 67);
+  font-size: 1rem;
+  margin: 1rem;
+}

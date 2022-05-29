@@ -41,10 +41,12 @@ function fetchAndPopulatePokemons(data) {
   const selectEl = document.createElement('select');
   document.body.appendChild(selectEl);
   selectEl.addEventListener('change', fetchImage);
+  selectEl.classList.add('select');
   const getPokemonButtonEl = document.createElement('button');
   getPokemonButtonEl.type = 'button';
   getPokemonButtonEl.textContent = 'Get Pokemon!';
   document.body.appendChild(getPokemonButtonEl);
+  getPokemonButtonEl.classList.add('pokmon-button');
   getPokemonButtonEl.addEventListener('click', () => {
     const pokemonData = data.results;
     pokemonData.forEach((result) => {

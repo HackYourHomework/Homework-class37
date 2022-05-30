@@ -32,11 +32,36 @@ async function fetchData(apiUrl) {
 
 function fetchAndPopulatePokemons(pokemonData) {
   console.log(pokemonData);
+  const pokemons = pokemonData.results.map((pokemon) => {
+    return { name: pokemon.name, link: pokemon.url };
+  });
+  const pokemonComboBox = document.createElement('select');
+  pokemonComboBox.addEventListener('change', async (e) => {
+    console.log(e.target.value);
+    const selectedPokemonData = await fetchImage(e.target.value);
+    const selectedPokemonImageUrl = selectedPokemonData.sprites.back_default;
+    const image = document.createElement('img');
+    image.src = selectedPokemonImageUrl;
+
+    document.body.appendChild(image);
+  });
+  pokemons.forEach((pokemon) => {
+    const optionPokemon = document.createElement('option');
+    optionPokemon.textContent = pokemon.name;
+    optionPokemon.value = pokemon.link;
+    pokemonComboBox.appendChild(optionPokemon);
+  });
+  document.body.appendChild(pokemonComboBox);
 
   // TODO complete this function
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
+async function fetchImage(imageUrl) {
+  const response = await fetch(imageUrl);
+  if (!response.ok) {
+    throw new Error('Please make sure that you type the address correctly ');
+  }
+  return response.json();
   // TODO complete this function
 }
 

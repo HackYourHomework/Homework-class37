@@ -1,28 +1,47 @@
 /* add your styling here */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  width: 90%;
+  width: 100%;
   height: 100%;
+  font-family: sans-serif;
+}
+.pokemon-img {
+  height: 30vh;
+  display: block;
+}
+.container {
   margin: auto;
+  width: 80vw;
+  height: 100vh;
+  background: linear-gradient(rgb(250, 245, 132), rgb(236, 146, 107));
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-img {
-  width: 15vw;
-}
-.display-pokemon-section {
-  width: 70vw;
-  height: 70vh;
-  border: 1px solid black;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+  align-items: center;
 }
 .btn-get-pokemon {
-  width: 20vw;
-  height: 5vh;
-  margin: 1vw;
+  width: 40vw;
+  font-size: 1.2rem;
+  height: 3rem;
+  margin: 10vw auto 5vw auto;
   color: white;
+  border-radius: 16px;
   background-color: black;
+  cursor: pointer;
+}
+.btn-get-pokemon:hover {
+  background-color: rgb(18, 85, 166);
+}
+.error-message {
+  color: red;
+}
+.pokemon-drop-down-list {
+  width: 40vw;
+  height: 2rem;
+}
+.pokemon-drop-down-list-item {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

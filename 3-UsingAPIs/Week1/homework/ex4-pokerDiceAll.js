@@ -45,4 +45,4 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDice;
 
-// Because we aren't using promise resolve and reject in the function name rollDice that is why we don't run into error, like that of ex3-rollDie.js
+// Because we don't (return) the condition, inside the rollDie function, and the function inside the rollDie function called rollOnce, the condition at line (78)

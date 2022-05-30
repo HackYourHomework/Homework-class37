@@ -43,8 +43,6 @@ function rollDie() {
 }
 
 function main() {
-  // TODO Refactor to use promise
-
   rollDie()
     .then((result) => console.log(`Success! Die settled on ${result}.`))
     .catch((error) => console.log(error.message));

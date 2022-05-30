@@ -36,15 +36,19 @@ async function fetchData(url) {
 }
 
 function fetchAndPopulatePokemons(data) {
+  const newDiv = document.createElement('div');
+
+  document.body.appendChild(newDiv);
+  newDiv.classList.add('button-section');
   const selectEl = document.createElement('select');
 
   selectEl.addEventListener('change', fetchImage);
   selectEl.classList.add('select');
-  document.body.appendChild(selectEl);
+  newDiv.appendChild(selectEl);
   const getPokemonButtonEl = document.createElement('button');
   getPokemonButtonEl.setAttribute('type', 'button');
   getPokemonButtonEl.textContent = 'Get Pokemon!';
-  document.body.appendChild(getPokemonButtonEl);
+  newDiv.appendChild(getPokemonButtonEl);
   getPokemonButtonEl.classList.add('pokemon-button');
 
   getPokemonButtonEl.addEventListener('click', () => {
@@ -65,16 +69,17 @@ async function fetchImage(event) {
     clearImg.remove();
   }
 */
-  const url = `https://pokeapi.co/api/v2/pokemon/${event.currentTarget.value}`;
 
   try {
+    const url = `https://pokeapi.co/api/v2/pokemon/${event.currentTarget.value}`;
     const data = await fetchData(url);
     const selected = document.querySelector('select');
 
     if (selected) {
       const pokemonImage = document.createElement('img');
-      pokemonImage.alt = 'Image of selected Pokemon';
-      pokemonImage.src = data.sprites.front_default;
+      pokemonImage.alt = 'Selected Pokemon Image';
+      pokemonImage.src = data.sprites.other.home.front_default;
+      //pokemonImage.src = data.sprites.front_female;
       document.body.appendChild(pokemonImage);
     }
   } catch (error) {

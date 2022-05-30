@@ -2,12 +2,23 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 10vh;
   min-height: 100%;
   margin: 0;
 
-  background: linear-gradient(rgb(46, 20, 66), rgb(222, 182, 89));
+  background: linear-gradient(rgb(46, 20, 66), rgb(187, 139, 207));
+}
+
+.button-section {
+  border: 1rem solid white;
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 html {
@@ -21,4 +32,7 @@ html {
   background: rgb(241, 212, 243);
   font-size: 1rem;
   margin: 1rem;
+}
+img {
+  width: 40vh;
 }

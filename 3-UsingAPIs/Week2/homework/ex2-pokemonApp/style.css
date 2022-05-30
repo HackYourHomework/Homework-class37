@@ -1,1 +1,28 @@
 /* add your styling here */
+body {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+img {
+  width: 15vw;
+}
+.display-pokemon-section {
+  width: 70vw;
+  height: 70vh;
+  border: 1px solid black;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.btn-get-pokemon {
+  width: 20vw;
+  height: 5vh;
+  margin: 1vw;
+  color: white;
+  background-color: black;
+}

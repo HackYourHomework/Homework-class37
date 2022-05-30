@@ -34,3 +34,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+// Promise.race "handle" the result of all of the promises we pass into them, regardless of whether that result was relevant to the settlement of the promise from race. So the "losing" promise in Promise.race is still handled, even though the promise from Promise.race only reflects what happened with the winning promise.
+//Because promises don't "run". They are just markers for some async operation. The only thing you can get from a promise is the end result of the operation.

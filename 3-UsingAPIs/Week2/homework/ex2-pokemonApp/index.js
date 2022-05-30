@@ -37,14 +37,14 @@ async function fetchData(url) {
 
 function fetchAndPopulatePokemons(data) {
   const newDiv = document.createElement('div');
-
   document.body.appendChild(newDiv);
   newDiv.classList.add('button-section');
-  const selectEl = document.createElement('select');
 
-  selectEl.addEventListener('change', fetchImage);
+  const selectEl = document.createElement('select');
   selectEl.classList.add('select');
   newDiv.appendChild(selectEl);
+  selectEl.addEventListener('change', fetchImage);
+
   const getPokemonButtonEl = document.createElement('button');
   getPokemonButtonEl.setAttribute('type', 'button');
   getPokemonButtonEl.textContent = 'Get Pokemon!';
@@ -64,11 +64,10 @@ function fetchAndPopulatePokemons(data) {
 }
 
 async function fetchImage(event) {
-  /*const clearImg = document.querySelector('img');
-  if (clearImg) {
-    clearImg.remove();
+  const clearImage = document.querySelector('img');
+  if (clearImage) {
+    clearImage.remove();
   }
-*/
 
   try {
     const url = `https://pokeapi.co/api/v2/pokemon/${event.currentTarget.value}`;
@@ -79,7 +78,6 @@ async function fetchImage(event) {
       const pokemonImage = document.createElement('img');
       pokemonImage.alt = 'Selected Pokemon Image';
       pokemonImage.src = data.sprites.other.home.front_default;
-      //pokemonImage.src = data.sprites.front_female;
       document.body.appendChild(pokemonImage);
     }
   } catch (error) {

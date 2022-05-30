@@ -13,7 +13,6 @@ body {
 }
 
 .button-section {
-  border: 1rem solid white;
   width: 40vw;
   height: 10vh;
   display: flex;
@@ -35,4 +34,5 @@ html {
 }
 img {
   width: 40vh;
+  margin-top: 2vh;
 }

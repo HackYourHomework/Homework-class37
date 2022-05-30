@@ -467,3 +467,8 @@ Error: Die 1 rolled off the table.
 2022-05-30 11:35:09 info: ------------------------------------------
 2022-05-30 11:35:18 info: All unit tests passed.
 2022-05-30 11:35:25 info: All steps were completed successfully
+2022-05-30 11:44:41 info: ----------------------------------------
+2022-05-30 11:44:41 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-05-30 11:44:41 info: ----------------------------------------
+2022-05-30 11:44:47 info: All unit tests passed.
+2022-05-30 11:44:53 info: All steps were completed successfully

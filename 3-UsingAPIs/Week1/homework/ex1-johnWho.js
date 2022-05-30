@@ -1,7 +1,5 @@
 'use strict';
 
-const { result } = require('lodash');
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-1-john-who
 
@@ -27,7 +25,7 @@ const getAnonName = (firstName) => {
 
 function main() {
   getAnonName('John')
-    .then(() => console.log(result))
+    .then((result) => console.log(result))
     .catch((err) => console.log(err.message));
 }
 

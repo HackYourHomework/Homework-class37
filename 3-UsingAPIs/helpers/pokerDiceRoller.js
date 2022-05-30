@@ -81,6 +81,7 @@ function rollDie(die = 1) {
           offTable = true;
         }
         reject(new Error(`Die ${die} rolled off the table.\n`));
+        return;
       }
 
       // If the dice settles (i.e. all mandated rolls are completed) we

@@ -28,7 +28,7 @@ function rollDie() {
 
       // Use callback to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
-        resolve(null, value);
+        resolve(value);
       }
 
       // Schedule the next roll todo until no more rolls to do
@@ -43,22 +43,16 @@ function rollDie() {
 }
 
 function main() {
-  return new Promise((resolve, reject) => {
-    rollDie((error, value) => {
-      if (error !== null) {
-        reject(error.message);
-      } else {
-        resolve(`Success! Die settled on ${value}.`);
-      }
-    });
-  });
+  // TODO Refactor to use promise
+
+  rollDie()
+    .then((result) => console.log(`Success! Die settled on ${result}.`))
+    .catch((error) => console.log(error.message));
 }
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
-  main()
-    .then((result) => console.log(result))
-    .catch((err) => console.log(err.message));
+  main();
 }
 
 module.exports = rollDie;

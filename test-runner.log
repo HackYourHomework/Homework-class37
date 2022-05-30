@@ -23,3 +23,8 @@
 2022-05-30 02:50:40 info: --------------------------------------------
 2022-05-30 02:50:40 warn: A unit test file was not provided.
 2022-05-30 02:50:41 info: All steps were completed successfully
+2022-05-30 05:35:55 info: ------------------------------------------
+2022-05-30 05:35:55 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-30 05:35:55 info: ------------------------------------------
+2022-05-30 05:35:58 info: All unit tests passed.
+2022-05-30 05:35:59 info: All steps were completed successfully

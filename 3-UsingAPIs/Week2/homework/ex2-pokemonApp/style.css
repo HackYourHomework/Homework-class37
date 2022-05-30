@@ -1,1 +1,44 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 3rem;
+  background-color: antiquewhite;
+}
+
+.get-pokemon-button {
+  padding: 1rem;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #902282;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(67, 23, 23);
+}
+
+.get-pokemon-button:hover {
+  opacity: 0.9;
+}
+
+.get-pokemon-button:active {
+  transform: translateY(4px);
+}
+
+.select-pokemon {
+  margin-top: 3rem;
+  text-align: center;
+  width: 20%;
+  padding: 0.5rem;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+}
+
+.pokemon-image {
+  margin-top: 3rem;
+  background-color: lightblue;
+}

@@ -1,1 +1,14 @@
-/* add your styling here */
+body {
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+}
+
+.select {
+  margin-top: 1rem;
+}

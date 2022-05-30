@@ -58,7 +58,6 @@ function fetchAndPopulatePokemons(data) {
 
       pokemonName.textContent = pokemon.name;
       selectEl.appendChild(pokemonName);
-      console.log(pokemonName);
     });
   });
 }

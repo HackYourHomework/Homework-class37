@@ -87,7 +87,7 @@ async function fetchImage(event) {
 
 async function main() {
   try {
-    const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=80');
     fetchAndPopulatePokemons(data);
   } catch (error) {
     console.log(error);

@@ -22,61 +22,12 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error(response.statusText);
-        }
-      })
-      .then((data) => resolve(data))
-      .catch((error) => reject(error));
-  });
-}
+function fetchData(url) {}
 
-async function fetchAndPopulatePokemons(data) {
-  // fetch data
-  const url = `https://pokeapi.co/api/v2/pokemon/${data}`;
-  const getData = await fetchData(url);
-  console.log(getData);
-  // Div Element
-  const divElement = document.createElement('div');
-  divElement.setAttribute('class', 'pokemon-container');
-  // Button Element
-  const btnElement = document.createElement('button');
-  btnElement.setAttribute('class', 'btn');
-  btnElement.textContent = 'Get Pokemon!';
+async function fetchAndPopulatePokemons(data) {}
 
-  // addEventlistern
-  btnElement.addEventListener('click', () => {
-    let num = 5;
-    console.log('hello clement');
-    for (let i = 1; i < num; i++) {
-      console.log(i);
-    }
-  });
-
-  // Select Element
-  const selectElement = document.createElement('select');
-  selectElement.setAttribute('class', 'select');
-  // Options Element
-  const options = document.createElement('option');
-
-  // Append Element
-  selectElement.appendChild(options);
-  divElement.appendChild(btnElement);
-  divElement.appendChild(selectElement);
-  document.body.appendChild(divElement);
-}
-
-// this will give me the image
 function fetchImage(element) {}
 
-async function main() {
-  fetchAndPopulatePokemons();
-}
+function main() {}
 
 window.addEventListener('load', main);

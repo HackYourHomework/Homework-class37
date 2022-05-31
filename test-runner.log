@@ -1630,3 +1630,214 @@ Ran all test suites matching /ex1-programmerFun.test.js/i.
 2022-05-31 03:53:16 info: ---------------------------------------------
 2022-05-31 03:53:21 info: All unit tests passed.
 2022-05-31 03:53:25 info: All steps were completed successfully
+2022-05-31 07:47:57 info: ------------------------------------------
+2022-05-31 07:47:57 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:47:57 info: ------------------------------------------
+2022-05-31 07:48:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (146 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `fetch()` (1 ms)
+    ✓ should use `await fetch()`
+    ✓ should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+       9:6   error  <img> is missing required \"src\" attribute      element-required-attributes
+       9:6   error  <img> is missing required \"alt\" attribute      wcag/h37
+      13:29  error  <button> is missing required \"type\" attribute  element-required-attributes
+      13:29  error  <button> must have accessible text             text-content·
+    ✖ 4 problems (4 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.515 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-05-31 07:48:04 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  43:3  warning  The homework tests do not support `innerText`. Please replace with `textContent`  no-restricted-syntax
+  59:7  warning  The homework tests do not support `innerText`. Please replace with `textContent`  no-restricted-syntax
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2022-05-31 07:49:32 info: ------------------------------------------
+2022-05-31 07:49:32 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:49:32 info: ------------------------------------------
+2022-05-31 07:49:38 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (131 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()`
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+       9:6   error  <img> is missing required \"src\" attribute      element-required-attributes
+       9:6   error  <img> is missing required \"alt\" attribute      wcag/h37
+      13:29  error  <button> is missing required \"type\" attribute  element-required-attributes·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.416 s, estimated 4 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-05-31 07:52:47 info: ------------------------------------------
+2022-05-31 07:52:47 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:52:47 info: ------------------------------------------
+2022-05-31 07:52:53 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (136 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()`
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+       9:6   error  Attribute \"src\" has invalid value \"\"           attribute-allowed-values
+      13:29  error  <button> is missing required \"type\" attribute  element-required-attributes·
+    ✖ 2 problems (2 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.459 s, estimated 4 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-05-31 07:55:53 info: ------------------------------------------
+2022-05-31 07:55:53 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:55:53 info: ------------------------------------------
+2022-05-31 07:55:59 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (128 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      9:6  error  Attribute \"src\" has invalid value \"\"  attribute-allowed-values·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.398 s, estimated 4 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-05-31 07:57:04 info: ------------------------------------------
+2022-05-31 07:57:04 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:57:04 info: ------------------------------------------
+2022-05-31 07:57:09 info: All unit tests passed.
+2022-05-31 07:57:14 info: All steps were completed successfully
+2022-05-31 07:57:37 info: ------------------------------------------
+2022-05-31 07:57:37 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:57:37 info: ------------------------------------------
+2022-05-31 07:57:42 info: All unit tests passed.
+2022-05-31 07:57:47 info: All steps were completed successfully
+2022-05-31 07:59:00 info: ------------------------------------------
+2022-05-31 07:59:00 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 07:59:00 info: ------------------------------------------
+2022-05-31 07:59:06 info: All unit tests passed.
+2022-05-31 07:59:09 info: All steps were completed successfully
+2022-05-31 08:00:03 info: ------------------------------------------
+2022-05-31 08:00:03 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-05-31 08:00:03 info: ------------------------------------------
+2022-05-31 08:00:08 info: All unit tests passed.
+2022-05-31 08:00:11 info: All steps were completed successfully

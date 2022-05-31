@@ -1,1 +1,19 @@
-/* add your styling here */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    border-radius: 15px;
+    width: 20%;
+}
+
+.select {
+    width: 10%;
+    margin-top: 10px;
+}
+
+.pokemon-image {
+    width: 300px;
+    height: auto;
+}

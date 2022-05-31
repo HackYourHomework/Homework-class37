@@ -79,7 +79,7 @@ function removeElement(element) {
   }
 }
 
-async function main() {
+function main() {
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
 
   createAndAppend('div', 'body', 'container');

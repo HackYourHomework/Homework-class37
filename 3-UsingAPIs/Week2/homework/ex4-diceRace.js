@@ -10,23 +10,28 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    resolves. Do you know why? Add your answer as a comment to the bottom of the 
    file.
 ------------------------------------------------------------------------------*/
-// ! Do not remove this line
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const newDice = dice.map((e) => rollDie(e));
+  return Promise.race(newDice);
 }
 
 // Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
 
-// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/* The reason of the dice continue rolling is because they started all at the same time
+and they still didn't finish them course (circle).*/

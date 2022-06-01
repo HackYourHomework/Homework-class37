@@ -64,7 +64,7 @@ function rollDie(die = 1) {
     logStamped(`Die ${die} scheduled for ${randomRollsToDo} rolls...`);
 
     let offTable = false;
-
+    
     // Function that executes a roll, called recursively until the mandated
     // number of rolls (`randomRollsToDo`) has been done.
     const rollOnce = (roll) => {

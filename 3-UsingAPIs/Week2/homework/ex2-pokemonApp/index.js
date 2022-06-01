@@ -30,16 +30,18 @@ async function fetchData(url) {
   return response.json();
 }
 
-function fetchAndPopulatePokemons(pokemonData) {
+async function fetchAndPopulatePokemons() {
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+  const pokemonData = await fetchData(apiUrl);
+  const arrayOfPokemonNamesAndUrls = pokemonData.results.map((pokemon) => {
+    return { name: pokemon.name, url: pokemon.url };
+  });
+
   const pokemonDropDownList = createAndAppend(
     'select',
     '.container',
     'pokemon-drop-down-list'
   );
-
-  const arrayOfPokemonNamesAndUrls = pokemonData.results.map((pokemon) => {
-    return { name: pokemon.name, url: pokemon.url };
-  });
   arrayOfPokemonNamesAndUrls.forEach((pokemon) => {
     const { name, url } = pokemon;
     const optionPokemon = createAndAppend(
@@ -62,9 +64,10 @@ async function fetchImage(e) {
 
   const pokemonImage = createAndAppend('img', '.container', 'pokemon-img');
   pokemonImage.src = selectedPokemonImageUrl;
+  pokemonImage.alt = 'pokemon image';
 }
 
-//This functions creates a dom element and appends it to its parent.
+//This function creates a dom element and appends it to its parent.
 function createAndAppend(tag, parent, elementClass) {
   const element = document.createElement(tag);
   element.classList.add(elementClass);
@@ -72,16 +75,15 @@ function createAndAppend(tag, parent, elementClass) {
   return element;
 }
 
-//This functions removes an element from dom .
+//This function removes an element from dom .
 function removeElement(element) {
   if (element) {
     element.remove();
   }
 }
 
-function main() {
-  const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
-
+//This function initialize the page; creates a container and a button
+function initPage() {
   createAndAppend('div', 'body', 'container');
 
   const btnGetPokemon = createAndAppend(
@@ -91,21 +93,29 @@ function main() {
   );
   btnGetPokemon.setAttribute('type', 'button');
   btnGetPokemon.textContent = 'Get Pokemon!';
+}
 
-  const errorField = createAndAppend('div', '.container', 'error-message');
+//This function renders the errors
+function renderErr(err) {
+  console.log(err);
+  const errorMessage = createAndAppend('div', '.container', 'error-message');
+  errorMessage.textContent = `Error: ${err.message}`;
+}
 
-  btnGetPokemon.addEventListener('click', async () => {
-    removeElement(document.querySelector('.pokemon-drop-down-list'));
-    removeElement(document.querySelector('.pokemon-img'));
+function main() {
+  initPage();
 
-    try {
-      const pokemonData = await fetchData(apiUrl);
-      fetchAndPopulatePokemons(pokemonData);
-    } catch (error) {
-      console.log(error);
-      errorField.textContent = `${error.name}: ${error.message}`;
-    }
-  });
+  document
+    .querySelector('.btn-get-pokemon')
+    .addEventListener('click', async () => {
+      removeElement(document.querySelector('.pokemon-drop-down-list'));
+      removeElement(document.querySelector('.pokemon-img'));
+      try {
+        await fetchAndPopulatePokemons();
+      } catch (error) {
+        renderErr(error);
+      }
+    });
 }
 
 window.addEventListener('load', main);

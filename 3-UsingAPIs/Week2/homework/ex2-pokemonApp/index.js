@@ -23,16 +23,12 @@ Try and avoid using global variables. As much as possible, try and use function
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response) {
-      throw new Error(`HTTP Error ${response.statusText}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log(error.message);
+  const response = await fetch(url);
+  if (!response) {
+    throw new Error(`HTTP Error ${response.statusText}`);
   }
+  const data = await response.json();
+  return data;
 }
 
 async function fetchAndPopulatePokemons() {
@@ -51,9 +47,14 @@ async function fetchAndPopulatePokemons() {
   document.body.appendChild(pokemonDivContainer);
 
   pokemonBtnElement.addEventListener('click', async () => {
-    const pokemonUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
-    const data = await fetchData(pokemonUrl);
-    const getDataFromPokemon = data.results;
+    const pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+    let getDataFromPokemon;
+    try {
+      const data = await fetchData(pokemonsUrl);
+      getDataFromPokemon = data.results;
+    } catch (error) {
+      console.log(error.message);
+    }
 
     getDataFromPokemon.forEach((getData) => {
       const pokemonOptionElement = document.createElement('option');
@@ -70,9 +71,14 @@ async function fetchImageEventListener(image) {
     innerHtmlImgElem.remove();
   }
 
-  const getPokemonClickedElem = image.target.value;
-  const getTargetPokemonImg = `https://pokeapi.co/api/v2/pokemon/${getPokemonClickedElem}`;
-  const data = await fetchData(getTargetPokemonImg);
+  const getPokemonImgUrl = image.target.value;
+  const getTargetImgFromPokemonUrl = `https://pokeapi.co/api/v2/pokemon/${getPokemonImgUrl}`;
+  let data;
+  try {
+    data = await fetchData(getTargetImgFromPokemonUrl);
+  } catch (error) {
+    console.log(error);
+  }
 
   const pokemonDivElement = document.createElement('div');
 

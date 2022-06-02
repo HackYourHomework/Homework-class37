@@ -37,7 +37,7 @@ function renderImage(data) {
   elementImg.src = data.img;
   document.body.style.backgroundColor = 'green';
   document.body.appendChild(elementImg);
-  console.log(data);
+  return data;
 }
 
 function renderError(error) {
@@ -45,7 +45,7 @@ function renderError(error) {
   h1.textContent = error;
   document.body.style.backgroundColor = 'red';
   document.body.appendChild(h1);
-  console.log(error);
+  return error;
 }
 
 async function main() {

@@ -11,7 +11,7 @@ Complete the four functions provided in the starter `index.js` file:
 `fetchAndPopulatePokemons`: Use `fetchData()` to load the pokemon data from the 
   public API and populate the `<select>` element in the DOM.
   
-`fetchImage`: Use `fetchData()` to fetch the selected image and update the 
+`fetchImageEventListener`: Use `fetchData()` to fetch the selected image and update the 
   `<img>` element in the DOM.
 
 `main`: The `main` function orchestrates the other functions. The `main` 
@@ -60,11 +60,11 @@ async function fetchAndPopulatePokemons() {
       pokemonOptionElement.textContent = getData.name;
       pokemonSelectElement.appendChild(pokemonOptionElement);
     });
-    pokemonSelectElement.addEventListener('change', fetchImage);
+    pokemonSelectElement.addEventListener('change', fetchImageEventListener);
   });
 }
 
-async function fetchImage(image) {
+async function fetchImageEventListener(image) {
   const innerHtmlImgElem = document.querySelector('img');
   if (innerHtmlImgElem) {
     innerHtmlImgElem.remove();

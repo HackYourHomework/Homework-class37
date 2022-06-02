@@ -1,1 +1,27 @@
-/* add your styling here */
+body {
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.div-container {
+  margin-top: 5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+.btn-elem {
+  cursor: pointer;
+  display: block;
+}
+
+.select-elem {
+  margin-top: 1rem;
+}
+
+.pokemon-img {
+  left: 45%;
+  top: 15%;
+  position: absolute;
+}

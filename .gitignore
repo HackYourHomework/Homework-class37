@@ -107,6 +107,7 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.DS_Store
 
 # yarn v2
 .yarn/cache
@@ -119,3 +120,9 @@ dist
 .recent.json
 .disclaimer
 @homework*
+
+# vscode
+.vscode
+
+# DS_Store
+.DS_Store

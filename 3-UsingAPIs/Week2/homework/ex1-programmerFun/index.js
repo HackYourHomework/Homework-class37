@@ -24,7 +24,7 @@ async function requestData(url) {
     throw new Error(`HTTP Error: ${response.status}`);
   }
 
-  return await response.json();
+  return response.json();
 }
 
 function renderImage(data) {

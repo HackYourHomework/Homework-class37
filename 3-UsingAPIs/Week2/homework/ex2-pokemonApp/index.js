@@ -31,7 +31,7 @@ async function fetchData(url) {
     }
     return await response.json();
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
     throw error;
   }
 }
@@ -49,40 +49,34 @@ function fetchAndPopulatePokemons() {
 
   let data = null;
   const urlApi = 'https://pokeapi.co/api/v2/pokemon?limit=151';
-  getPokemonButton.addEventListener('click', async () => {
-    try {
-      data = await fetchData(urlApi);
-    } catch (error) {
-      console.error(error.message);
-    }
+  getPokemonButton.addEventListener('click', async function getPokemons() {
+    data = await fetchData(urlApi);
     const results = data.results;
     for (const pokemon of results) {
       const option = document.createElement('option');
       option.textContent = pokemon.name;
-      option.value = results.indexOf(pokemon) + 1;
+      option.value = pokemon.name;
       selectPokemon.appendChild(option);
     }
+    getPokemonButton.removeEventListener('click', getPokemons);
   });
   selectPokemon.addEventListener('change', fetchImage);
 }
 
-async function fetchImage(image) {
+async function fetchImage(event) {
   const previousPokemon = document.querySelector('img');
   if (previousPokemon) {
     document.body.removeChild(previousPokemon);
   }
-  const currentPokemon = `${image.currentTarget.value}`;
+  const currentPokemon = event.currentTarget.value;
   const urlCurrentPokemon = `https://pokeapi.co/api/v2/pokemon/${currentPokemon}`;
-  try {
-    const data = await fetchData(urlCurrentPokemon);
-    const ImageCurrentPokemon = document.createElement('img');
-    ImageCurrentPokemon.classList.add('pokemon-image');
-    ImageCurrentPokemon.src = data.sprites.front_default;
-    ImageCurrentPokemon.alt = 'Pokemon Image';
-    document.body.appendChild(ImageCurrentPokemon);
-  } catch (error) {
-    console.log(error);
-  }
+
+  const data = await fetchData(urlCurrentPokemon);
+  const ImageCurrentPokemon = document.createElement('img');
+  ImageCurrentPokemon.classList.add('pokemon-image');
+  ImageCurrentPokemon.src = data.sprites.front_default;
+  ImageCurrentPokemon.alt = 'Pokemon Image';
+  document.body.appendChild(ImageCurrentPokemon);
 }
 
 function main() {

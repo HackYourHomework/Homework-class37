@@ -24,16 +24,11 @@ Try and avoid using global variables. As much as possible, try and use function
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP Error: ${response.status}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(error.message);
-    throw error;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP Error: ${response.status}`);
   }
+  return await response.json();
 }
 
 function fetchAndPopulatePokemons() {
@@ -50,12 +45,17 @@ function fetchAndPopulatePokemons() {
   let data = null;
   const urlApi = 'https://pokeapi.co/api/v2/pokemon?limit=151';
   getPokemonButton.addEventListener('click', async function getPokemons() {
-    data = await fetchData(urlApi);
+    try {
+      data = await fetchData(urlApi);
+    } catch (error) {
+      console.error(error.message);
+    }
     const results = data.results;
     for (const pokemon of results) {
       const option = document.createElement('option');
       option.textContent = pokemon.name;
       option.value = pokemon.name;
+
       selectPokemon.appendChild(option);
     }
     getPokemonButton.removeEventListener('click', getPokemons);
@@ -70,13 +70,16 @@ async function fetchImage(event) {
   }
   const currentPokemon = event.currentTarget.value;
   const urlCurrentPokemon = `https://pokeapi.co/api/v2/pokemon/${currentPokemon}`;
-
-  const data = await fetchData(urlCurrentPokemon);
-  const ImageCurrentPokemon = document.createElement('img');
-  ImageCurrentPokemon.classList.add('pokemon-image');
-  ImageCurrentPokemon.src = data.sprites.front_default;
-  ImageCurrentPokemon.alt = 'Pokemon Image';
-  document.body.appendChild(ImageCurrentPokemon);
+  try {
+    const data = await fetchData(urlCurrentPokemon);
+    const ImageCurrentPokemon = document.createElement('img');
+    ImageCurrentPokemon.classList.add('pokemon-image');
+    ImageCurrentPokemon.src = data.sprites.front_default;
+    ImageCurrentPokemon.alt = 'Pokemon Image';
+    document.body.appendChild(ImageCurrentPokemon);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function main() {

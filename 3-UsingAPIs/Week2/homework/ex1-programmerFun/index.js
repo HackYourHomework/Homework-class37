@@ -19,16 +19,12 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log(error);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(response.statusText);
   }
+  const data = await response.json();
+  return data;
 }
 
 function renderImage(data) {
@@ -50,7 +46,7 @@ function renderError(error) {
 
 async function main() {
   try {
-    const data = await requestData('https://xkcd.now.sh/?comic=latest');
+    const data = await requestData('https://xkcd.now.sh/?comicx=latest');
     renderImage(data);
   } catch (error) {
     renderError(error);

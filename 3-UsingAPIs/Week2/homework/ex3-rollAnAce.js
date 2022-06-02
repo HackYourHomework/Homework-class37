@@ -16,9 +16,6 @@ async function rollDieUntil(wantedValue) {
   let value;
   while (value !== wantedValue) {
     value = await rollDie();
-    if (value === wantedValue) {
-      return value;
-    }
   }
   return value;
 }

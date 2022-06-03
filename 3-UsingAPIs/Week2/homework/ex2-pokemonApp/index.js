@@ -58,13 +58,13 @@ async function fetchImage(e) {
   }
 
   try {
-    const dropdownList = e.target;
-    const { sprites } = await fetchData(dropdownList.value);
+    const url = e.target.value;
+    const { sprites, name } = await fetchData(url);
 
     const pokemonImage = createAndAppend('img', '.container', 'pokemon-img');
     pokemonImage.src = sprites.front_shiny;
-    pokemonImage.alt =
-      dropdownList.options[dropdownList.selectedIndex].textContent;
+    pokemonImage.alt = name;
+    console.log(name);
   } catch (err) {
     renderErr(err);
   }

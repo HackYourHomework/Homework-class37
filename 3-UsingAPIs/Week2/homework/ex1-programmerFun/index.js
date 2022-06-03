@@ -20,9 +20,7 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 async function requestData(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(
-      'Page can not be loaded. Please check your connection and the address '
-    );
+    throw new Error('Something unexpected happened. Please try again later.');
   }
 
   return response.json();

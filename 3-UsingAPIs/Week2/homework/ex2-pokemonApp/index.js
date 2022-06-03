@@ -25,7 +25,7 @@ parameters and return values to pass data back and forth.
 async function fetchData(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error('Please make sure that you type the address correctly ');
+    throw new Error('Something unexpected happened. Please try again later.');
   }
   return response.json();
 }
@@ -33,16 +33,13 @@ async function fetchData(url) {
 async function fetchAndPopulatePokemons() {
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
   const pokemonData = await fetchData(apiUrl);
-  const arrayOfPokemonNamesAndUrls = pokemonData.results.map((pokemon) => {
-    return { name: pokemon.name, url: pokemon.url };
-  });
 
   const pokemonDropDownList = createAndAppend(
     'select',
     '.container',
     'pokemon-drop-down-list'
   );
-  arrayOfPokemonNamesAndUrls.forEach((pokemon) => {
+  pokemonData.results.forEach((pokemon) => {
     const { name, url } = pokemon;
     const optionPokemon = createAndAppend(
       'option',
@@ -52,19 +49,25 @@ async function fetchAndPopulatePokemons() {
     optionPokemon.textContent = name;
     optionPokemon.value = url;
   });
-
   pokemonDropDownList.addEventListener('change', fetchImage);
 }
 
 async function fetchImage(e) {
-  removeElement(document.querySelector('.pokemon-img'));
+  if (document.querySelector('.pokemon-img')) {
+    document.querySelector('.pokemon-img').remove();
+  }
 
-  const selectedPokemonData = await fetchData(e.target.value);
-  const selectedPokemonImageUrl = selectedPokemonData.sprites.front_shiny;
+  try {
+    const dropdownList = e.target;
+    const { sprites } = await fetchData(dropdownList.value);
 
-  const pokemonImage = createAndAppend('img', '.container', 'pokemon-img');
-  pokemonImage.src = selectedPokemonImageUrl;
-  pokemonImage.alt = 'pokemon image';
+    const pokemonImage = createAndAppend('img', '.container', 'pokemon-img');
+    pokemonImage.src = sprites.front_shiny;
+    pokemonImage.alt =
+      dropdownList.options[dropdownList.selectedIndex].textContent;
+  } catch (err) {
+    renderErr(err);
+  }
 }
 
 //This function creates a dom element and appends it to its parent.
@@ -73,13 +76,6 @@ function createAndAppend(tag, parent, elementClass) {
   element.classList.add(elementClass);
   document.querySelector(parent).appendChild(element);
   return element;
-}
-
-//This function removes an element from dom .
-function removeElement(element) {
-  if (element) {
-    element.remove();
-  }
 }
 
 //This function initialize the page; creates a container and a button
@@ -108,8 +104,12 @@ function main() {
   document
     .querySelector('.btn-get-pokemon')
     .addEventListener('click', async () => {
-      removeElement(document.querySelector('.pokemon-drop-down-list'));
-      removeElement(document.querySelector('.pokemon-img'));
+      if (document.querySelector('.pokemon-drop-down-list')) {
+        document.querySelector('.pokemon-drop-down-list').remove();
+      }
+      if (document.querySelector('.pokemon-img')) {
+        document.querySelector('.pokemon-img').remove();
+      }
       try {
         await fetchAndPopulatePokemons();
       } catch (error) {

@@ -22,9 +22,9 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(url) {
+async function fetchData(url) {
   try {
-    const response = fetch(url);
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`HTTP Error ${response.status}`);
     }
@@ -34,35 +34,44 @@ function fetchData(url) {
   }
 }
 
-function fetchAndPopulatePokemons(data) {
+function fetchAndPopulatePokemons() {
   const button = document.createElement('button');
   button.type = 'button';
   button.textContent = 'Get Pokemon';
   document.body.appendChild(button);
-
   const selectPokemon = document.createElement('select');
   document.body.appendChild(selectPokemon);
   selectPokemon.id = 'mySelect';
-
-  button.addEventListener('click', () => {
-    const pokemonNames = data.results;
-    pokemonNames.forEach((element) => {
-      const pokemon = document.createElement('option');
-      pokemon.text = element.name;
-      pokemon.value = element.url;
-      selectPokemon.appendChild(pokemon);
-    });
+  const pokemonListUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+  button.addEventListener('click', async () => {
+    try {
+      const response = await fetch(pokemonListUrl);
+      const data = await response.json();
+      const pokemonNames = data.results;
+      for (const pokemon of pokemonNames) {
+        const option = document.createElement('option');
+        option.text = pokemon.name;
+        option.value = pokemon.name;
+        selectPokemon.appendChild(option);
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+    selectPokemon.addEventListener('change', fetchImage);
   });
-  selectPokemon.addEventListener('change', fetchImage);
 }
 
-function fetchImage(element) {
-  const selected = element.value;
-  const url = `https://pokeapi.co/api/v2/pokemon/${selected}`;
+async function fetchImage(element) {
+  const selected = element.target.value;
+  const pokemonImageUrl = `https://pokeapi.co/api/v2/pokemon/${selected}`;
+  const response = await fetch(pokemonImageUrl);
+  const data = await response.json();
+  const pokemonNames = data.sprites.front_default;
   if (selected) {
-    const pokeImg = document.createElement('img');
-    pokeImg.src = url.img;
-    document.appendChild(pokeImg);
+    const pokImg = document.createElement('img');
+    pokImg.src = pokemonNames;
+    document.body.appendChild(pokImg);
+    console.log(pokImg);
   }
 }
 

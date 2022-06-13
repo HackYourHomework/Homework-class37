@@ -10,12 +10,20 @@ app.get('/', (req, res) => {
 app.use(express.json());
 
 app.post('/weather', (req, res) => {
-  const { cityName } = req.body;
+  const cityName = req.body;
   if (!cityName) {
     return res.status(400).json({ msg: 'Please include a city name' });
   }
-  res.send(cityName);
+  res.json(cityName);
 });
+
+// app.post('/weather', (req, res) => {
+//   const  {cityName} = req.body;
+//   if (!cityName) {
+//     return res.status(400).json({ msg: 'Please include a city name' });
+//   }
+//   res.send(cityName);
+// });
 
 app.listen(PORT, () => {
   console.log('server is running');

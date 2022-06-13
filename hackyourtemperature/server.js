@@ -10,7 +10,10 @@ app.get('/', (req, res) => {
   res.send('Hello from backend to frontend');
 });
 app.use(express.json());
-router.post('/weather', (req, res) => {
-  const { cityname } = req.body;
-  res.send(cityname);
+//app.use(express.urlencoded({ extended: false }));
+console.log('hiep hiep hoorea');
+
+app.post('/weather', (req, res) => {
+  const { cityName } = req.body;
+  res.send(cityName);
 });

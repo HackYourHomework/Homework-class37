@@ -22,17 +22,13 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP Error ${response.status}`);
-    }
-    return response.json();
-  } catch (error) {
-    console.error(error.message);
-  }
-}
+// async function fetchData(url) {
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//       throw new Error(`HTTP Error ${response.status}`);
+//     }
+//     return response.json();
+//   }
 
 function fetchAndPopulatePokemons() {
   const button = document.createElement('button');
@@ -66,27 +62,20 @@ async function fetchImage(element) {
   const pokemonImageUrl = `https://pokeapi.co/api/v2/pokemon/${selected}`;
   const response = await fetch(pokemonImageUrl);
   const data = await response.json();
-  //Why when I used official-artwork the code does not working?
-  // const pokemonNames = data.sprites.other.official-artwork.front_default;
-  const pokemonNames = data.sprites.other.home.front_default;
+  const pokemonNames = data.sprites.other['official-artwork'].front_default;
   if (selected) {
     const viewPort = document.createElement('div');
     document.body.appendChild(viewPort);
     const pokImg = document.createElement('img');
+    pokImg.classList.add('pokemon-image');
     viewPort.appendChild(pokImg);
-    //Here bellow I couldn't remove the old image so I add position and background to cover the old image.
-    pokImg.style.position = 'absolute';
-    pokImg.style.backgroundColor = 'white';
-    pokImg.style.width = '90vh';
     pokImg.src = pokemonNames;
   }
 }
 
 async function main() {
   try {
-    const data = await fetchData('https://pokeapi.co/api/v2/pokemon/');
-    const jsonData = { data };
-    fetchAndPopulatePokemons(jsonData);
+    fetchAndPopulatePokemons();
   } catch (error) {
     console.log(error);
   }

@@ -66,12 +66,19 @@ async function fetchImage(element) {
   const pokemonImageUrl = `https://pokeapi.co/api/v2/pokemon/${selected}`;
   const response = await fetch(pokemonImageUrl);
   const data = await response.json();
-  const pokemonNames = data.sprites.front_default;
+  //Why when I used official-artwork the code does not working?
+  // const pokemonNames = data.sprites.other.official-artwork.front_default;
+  const pokemonNames = data.sprites.other.home.front_default;
   if (selected) {
+    const viewPort = document.createElement('div');
+    document.body.appendChild(viewPort);
     const pokImg = document.createElement('img');
+    viewPort.appendChild(pokImg);
+    //Here bellow I couldn't remove the old image so I add position and background to cover the old image.
+    pokImg.style.position = 'absolute';
+    pokImg.style.backgroundColor = 'white';
+    pokImg.style.width = '90vh';
     pokImg.src = pokemonNames;
-    document.body.appendChild(pokImg);
-    console.log(pokImg);
   }
 }
 

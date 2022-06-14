@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.post('/weather', (req, res) => {
   const cityName = req.body;

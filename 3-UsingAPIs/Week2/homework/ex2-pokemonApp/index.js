@@ -22,13 +22,6 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-// async function fetchData(url) {
-//     const response = await fetch(url);
-//     if (!response.ok) {
-//       throw new Error(`HTTP Error ${response.status}`);
-//     }
-//     return response.json();
-//   }
 
 function fetchAndPopulatePokemons() {
   const button = document.createElement('button');

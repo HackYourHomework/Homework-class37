@@ -23,6 +23,14 @@ Try and avoid using global variables. As much as possible, try and use function
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 
+async function fetchData(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP Error ${response.status}`);
+  }
+  return response.json();
+}
+
 function fetchAndPopulatePokemons() {
   const button = document.createElement('button');
   button.type = 'button';
@@ -31,11 +39,15 @@ function fetchAndPopulatePokemons() {
   const selectPokemon = document.createElement('select');
   document.body.appendChild(selectPokemon);
   selectPokemon.id = 'mySelect';
+  const viewPort = document.createElement('div');
+  document.body.appendChild(viewPort);
+  const image = document.createElement('img');
+  image.id = 'pokemon-image';
+  viewPort.appendChild(image);
   const pokemonListUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
   button.addEventListener('click', async () => {
     try {
-      const response = await fetch(pokemonListUrl);
-      const data = await response.json();
+      const data = await fetchData(pokemonListUrl);
       const pokemonNames = data.results;
       for (const pokemon of pokemonNames) {
         const option = document.createElement('option');
@@ -53,16 +65,11 @@ function fetchAndPopulatePokemons() {
 async function fetchImage(element) {
   const selected = element.target.value;
   const pokemonImageUrl = `https://pokeapi.co/api/v2/pokemon/${selected}`;
-  const response = await fetch(pokemonImageUrl);
-  const data = await response.json();
+  const data = await fetchData(pokemonImageUrl);
   const pokemonNames = data.sprites.other['official-artwork'].front_default;
   if (selected) {
-    const viewPort = document.createElement('div');
-    document.body.appendChild(viewPort);
-    const pokImg = document.createElement('img');
-    pokImg.classList.add('pokemon-image');
-    viewPort.appendChild(pokImg);
-    pokImg.src = pokemonNames;
+    const pokemonImage = document.getElementById('pokemon-image');
+    pokemonImage.src = pokemonNames;
   }
 }
 
